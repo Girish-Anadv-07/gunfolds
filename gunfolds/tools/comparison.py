@@ -66,7 +66,8 @@ def SM_fixed(Gstar, G, iter=5):
 
 
 def SM_converging(Gstar, G):
-    """Gstar is the undersampled reference graph, while G is the starting
+    """
+    Gstar is the undersampled reference graph, while G is the starting
     graph. The  code searches  over all undersampled  version of  G to
     find all matches with Gstar
     

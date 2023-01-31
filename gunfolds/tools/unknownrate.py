@@ -12,7 +12,7 @@ from progressbar import ProgressBar, Bar
 
 
 def prune_conflicts(H, g, elist):
-    """checks if adding an edge from the list to graph g causes a
+    """Checks if adding an edge from the list to graph g causes a
     conflict with respect to H and if it does removes the edge
     from the list
 
@@ -785,7 +785,7 @@ def build_loop_step(ds, loop, n, iter=1):
 
 def forward_loop_match(loop, n):
     """
-    start with an empty graph and keep adding simple loops until
+    Start with an empty graph and keep adding simple loops until
     the loop is generated at some undersampling rate
 
     :param loop: binary encoding of the loop
@@ -831,7 +831,7 @@ def delAloop(g, loop):
 
 def reverse_loop_match(g, loop):
     """
-    start with a graph and keep removing loops while the loop is still matched
+    Start with a graph and keep removing loops while the loop is still matched
 
     :param g: graph that generates the loop
     :param g:
@@ -863,7 +863,7 @@ def reverse_loop_match(g, loop):
 
 def reverse_edge_match(g, loop):
     """
-    start with a graph and keep removing loops while the loop is still matched
+    Start with a graph and keep removing loops while the loop is still matched
 
     :param g: graph that generates the loop
     :param g:
@@ -894,7 +894,7 @@ def reverse_edge_match(g, loop):
 
 
 def matchAloop(loop, n):
-    """returns a set of minimal graphs that generate this loop
+    """Returns a set of minimal graphs that generate this loop
 
     :param loop: binary encoding of the loop
     :type loop:

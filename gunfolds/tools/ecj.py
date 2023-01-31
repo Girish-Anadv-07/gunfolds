@@ -186,7 +186,7 @@ def reachable(s, G, g):
 
 def has_unit_cycle(G, path):
     """ 
-    check  if two  unequal  length  paths can  be  compensated by  their
+    Checks  if two  unequal  length  paths can  be  compensated by  their
     elementary cycles 
     
     :param G: ``gunfolds`` format graph

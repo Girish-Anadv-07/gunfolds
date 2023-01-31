@@ -27,13 +27,13 @@ def is_sclique(G):
 
 def directed_inc(G, D):
     """ 
-    helper function for determining directed edges in an undersampled
+    A helper function for determining directed edges in an undersampled
     graph given a previously undersampled graph 
         
-    :param G: ``gunfolds`` format graph
+    :param G: ``gunfolds`` format graph G_1 - without undersampling
     :type G:  dictionary (``gunfolds`` graphs)
     
-    :param D: ``gunfolds`` graph
+    :param D: ``gunfolds`` graph G_u a version of G_1 undersampled by u
     :type D:  dictionary (``gunfolds`` graphs)
     
     :returns: 
@@ -52,13 +52,13 @@ def directed_inc(G, D):
 
 def bidirected_inc(G, D):
     """ 
-    helper function for determining bidirected edges in an undersampled
+    A helper function for determining bidirected edges in an undersampled
     graph given a previously undersampled graph 
     
-    :param G: ``gunfolds`` format graph
+    :param G: ``gunfolds`` format graph G_1 - without undersampling
     :type G:  dictionary (``gunfolds`` graphs)
     
-    :param D: ``gunfolds`` format graph
+    :param D: ``gunfolds`` graph G_u a version of G_1 undersampled by u
     :type D:  dictionary (``gunfolds`` graphs)
     
     :returns: 
@@ -78,13 +78,13 @@ def bidirected_inc(G, D):
 
 def increment_u(G_star, G_u):
     """ 
-    (Ask)
+    Given graph `G_star` - without undersampling - and its undersampled version `G_u`, generate the `G_{u+1}` graph
 
-    :param G_star: ``gunfolds`` format graph
+    :param G_star: ``gunfolds`` format graph G_1 - without undersampling
     :type G_star: dictionary (``gunfolds`` graphs)
     
-    :param G_u:
-    :type G_u:
+    :param G_u: ``gunfolds`` graph G_u a version of G_1 undersampled by u
+    :type G_u: dictionary (``gunfolds`` graphs)
     
     :returns: 
     :rtype: 
@@ -98,11 +98,11 @@ def increment_u(G_star, G_u):
 
 def pure_directed_inc(G, D):
     """ 
-    :param G: ``gunfolds`` format graph
+    :param G: ``gunfolds`` format graph G_1 - without undersampling
     :type G:  dictionary (``gunfolds`` graphs)
     
-    :param D:
-    :type D:
+    :param D: ``gunfolds`` graph G_u a version of G_1 undersampled by u
+    :type D:  dictionary (``gunfolds`` graphs)
     
     :returns: 
     :rtype: 
@@ -119,7 +119,7 @@ def pure_directed_inc(G, D):
 
 def increment(G):
     """
-    undersample ``G`` by 2
+    Undersample ``G`` by 2
     only works for G1 to G2 directed
     
     :param G: ``gunfolds`` format graph
@@ -190,7 +190,7 @@ def undersample(G, u):
 
 def all_undersamples(G_star):
     """ 
-    return a list of all undersampled graphs (excluding superclique) 
+    Returns a list of all undersampled graphs (excluding superclique) 
  
     :param G_star: ``gunfolds`` format graph
     :type G_star: dictionary (``gunfolds`` graphs)
@@ -212,7 +212,7 @@ def all_undersamples(G_star):
 
 def call_undersamples(G_star):
     """ 
-    return a list of all undersampled graphs (including superclique) 
+    Returns a list of all undersampled graphs (including superclique) 
     
     :param G_star: ``gunfolds`` format graph
     :type G_star: dictionary (``gunfolds`` graphs)
@@ -231,7 +231,7 @@ def call_undersamples(G_star):
 
 def compact_call_undersamples(G_star):
     """ 
-    return a list of all undersampled graphs (including superclique)
+    Returns a list of all undersampled graphs (including superclique)
     in binary encoded format 
     
     :param G_star: ``gunfolds`` format graph
@@ -255,11 +255,13 @@ def compact_call_undersamples(G_star):
 
 def cc_undersamples(G_star, steps=1):
     """
+    Returns ``G_u`` for ``G_star`` with default value of ``u=2``. If the input graph converges before the requested ``u`` - an empty list is returned.
+    
     :param G_star: ``gunfolds`` format graph
     :type G_star: dictionary (``gunfolds`` graphs)
     
-    :param steps:
-    :type steps: (guess)integer
+    :param steps: undersampling rate - 1 for G_star
+    :type steps: integer
     
     :returns: 
     :rtype: 
@@ -280,14 +282,16 @@ def cc_undersamples(G_star, steps=1):
 
 def overshoot(G_star, H):
     """
-    :param G_star: ``gunfolds`` format graph
+    Undersample ``G_star`` until it turns into a ``G_u`` for which ``H`` is an edge subset. Return ``True`` in this case. If this does not happen for either of the undersampling rates until teh convergence - return ``False``
+
+    :param G_star: ``gunfolds`` format graph at ``u=1``
     :type G_star: dictionary (``gunfolds`` graphs)
-    
-    :param H:
-    :type H:
-    
-    :returns: 
-    :rtype: 
+
+    :param H: ``gunfolds`` format graph at some ``u``
+    :type H: dictionary (``gunfolds`` graphs)
+
+    :returns:
+    :rtype: boolean
     """
     glist = [G_star]
     while True:
@@ -595,7 +599,7 @@ def savegraphs(l, fname):
 
 
 # talking about extra edges on top of the ring
-    
+
 
 def dens2edgenum(d, n=10):
     """

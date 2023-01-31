@@ -179,7 +179,7 @@ def childrenedges(n, c, el, bl):
 
 def make_emptyforks(n, c, el, bl):
     """ 
-    an empty fork is a fork without the bidirected edge 
+    An empty fork is a fork without the bidirected edge 
 
     :param n: single node string
     :type n: (guess)string
@@ -283,7 +283,7 @@ def make_allforks_and_rest(g, el, bl, dofullforks=True):
 
 def vedgelist(g, pathtoo=False):
     """ 
-    Return a list of tuples for edges of g and forks
+    Returns a list of tuples for edges of g and forks
     a superugly organically grown function that badly needs refactoring
     
     :param g: ``gunfolds`` graph
@@ -1146,7 +1146,7 @@ def maskaVpath(g, e, p):
 
 def addanedge(g, e):
     """
-    add edge e[0] -> e[1] to g
+    Add edge e[0] -> e[1] to g
 
     :param g: ``gunfolds`` graph
     :type g: dictionary (``gunfolds`` graphs)
@@ -1164,7 +1164,7 @@ def addanedge(g, e):
 
 def delanedge(g, e, mask):
     """
-    delete edge e[0] -> e[1] from g if it was not there before
+    Delete edge e[0] -> e[1] from g if it was not there before
 
     :param g: ``gunfolds`` graph
     :type g: dictionary (``gunfolds`` graphs)
@@ -1184,7 +1184,7 @@ def delanedge(g, e, mask):
 
 def add2edges(g, e, p):
     """
-    break edge e[0] -> e[1] into two pieces
+    Break edge e[0] -> e[1] into two pieces
     e[0] -> p and p -> e[1]
     and add them to g
 
@@ -1207,7 +1207,7 @@ def add2edges(g, e, p):
 
 def del2edges(g, e, p, mask):
     """
-    restore the graph as it was before adding e[0]->p and p->e[1]
+    Restore the graph as it was before adding e[0]->p and p->e[1]
 
     :param g: ``gunfolds`` graph
     :type g: dictionary (``gunfolds`` graphs)
@@ -1686,7 +1686,7 @@ def delacedge(g, v, b, mask):
 
 def esig(l, n):
     """
-    turns edge list into a hash string
+    Turns edge list into a hash string
     
     :param l:
     :type l:
@@ -1706,7 +1706,7 @@ def esig(l, n):
 
 def gsig(g):
     """
-    turns input graph ``g`` into a hash string using edges
+    Turns input graph ``g`` into a hash string using edges
     
     :param g: ``gunfolds`` graph
     :type g: dictionary (``gunfolds`` graphs)
@@ -1808,7 +1808,7 @@ def memo_no_return(func):
 
 def v2g22g1(g2, capsize=None, verbose=True):
     """
-    computes all g1 that are in the equivalence class for g2
+    Computes all g1 that are in the equivalence class for g2
     
     :param g2:
     :type g2:

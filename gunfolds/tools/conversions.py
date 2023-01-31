@@ -124,7 +124,7 @@ def nx2graph(G):
 
 def num2CG(num, n):
     """
-    num2CG - converts a number  whose binary representaion encodes edge
+    Converts a number  whose binary representaion encodes edge
     presence/absence into a compressed graph representaion
     
     :param num: unique graph representation in numbers

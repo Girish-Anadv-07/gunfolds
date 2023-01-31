@@ -7,7 +7,7 @@ from numpy import argsort
 
 def simple_loops(g, u):
     """
-    iterator over the list of simple loops of graph g at the undersample rate u
+    Iterator over the list of simple loops of graph g at the undersample rate u
     
     :param g: ``gunfolds`` graph
     :type g: dictionary (``gunfolds`` graphs)

@@ -11,7 +11,7 @@ import random
 
 def edgelist(g):  # directed
     """
-    return a list of tuples for edges of ``g``
+    Returns a list of tuples for edges of ``g``
     
     :param g: ``gunfolds`` graph
     :type g: dictionary (``gunfolds`` graph)
@@ -27,7 +27,7 @@ def edgelist(g):  # directed
 
 def inedgelist(g):  # missing directed iterator
     """
-    iterate over the list of tuples for edges of ``g``
+    Iterate over the list of tuples for edges of ``g``
     
     :param g: ``gunfolds`` graph
     :type g: dictionary (``gunfolds`` graph)
@@ -43,7 +43,7 @@ def inedgelist(g):  # missing directed iterator
 
 def inbedgelist(g):  # missing bidirected iterator
     """
-    iterate over the list of tuples for edges of ``g``
+    Iterate over the list of tuples for edges of ``g``
     
     :param g: ``gunfolds`` graph
     :type g: dictionary (``gunfolds`` graph)
@@ -59,7 +59,7 @@ def inbedgelist(g):  # missing bidirected iterator
 
 def bedgelist(g):
     """ 
-    bidirected edge list with flips 
+    Bidirected edge list with flips 
     
     :param g: ``gunfolds`` graph
     :type g: dictionary (``gunfolds`` graph)
@@ -76,7 +76,7 @@ def bedgelist(g):
 
 def undedgelist(g, exclude_bi=False):
     """
-    returns a list of tuples for undirected edges of ``g`` with nodes
+    Returns a list of tuples for undirected edges of ``g`` with nodes
     sorted in ascending order.
     
     :param g: ``gunfolds`` graph
@@ -134,7 +134,7 @@ def fullyconnected(n):
 
 def complement(G):
     """ 
-    return the complement of ``G``
+    Returns the complement of ``G``
     
     :param G: ``gunfolds`` format graph
     :type G: dictionary (``gunfolds`` graph)
@@ -261,7 +261,7 @@ def addAring(g):
 
 def upairs(n, k):
     """
-    n unique nonsequential pairs
+    Returns ``n`` unique nonsequential pairs
     
     :param n: (ask)
     :type n: integer
@@ -376,7 +376,7 @@ def _normed_OCE(g1, g2):
     :type g2: dictionary (``gunfolds`` graph)
     
     :returns: normalized omission and comission errors for directed and
-    bidirected edges.
+              bidirected edges.
     :rtype: dictionary
     """
     def sdiv(x,y):
@@ -402,7 +402,7 @@ def _normed_OCE(g1, g2):
 
 def _undirected_OCE(g1,g2):
     """
-    omission/commision error of ``g1`` referenced to ``g2``
+    Returns omission/commision error of ``g1`` referenced to ``g2``
     if both are undirected graphs.
     
     :param g1: the graph to check
@@ -645,7 +645,7 @@ def deledges(g, es):
 
 def isdedgesubset(g2star, g2):
     """
-    check if ``g2star`` directed edges are a subset of those of ``g2``
+    Checks if ``g2star`` directed edges are a subset of those of ``g2``
     
     :param g2star: ``gunfolds`` graph to be checked
     :type g2star: dictionary (``gunfolds`` graph)
@@ -669,7 +669,7 @@ def isdedgesubset(g2star, g2):
 
 def isedgesubset(g2star, g2):
     """
-    check if all ``g2star`` edges are a subset of those of ``g2``
+    Checks if all ``g2star`` edges are a subset of those of ``g2``
     
     :param g2star: ``gunfolds`` graph to be checked
     :type g2star: dictionary (``gunfolds`` graph)
@@ -1080,7 +1080,7 @@ def merge_graphs(glist):
 
 def ensure_graph_gcd1(g):
     """
-    this function takes any graph, breaks it into SCCs and make sure each SCC has a gcd of 1
+    This function takes any graph, breaks it into SCCs and make sure each SCC has a gcd of 1
 
     :param g: ``gunfolds`` graph
     :type g: dictionary (``gunfolds`` graph)
