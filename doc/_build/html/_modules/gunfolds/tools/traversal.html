@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
-        <title>gunfolds.tools.traversal - Gunfolds documentation</title>
+        <title>gunfolds.tools.traversal - gunfolds documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">Gunfolds  documentation</div></a>
+      <a href="../../../index.html"><div class="brand">gunfolds  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">Gunfolds  documentation</span>
+  <span class="sidebar-brand-text">gunfolds  documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -160,7 +160,29 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">gunfolds</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../tools.html">tools package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../bfutils.html">bfutils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../calc_procs.html">calc_procs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo.html">clingo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_msl.html">clingo_msl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_rasl.html">clingo_rasl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../comparison.html">comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../conversions.html">conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dbn2latex.html">dbn2latex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ecj.html">ecj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../grangercausality.html">grangercausality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../graphkit.html">graphkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../gtool.html">gtool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../linear_model.html">linear_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../myTimeout.html">myTimeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../neighborhoods.html">neighborhoods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pc.html">pc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../simpleloops.html">simpleloops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../traversal.html">traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../unknownrate.html">unknownrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../zickle.html">zickle</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -213,7 +235,7 @@
 <span class="kn">import</span> <span class="nn">time</span>
 
 
-<div class="viewcode-block" id="chunks"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.chunks">[docs]</a><span class="k">def</span> <span class="nf">chunks</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="chunks"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.chunks">[docs]</a><span class="k">def</span> <span class="nf">chunks</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Yield successive n-sized chunks from l.</span>
 <span class="sd">    </span>
@@ -227,7 +249,7 @@
         <span class="k">yield</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="purgepath"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.purgepath">[docs]</a><span class="k">def</span> <span class="nf">purgepath</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">l</span><span class="p">):</span>
+<div class="viewcode-block" id="purgepath"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.purgepath">[docs]</a><span class="k">def</span> <span class="nf">purgepath</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">l</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param path:</span>
 <span class="sd">    :type path:</span>
@@ -239,7 +261,7 @@
         <span class="n">l</span><span class="o">.</span><span class="n">remove</span><span class="p">((</span><span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">path</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]))</span></div>
 
 
-<div class="viewcode-block" id="try_till_d_path"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.try_till_d_path">[docs]</a><span class="k">def</span> <span class="nf">try_till_d_path</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">gt</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="try_till_d_path"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.try_till_d_path">[docs]</a><span class="k">def</span> <span class="nf">try_till_d_path</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">gt</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -274,7 +296,7 @@
     <span class="k">return</span> <span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="try_till_path"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.try_till_path">[docs]</a><span class="k">def</span> <span class="nf">try_till_path</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">gt</span><span class="p">):</span>
+<div class="viewcode-block" id="try_till_path"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.try_till_path">[docs]</a><span class="k">def</span> <span class="nf">try_till_path</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">gt</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -301,7 +323,7 @@
     <span class="k">return</span> <span class="n">k</span></div>
 
 
-<div class="viewcode-block" id="gpurgepath"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.gpurgepath">[docs]</a><span class="k">def</span> <span class="nf">gpurgepath</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<div class="viewcode-block" id="gpurgepath"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.gpurgepath">[docs]</a><span class="k">def</span> <span class="nf">gpurgepath</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -313,7 +335,7 @@
         <span class="k">del</span> <span class="n">g</span><span class="p">[</span><span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="p">]][</span><span class="n">path</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]]</span></div>
 
 
-<div class="viewcode-block" id="forks"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.forks">[docs]</a><span class="k">def</span> <span class="nf">forks</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bl</span><span class="p">,</span> <span class="n">doempty</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="forks"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.forks">[docs]</a><span class="k">def</span> <span class="nf">forks</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bl</span><span class="p">,</span> <span class="n">doempty</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param n: single node string</span>
 <span class="sd">    :type n: (guess)string</span>
@@ -347,7 +369,7 @@
     <span class="k">return</span> <span class="n">l</span></div>
 
 
-<div class="viewcode-block" id="childrenedges"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.childrenedges">[docs]</a><span class="k">def</span> <span class="nf">childrenedges</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bl</span><span class="p">):</span>
+<div class="viewcode-block" id="childrenedges"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.childrenedges">[docs]</a><span class="k">def</span> <span class="nf">childrenedges</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bl</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param n: single node string</span>
 <span class="sd">    :type n: (guess)string</span>
@@ -376,7 +398,7 @@
     <span class="k">return</span> <span class="n">l</span></div>
 
 
-<div class="viewcode-block" id="make_emptyforks"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.make_emptyforks">[docs]</a><span class="k">def</span> <span class="nf">make_emptyforks</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bl</span><span class="p">):</span>
+<div class="viewcode-block" id="make_emptyforks"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.make_emptyforks">[docs]</a><span class="k">def</span> <span class="nf">make_emptyforks</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bl</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    an empty fork is a fork without the bidirected edge </span>
 
@@ -398,7 +420,7 @@
     <span class="k">return</span> <span class="n">forks</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bl</span><span class="p">,</span> <span class="n">doempty</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="ow">not</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">y</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="make_fullforks"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.make_fullforks">[docs]</a><span class="k">def</span> <span class="nf">make_fullforks</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bl</span><span class="p">):</span>
+<div class="viewcode-block" id="make_fullforks"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.make_fullforks">[docs]</a><span class="k">def</span> <span class="nf">make_fullforks</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bl</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param n: single node string</span>
 <span class="sd">    :type n: (guess)string</span>
@@ -418,7 +440,7 @@
     <span class="k">return</span> <span class="n">forks</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bl</span><span class="p">,</span> <span class="n">doempty</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">y</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="make_longpaths"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.make_longpaths">[docs]</a><span class="k">def</span> <span class="nf">make_longpaths</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">el</span><span class="p">):</span>
+<div class="viewcode-block" id="make_longpaths"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.make_longpaths">[docs]</a><span class="k">def</span> <span class="nf">make_longpaths</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">el</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -444,7 +466,7 @@
     <span class="k">return</span> <span class="n">l</span></div>
 
 
-<div class="viewcode-block" id="make_allforks_and_rest"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.make_allforks_and_rest">[docs]</a><span class="k">def</span> <span class="nf">make_allforks_and_rest</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bl</span><span class="p">,</span> <span class="n">dofullforks</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="make_allforks_and_rest"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.make_allforks_and_rest">[docs]</a><span class="k">def</span> <span class="nf">make_allforks_and_rest</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bl</span><span class="p">,</span> <span class="n">dofullforks</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -480,7 +502,7 @@
     <span class="k">return</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span></div>
 
 
-<div class="viewcode-block" id="vedgelist"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.vedgelist">[docs]</a><span class="k">def</span> <span class="nf">vedgelist</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">pathtoo</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="vedgelist"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.vedgelist">[docs]</a><span class="k">def</span> <span class="nf">vedgelist</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">pathtoo</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Return a list of tuples for edges of g and forks</span>
 <span class="sd">    a superugly organically grown function that badly needs refactoring</span>
@@ -514,7 +536,7 @@
     <span class="k">return</span> <span class="n">l</span></div>
 
 
-<div class="viewcode-block" id="twoedges_pick"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.twoedges_pick">[docs]</a><span class="k">def</span> <span class="nf">twoedges_pick</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+<div class="viewcode-block" id="twoedges_pick"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.twoedges_pick">[docs]</a><span class="k">def</span> <span class="nf">twoedges_pick</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param l:</span>
 <span class="sd">    :type l:</span>
@@ -525,7 +547,7 @@
     <span class="k">return</span> <span class="p">[</span><span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="threedges_pick"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.threedges_pick">[docs]</a><span class="k">def</span> <span class="nf">threedges_pick</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+<div class="viewcode-block" id="threedges_pick"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.threedges_pick">[docs]</a><span class="k">def</span> <span class="nf">threedges_pick</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param l:</span>
 <span class="sd">    :type l:</span>
@@ -536,7 +558,7 @@
     <span class="k">return</span> <span class="p">[</span><span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="longpaths_pick"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.longpaths_pick">[docs]</a><span class="k">def</span> <span class="nf">longpaths_pick</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+<div class="viewcode-block" id="longpaths_pick"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.longpaths_pick">[docs]</a><span class="k">def</span> <span class="nf">longpaths_pick</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param l:</span>
 <span class="sd">    :type l:</span>
@@ -547,7 +569,7 @@
     <span class="k">return</span> <span class="p">[</span><span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="makechains"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.makechains">[docs]</a><span class="k">def</span> <span class="nf">makechains</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+<div class="viewcode-block" id="makechains"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.makechains">[docs]</a><span class="k">def</span> <span class="nf">makechains</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Greedily construct 2 edge chains from edge list</span>
 <span class="sd">    </span>
@@ -575,7 +597,7 @@
     <span class="k">return</span> <span class="n">r</span><span class="p">,</span> <span class="n">singles</span></div>
 
 
-<div class="viewcode-block" id="makesink"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.makesink">[docs]</a><span class="k">def</span> <span class="nf">makesink</span><span class="p">(</span><span class="n">es</span><span class="p">):</span>
+<div class="viewcode-block" id="makesink"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.makesink">[docs]</a><span class="k">def</span> <span class="nf">makesink</span><span class="p">(</span><span class="n">es</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param es:</span>
 <span class="sd">    :type es:</span>
@@ -586,7 +608,7 @@
     <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">es</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],)</span> <span class="o">+</span> <span class="n">es</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="makesinks"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.makesinks">[docs]</a><span class="k">def</span> <span class="nf">makesinks</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+<div class="viewcode-block" id="makesinks"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.makesinks">[docs]</a><span class="k">def</span> <span class="nf">makesinks</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Greedily construct 2 edge sinks ( b-&gt;a&lt;-c ) from edge list</span>
 
@@ -617,7 +639,7 @@
 
 
 
-<div class="viewcode-block" id="selfloops"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.selfloops">[docs]</a><span class="k">def</span> <span class="nf">selfloops</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="selfloops"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.selfloops">[docs]</a><span class="k">def</span> <span class="nf">selfloops</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param l:</span>
 <span class="sd">    :type l:</span>
@@ -631,7 +653,7 @@
     <span class="k">return</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">y</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">gk</span><span class="o">.</span><span class="n">selfloop</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">g</span><span class="p">),</span> <span class="n">l</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="checkbedges"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.checkbedges">[docs]</a><span class="k">def</span> <span class="nf">checkbedges</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">bel</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="checkbedges"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.checkbedges">[docs]</a><span class="k">def</span> <span class="nf">checkbedges</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">bel</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param v:</span>
 <span class="sd">    :type v:</span>
@@ -656,7 +678,7 @@
     <span class="k">return</span> <span class="n">bel</span></div>
 
 
-<div class="viewcode-block" id="checkedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.checkedge">[docs]</a><span class="k">def</span> <span class="nf">checkedge</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="checkedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.checkedge">[docs]</a><span class="k">def</span> <span class="nf">checkedge</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param e:</span>
 <span class="sd">    :type e:</span>
@@ -679,7 +701,7 @@
         <span class="k">return</span> <span class="n">g2</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="single_nodes"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.single_nodes">[docs]</a><span class="k">def</span> <span class="nf">single_nodes</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="single_nodes"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.single_nodes">[docs]</a><span class="k">def</span> <span class="nf">single_nodes</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Returns a list of singleton nodes allowed for merging with ``v``</span>
 
@@ -696,7 +718,7 @@
     <span class="k">return</span> <span class="n">l</span></div>
 
 
-<div class="viewcode-block" id="checkvedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.checkvedge">[docs]</a><span class="k">def</span> <span class="nf">checkvedge</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="checkvedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.checkvedge">[docs]</a><span class="k">def</span> <span class="nf">checkvedge</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Nodes to check to merge the virtual nodes of ``v`` ( b&lt;-a-&gt;c )</span>
 <span class="sd">    </span>
@@ -720,7 +742,7 @@
     <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">l</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="checkAedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.checkAedge">[docs]</a><span class="k">def</span> <span class="nf">checkAedge</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="checkAedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.checkAedge">[docs]</a><span class="k">def</span> <span class="nf">checkAedge</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Nodes to check to merge the virtual nodes of A ( b-&gt;a&lt;-c )</span>
 <span class="sd">    </span>
@@ -745,7 +767,7 @@
     <span class="k">return</span> <span class="n">l</span></div>
 
 
-<div class="viewcode-block" id="checkcedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.checkcedge">[docs]</a><span class="k">def</span> <span class="nf">checkcedge</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="checkcedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.checkcedge">[docs]</a><span class="k">def</span> <span class="nf">checkcedge</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Nodes to check to merge the virtual nodes of ``c`` ( a-&gt;b-&gt;c )</span>
 <span class="sd">    </span>
@@ -762,7 +784,7 @@
     <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">l</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="checkApath"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.checkApath">[docs]</a><span class="k">def</span> <span class="nf">checkApath</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="checkApath"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.checkApath">[docs]</a><span class="k">def</span> <span class="nf">checkApath</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param p:</span>
 <span class="sd">    :type p:</span>
@@ -782,7 +804,7 @@
     <span class="k">return</span> <span class="n">l</span></div>
 
 
-<div class="viewcode-block" id="isedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.isedge">[docs]</a><span class="k">def</span> <span class="nf">isedge</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+<div class="viewcode-block" id="isedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.isedge">[docs]</a><span class="k">def</span> <span class="nf">isedge</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param v:</span>
 <span class="sd">    :type v:</span>
@@ -793,7 +815,7 @@
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>  <span class="c1"># a-&gt;b</span></div>
 
 
-<div class="viewcode-block" id="isvedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.isvedge">[docs]</a><span class="k">def</span> <span class="nf">isvedge</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+<div class="viewcode-block" id="isvedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.isvedge">[docs]</a><span class="k">def</span> <span class="nf">isvedge</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param v:</span>
 <span class="sd">    :type v:</span>
@@ -804,7 +826,7 @@
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>  <span class="c1"># b&lt;-a-&gt;c</span></div>
 
 
-<div class="viewcode-block" id="isCedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.isCedge">[docs]</a><span class="k">def</span> <span class="nf">isCedge</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+<div class="viewcode-block" id="isCedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.isCedge">[docs]</a><span class="k">def</span> <span class="nf">isCedge</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param v:</span>
 <span class="sd">    :type v:</span>
@@ -815,7 +837,7 @@
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>  <span class="c1"># a-&gt;b-&gt;c</span></div>
 
 
-<div class="viewcode-block" id="isAedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.isAedge">[docs]</a><span class="k">def</span> <span class="nf">isAedge</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+<div class="viewcode-block" id="isAedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.isAedge">[docs]</a><span class="k">def</span> <span class="nf">isAedge</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param v:</span>
 <span class="sd">    :type v:</span>
@@ -826,7 +848,7 @@
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>  <span class="c1"># a-&gt;c&lt;-b</span></div>
 
 
-<div class="viewcode-block" id="isApath"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.isApath">[docs]</a><span class="k">def</span> <span class="nf">isApath</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+<div class="viewcode-block" id="isApath"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.isApath">[docs]</a><span class="k">def</span> <span class="nf">isApath</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param v:</span>
 <span class="sd">    :type v:</span>
@@ -837,7 +859,7 @@
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span>  <span class="c1"># a-&gt;b-&gt;...-&gt;z</span></div>
 
 
-<div class="viewcode-block" id="checker"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.checker">[docs]</a><span class="k">def</span> <span class="nf">checker</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">ee</span><span class="p">):</span>
+<div class="viewcode-block" id="checker"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.checker">[docs]</a><span class="k">def</span> <span class="nf">checker</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">ee</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param n:</span>
 <span class="sd">    :type n:</span>
@@ -860,7 +882,7 @@
     <span class="k">return</span> <span class="n">r</span></div>
 
 
-<div class="viewcode-block" id="checkerDS"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.checkerDS">[docs]</a><span class="k">def</span> <span class="nf">checkerDS</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">ee</span><span class="p">):</span>
+<div class="viewcode-block" id="checkerDS"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.checkerDS">[docs]</a><span class="k">def</span> <span class="nf">checkerDS</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">ee</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param n:</span>
 <span class="sd">    :type n:</span>
@@ -884,7 +906,7 @@
     <span class="k">return</span> <span class="n">r</span></div>
 
 
-<div class="viewcode-block" id="checkable"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.checkable">[docs]</a><span class="k">def</span> <span class="nf">checkable</span><span class="p">(</span><span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="checkable"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.checkable">[docs]</a><span class="k">def</span> <span class="nf">checkable</span><span class="p">(</span><span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g2:</span>
 <span class="sd">    :type g2:</span>
@@ -923,7 +945,7 @@
     <span class="k">return</span> <span class="n">d</span></div>
 
 
-<div class="viewcode-block" id="inorder_check2"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.inorder_check2">[docs]</a><span class="k">def</span> <span class="nf">inorder_check2</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">,</span> <span class="n">j1</span><span class="p">,</span> <span class="n">j2</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="p">[],</span> <span class="n">c</span><span class="o">=</span><span class="p">[]):</span>
+<div class="viewcode-block" id="inorder_check2"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.inorder_check2">[docs]</a><span class="k">def</span> <span class="nf">inorder_check2</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">,</span> <span class="n">j1</span><span class="p">,</span> <span class="n">j2</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="p">[],</span> <span class="n">c</span><span class="o">=</span><span class="p">[]):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param e1:</span>
 <span class="sd">    :type e1:</span>
@@ -984,7 +1006,7 @@
     <span class="k">return</span> <span class="n">d</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span></div>
 
 
-<div class="viewcode-block" id="check3"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.check3">[docs]</a><span class="k">def</span> <span class="nf">check3</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">,</span> <span class="n">e3</span><span class="p">,</span> <span class="n">j1</span><span class="p">,</span> <span class="n">j2</span><span class="p">,</span> <span class="n">j3</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="p">[],</span> <span class="n">c</span><span class="o">=</span><span class="p">[]):</span>
+<div class="viewcode-block" id="check3"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.check3">[docs]</a><span class="k">def</span> <span class="nf">check3</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">,</span> <span class="n">e3</span><span class="p">,</span> <span class="n">j1</span><span class="p">,</span> <span class="n">j2</span><span class="p">,</span> <span class="n">j3</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="p">[],</span> <span class="n">c</span><span class="o">=</span><span class="p">[]):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param e1:</span>
 <span class="sd">    :type e1:</span>
@@ -1058,7 +1080,7 @@
     <span class="k">return</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span></div>
 
 
-<div class="viewcode-block" id="del_empty"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.del_empty">[docs]</a><span class="k">def</span> <span class="nf">del_empty</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+<div class="viewcode-block" id="del_empty"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.del_empty">[docs]</a><span class="k">def</span> <span class="nf">del_empty</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param d:</span>
 <span class="sd">    :type d:</span>
@@ -1073,7 +1095,7 @@
     <span class="k">return</span> <span class="n">d</span></div>
 
 
-<div class="viewcode-block" id="inorder_checks"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.inorder_checks">[docs]</a><span class="k">def</span> <span class="nf">inorder_checks</span><span class="p">(</span><span class="n">g2</span><span class="p">,</span> <span class="n">gg</span><span class="p">):</span>
+<div class="viewcode-block" id="inorder_checks"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.inorder_checks">[docs]</a><span class="k">def</span> <span class="nf">inorder_checks</span><span class="p">(</span><span class="n">g2</span><span class="p">,</span> <span class="n">gg</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g2:</span>
 <span class="sd">    :type g2:</span>
@@ -1099,7 +1121,7 @@
     <span class="k">return</span> <span class="n">ee</span><span class="p">,</span> <span class="n">d</span></div>
 
 
-<div class="viewcode-block" id="cloneempty"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.cloneempty">[docs]</a><span class="k">def</span> <span class="nf">cloneempty</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="cloneempty"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.cloneempty">[docs]</a><span class="k">def</span> <span class="nf">cloneempty</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1110,7 +1132,7 @@
     <span class="k">return</span> <span class="p">{</span><span class="n">n</span><span class="p">:</span> <span class="p">{}</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">g</span><span class="p">}</span>  <span class="c1"># return a graph with no edges</span></div>
 
 
-<div class="viewcode-block" id="ok2addanedge1"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.ok2addanedge1">[docs]</a><span class="k">def</span> <span class="nf">ok2addanedge1</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="ok2addanedge1"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.ok2addanedge1">[docs]</a><span class="k">def</span> <span class="nf">ok2addanedge1</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param s : start</span>
 <span class="sd">    :type s:</span>
@@ -1146,7 +1168,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="ok2addanedge2"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.ok2addanedge2">[docs]</a><span class="k">def</span> <span class="nf">ok2addanedge2</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="ok2addanedge2"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.ok2addanedge2">[docs]</a><span class="k">def</span> <span class="nf">ok2addanedge2</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param s : start</span>
 <span class="sd">    :type s:</span>
@@ -1172,7 +1194,7 @@
     <span class="k">return</span> <span class="n">value</span></div>
 
 
-<div class="viewcode-block" id="ok2addanedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.ok2addanedge">[docs]</a><span class="k">def</span> <span class="nf">ok2addanedge</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="ok2addanedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.ok2addanedge">[docs]</a><span class="k">def</span> <span class="nf">ok2addanedge</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param s : start</span>
 <span class="sd">    :type s:</span>
@@ -1196,7 +1218,7 @@
     <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="nb">min</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="n">rate</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])](</span><span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">rate</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="ok2add2edges"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.ok2add2edges">[docs]</a><span class="k">def</span> <span class="nf">ok2add2edges</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="ok2add2edges"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.ok2add2edges">[docs]</a><span class="k">def</span> <span class="nf">ok2add2edges</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param e:</span>
 <span class="sd">    :type e:</span>
@@ -1216,7 +1238,7 @@
     <span class="k">return</span> <span class="n">edge_increment_ok</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p</span><span class="p">,</span> <span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="maskanedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.maskanedge">[docs]</a><span class="k">def</span> <span class="nf">maskanedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+<div class="viewcode-block" id="maskanedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.maskanedge">[docs]</a><span class="k">def</span> <span class="nf">maskanedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1230,7 +1252,7 @@
     <span class="k">return</span> <span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]]]</span></div>
 
 
-<div class="viewcode-block" id="mask2edges"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.mask2edges">[docs]</a><span class="k">def</span> <span class="nf">mask2edges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<div class="viewcode-block" id="mask2edges"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.mask2edges">[docs]</a><span class="k">def</span> <span class="nf">mask2edges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1247,7 +1269,7 @@
     <span class="k">return</span> <span class="p">[</span><span class="n">p</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">p</span><span class="p">]]</span></div>
 
 
-<div class="viewcode-block" id="maskavedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.maskavedge">[docs]</a><span class="k">def</span> <span class="nf">maskavedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<div class="viewcode-block" id="maskavedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.maskavedge">[docs]</a><span class="k">def</span> <span class="nf">maskavedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1265,7 +1287,7 @@
             <span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">e</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]]]</span></div>
 
 
-<div class="viewcode-block" id="maskaAedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.maskaAedge">[docs]</a><span class="k">def</span> <span class="nf">maskaAedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<div class="viewcode-block" id="maskaAedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.maskaAedge">[docs]</a><span class="k">def</span> <span class="nf">maskaAedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1283,7 +1305,7 @@
             <span class="n">e</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">e</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]]]</span></div>
 
 
-<div class="viewcode-block" id="maskaCedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.maskaCedge">[docs]</a><span class="k">def</span> <span class="nf">maskaCedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<div class="viewcode-block" id="maskaCedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.maskaCedge">[docs]</a><span class="k">def</span> <span class="nf">maskaCedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1301,7 +1323,7 @@
             <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="n">e</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]]]</span></div>
 
 
-<div class="viewcode-block" id="maskapath"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.maskapath">[docs]</a><span class="k">def</span> <span class="nf">maskapath</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<div class="viewcode-block" id="maskapath"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.maskapath">[docs]</a><span class="k">def</span> <span class="nf">maskapath</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1322,7 +1344,7 @@
     <span class="k">return</span> <span class="n">mask</span></div>
 
 
-<div class="viewcode-block" id="maskaVpath"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.maskaVpath">[docs]</a><span class="k">def</span> <span class="nf">maskaVpath</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<div class="viewcode-block" id="maskaVpath"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.maskaVpath">[docs]</a><span class="k">def</span> <span class="nf">maskaVpath</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1343,7 +1365,7 @@
     <span class="k">return</span> <span class="n">mask</span></div>
 
 
-<div class="viewcode-block" id="addanedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.addanedge">[docs]</a><span class="k">def</span> <span class="nf">addanedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+<div class="viewcode-block" id="addanedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.addanedge">[docs]</a><span class="k">def</span> <span class="nf">addanedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    add edge e[0] -&gt; e[1] to g</span>
 
@@ -1361,7 +1383,7 @@
     <span class="k">return</span> <span class="n">mask</span></div>
 
 
-<div class="viewcode-block" id="delanedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.delanedge">[docs]</a><span class="k">def</span> <span class="nf">delanedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
+<div class="viewcode-block" id="delanedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.delanedge">[docs]</a><span class="k">def</span> <span class="nf">delanedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    delete edge e[0] -&gt; e[1] from g if it was not there before</span>
 
@@ -1381,7 +1403,7 @@
         <span class="n">g</span><span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="kc">None</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="add2edges"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.add2edges">[docs]</a><span class="k">def</span> <span class="nf">add2edges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<div class="viewcode-block" id="add2edges"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.add2edges">[docs]</a><span class="k">def</span> <span class="nf">add2edges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    break edge e[0] -&gt; e[1] into two pieces</span>
 <span class="sd">    e[0] -&gt; p and p -&gt; e[1]</span>
@@ -1404,7 +1426,7 @@
     <span class="k">return</span> <span class="n">mask</span></div>
 
 
-<div class="viewcode-block" id="del2edges"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.del2edges">[docs]</a><span class="k">def</span> <span class="nf">del2edges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
+<div class="viewcode-block" id="del2edges"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.del2edges">[docs]</a><span class="k">def</span> <span class="nf">del2edges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    restore the graph as it was before adding e[0]-&gt;p and p-&gt;e[1]</span>
 
@@ -1429,7 +1451,7 @@
         <span class="n">g</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="kc">None</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="ok2addavedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.ok2addavedge">[docs]</a><span class="k">def</span> <span class="nf">ok2addavedge</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="ok2addavedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.ok2addavedge">[docs]</a><span class="k">def</span> <span class="nf">ok2addavedge</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param e:</span>
 <span class="sd">    :type e:</span>
@@ -1479,7 +1501,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="addavedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.addavedge">[docs]</a><span class="k">def</span> <span class="nf">addavedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="viewcode-block" id="addavedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.addavedge">[docs]</a><span class="k">def</span> <span class="nf">addavedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1498,7 +1520,7 @@
     <span class="k">return</span> <span class="n">mask</span></div>
 
 
-<div class="viewcode-block" id="delavedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.delavedge">[docs]</a><span class="k">def</span> <span class="nf">delavedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
+<div class="viewcode-block" id="delavedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.delavedge">[docs]</a><span class="k">def</span> <span class="nf">delavedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1522,7 +1544,7 @@
         <span class="n">g</span><span class="p">[</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="kc">None</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="ok2addaAedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.ok2addaAedge">[docs]</a><span class="k">def</span> <span class="nf">ok2addaAedge</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="ok2addaAedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.ok2addaAedge">[docs]</a><span class="k">def</span> <span class="nf">ok2addaAedge</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param e:</span>
 <span class="sd">    :type e:</span>
@@ -1552,7 +1574,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="addaAedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.addaAedge">[docs]</a><span class="k">def</span> <span class="nf">addaAedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="viewcode-block" id="addaAedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.addaAedge">[docs]</a><span class="k">def</span> <span class="nf">addaAedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1571,7 +1593,7 @@
     <span class="k">return</span> <span class="n">mask</span></div>
 
 
-<div class="viewcode-block" id="delaAedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.delaAedge">[docs]</a><span class="k">def</span> <span class="nf">delaAedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
+<div class="viewcode-block" id="delaAedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.delaAedge">[docs]</a><span class="k">def</span> <span class="nf">delaAedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1595,7 +1617,7 @@
         <span class="n">g</span><span class="p">[</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="kc">None</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="cleanedges"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.cleanedges">[docs]</a><span class="k">def</span> <span class="nf">cleanedges</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
+<div class="viewcode-block" id="cleanedges"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.cleanedges">[docs]</a><span class="k">def</span> <span class="nf">cleanedges</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param e:</span>
 <span class="sd">    :type e:</span>
@@ -1618,7 +1640,7 @@
         <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span></div>
 
 
-<div class="viewcode-block" id="cleanVedges"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.cleanVedges">[docs]</a><span class="k">def</span> <span class="nf">cleanVedges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
+<div class="viewcode-block" id="cleanVedges"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.cleanVedges">[docs]</a><span class="k">def</span> <span class="nf">cleanVedges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1645,7 +1667,7 @@
             <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span></div>
 
 
-<div class="viewcode-block" id="ok2addapath"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.ok2addapath">[docs]</a><span class="k">def</span> <span class="nf">ok2addapath</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="ok2addapath"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.ok2addapath">[docs]</a><span class="k">def</span> <span class="nf">ok2addapath</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param e:</span>
 <span class="sd">    :type e:</span>
@@ -1672,7 +1694,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="ok2addaVpath"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.ok2addaVpath">[docs]</a><span class="k">def</span> <span class="nf">ok2addaVpath</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<div class="viewcode-block" id="ok2addaVpath"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.ok2addaVpath">[docs]</a><span class="k">def</span> <span class="nf">ok2addaVpath</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param e:</span>
 <span class="sd">    :type e:</span>
@@ -1700,7 +1722,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="addapath"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.addapath">[docs]</a><span class="k">def</span> <span class="nf">addapath</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="viewcode-block" id="addapath"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.addapath">[docs]</a><span class="k">def</span> <span class="nf">addapath</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1721,7 +1743,7 @@
     <span class="k">return</span> <span class="n">mask</span></div>
 
 
-<div class="viewcode-block" id="addaVpath"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.addaVpath">[docs]</a><span class="k">def</span> <span class="nf">addaVpath</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="viewcode-block" id="addaVpath"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.addaVpath">[docs]</a><span class="k">def</span> <span class="nf">addaVpath</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1742,7 +1764,7 @@
     <span class="k">return</span> <span class="n">mask</span></div>
 
 
-<div class="viewcode-block" id="delaVpath"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.delaVpath">[docs]</a><span class="k">def</span> <span class="nf">delaVpath</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
+<div class="viewcode-block" id="delaVpath"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.delaVpath">[docs]</a><span class="k">def</span> <span class="nf">delaVpath</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1762,7 +1784,7 @@
     <span class="n">cleanVedges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="delapath"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.delapath">[docs]</a><span class="k">def</span> <span class="nf">delapath</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
+<div class="viewcode-block" id="delapath"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.delapath">[docs]</a><span class="k">def</span> <span class="nf">delapath</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1783,7 +1805,7 @@
             <span class="n">g</span><span class="p">[</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">],</span> <span class="kc">None</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="prunepaths_1D"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.prunepaths_1D">[docs]</a><span class="k">def</span> <span class="nf">prunepaths_1D</span><span class="p">(</span><span class="n">g2</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">conn</span><span class="p">):</span>
+<div class="viewcode-block" id="prunepaths_1D"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.prunepaths_1D">[docs]</a><span class="k">def</span> <span class="nf">prunepaths_1D</span><span class="p">(</span><span class="n">g2</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">conn</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g2:</span>
 <span class="sd">    :type g2:</span>
@@ -1807,7 +1829,7 @@
     <span class="k">return</span> <span class="n">c</span></div>
 
 
-<div class="viewcode-block" id="ok2addacedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.ok2addacedge">[docs]</a><span class="k">def</span> <span class="nf">ok2addacedge</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="ok2addacedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.ok2addacedge">[docs]</a><span class="k">def</span> <span class="nf">ok2addacedge</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param e:</span>
 <span class="sd">    :type e:</span>
@@ -1840,7 +1862,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="addacedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.addacedge">[docs]</a><span class="k">def</span> <span class="nf">addacedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>  <span class="c1"># chain</span>
+<div class="viewcode-block" id="addacedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.addacedge">[docs]</a><span class="k">def</span> <span class="nf">addacedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>  <span class="c1"># chain</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1859,7 +1881,7 @@
     <span class="k">return</span> <span class="n">mask</span></div>
 
 
-<div class="viewcode-block" id="delacedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.delacedge">[docs]</a><span class="k">def</span> <span class="nf">delacedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
+<div class="viewcode-block" id="delacedge"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.delacedge">[docs]</a><span class="k">def</span> <span class="nf">delacedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1883,7 +1905,7 @@
         <span class="n">g</span><span class="p">[</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="kc">None</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="esig"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.esig">[docs]</a><span class="k">def</span> <span class="nf">esig</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="esig"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.esig">[docs]</a><span class="k">def</span> <span class="nf">esig</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    turns edge list into a hash string</span>
 <span class="sd">    </span>
@@ -1903,7 +1925,7 @@
     <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="o">+</span> <span class="n">n</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="gsig"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.gsig">[docs]</a><span class="k">def</span> <span class="nf">gsig</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="gsig"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.gsig">[docs]</a><span class="k">def</span> <span class="nf">gsig</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    turns input graph ``g`` into a hash string using edges</span>
 <span class="sd">    </span>
@@ -1916,7 +1938,7 @@
     <span class="k">return</span> <span class="n">g2num</span><span class="p">(</span><span class="n">g</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="signature"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.signature">[docs]</a><span class="k">def</span> <span class="nf">signature</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">edges</span><span class="p">):</span>
+<div class="viewcode-block" id="signature"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.signature">[docs]</a><span class="k">def</span> <span class="nf">signature</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">edges</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -1930,7 +1952,7 @@
     <span class="k">return</span> <span class="p">(</span><span class="n">gsig</span><span class="p">(</span><span class="n">g</span><span class="p">),</span> <span class="n">esig</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">)))</span></div>
 
 
-<div class="viewcode-block" id="supergraphs_in_eq"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.supergraphs_in_eq">[docs]</a><span class="k">def</span> <span class="nf">supergraphs_in_eq</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="supergraphs_in_eq"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.supergraphs_in_eq">[docs]</a><span class="k">def</span> <span class="nf">supergraphs_in_eq</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Find  all supergraphs of ``g``  that are also in  the same equivalence</span>
 <span class="sd">    class with respect to g2 and the rate.</span>
@@ -1975,7 +1997,7 @@
     <span class="k">return</span> <span class="n">s</span></div>
 
 
-<div class="viewcode-block" id="edge_function_idx"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.edge_function_idx">[docs]</a><span class="k">def</span> <span class="nf">edge_function_idx</span><span class="p">(</span><span class="n">edge</span><span class="p">):</span>
+<div class="viewcode-block" id="edge_function_idx"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.edge_function_idx">[docs]</a><span class="k">def</span> <span class="nf">edge_function_idx</span><span class="p">(</span><span class="n">edge</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param edge:</span>
 <span class="sd">    :type edge:</span>
@@ -1986,7 +2008,7 @@
     <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">edge</span><span class="p">))</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">edge</span><span class="p">))</span> <span class="o">-</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span></div>
 
 
-<div class="viewcode-block" id="memo_no_return"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.memo_no_return">[docs]</a><span class="k">def</span> <span class="nf">memo_no_return</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<div class="viewcode-block" id="memo_no_return"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.memo_no_return">[docs]</a><span class="k">def</span> <span class="nf">memo_no_return</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param func:</span>
 <span class="sd">    :type func:</span>
@@ -2005,7 +2027,7 @@
     <span class="k">return</span> <span class="n">wrap</span></div>
 
 
-<div class="viewcode-block" id="v2g22g1"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.v2g22g1">[docs]</a><span class="k">def</span> <span class="nf">v2g22g1</span><span class="p">(</span><span class="n">g2</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="v2g22g1"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.v2g22g1">[docs]</a><span class="k">def</span> <span class="nf">v2g22g1</span><span class="p">(</span><span class="n">g2</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    computes all g1 that are in the equivalence class for g2</span>
 <span class="sd">    </span>
@@ -2111,7 +2133,7 @@
     <span class="k">return</span> <span class="n">s</span></div>
 
 
-<div class="viewcode-block" id="conformanceDS"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.conformanceDS">[docs]</a><span class="k">def</span> <span class="nf">conformanceDS</span><span class="p">(</span><span class="n">g2</span><span class="p">,</span> <span class="n">gg</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="p">[],</span> <span class="n">c</span><span class="o">=</span><span class="p">[]):</span>
+<div class="viewcode-block" id="conformanceDS"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.conformanceDS">[docs]</a><span class="k">def</span> <span class="nf">conformanceDS</span><span class="p">(</span><span class="n">g2</span><span class="p">,</span> <span class="n">gg</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="p">[],</span> <span class="n">c</span><span class="o">=</span><span class="p">[]):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g2:</span>
 <span class="sd">    :type g2:</span>
@@ -2166,7 +2188,7 @@
     <span class="k">return</span> <span class="n">prune_sort_CDS</span><span class="p">(</span><span class="n">CDS</span><span class="p">,</span> <span class="n">pool</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="prune_sort_CDS"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.prune_sort_CDS">[docs]</a><span class="k">def</span> <span class="nf">prune_sort_CDS</span><span class="p">(</span><span class="n">cds</span><span class="p">,</span> <span class="n">pool</span><span class="p">):</span>
+<div class="viewcode-block" id="prune_sort_CDS"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.prune_sort_CDS">[docs]</a><span class="k">def</span> <span class="nf">prune_sort_CDS</span><span class="p">(</span><span class="n">cds</span><span class="p">,</span> <span class="n">pool</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param cds:</span>
 <span class="sd">    :type cds:</span>
@@ -2197,7 +2219,7 @@
     <span class="k">return</span> <span class="n">ds</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">idx</span></div>
 
 
-<div class="viewcode-block" id="invertCDSelement"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.invertCDSelement">[docs]</a><span class="k">def</span> <span class="nf">invertCDSelement</span><span class="p">(</span><span class="n">d_i</span><span class="p">):</span>
+<div class="viewcode-block" id="invertCDSelement"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.invertCDSelement">[docs]</a><span class="k">def</span> <span class="nf">invertCDSelement</span><span class="p">(</span><span class="n">d_i</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param d_i:</span>
 <span class="sd">    :type d_i:</span>
@@ -2215,7 +2237,7 @@
     <span class="k">return</span> <span class="n">d</span></div>
 
 
-<div class="viewcode-block" id="length_d_paths"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.length_d_paths">[docs]</a><span class="k">def</span> <span class="nf">length_d_paths</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+<div class="viewcode-block" id="length_d_paths"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.length_d_paths">[docs]</a><span class="k">def</span> <span class="nf">length_d_paths</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Iterate over nodes in G reachable from s in exactly d steps</span>
 <span class="sd">    </span>
@@ -2246,7 +2268,7 @@
         <span class="k">yield</span> <span class="n">u</span></div>
 
 
-<div class="viewcode-block" id="edge_increment_ok"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.edge_increment_ok">[docs]</a><span class="k">def</span> <span class="nf">edge_increment_ok</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="edge_increment_ok"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.edge_increment_ok">[docs]</a><span class="k">def</span> <span class="nf">edge_increment_ok</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param s: start</span>
 <span class="sd">    :type s:</span>
@@ -2298,7 +2320,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="length_d_loopy_paths"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.traversal.length_d_loopy_paths">[docs]</a><span class="k">def</span> <span class="nf">length_d_loopy_paths</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<div class="viewcode-block" id="length_d_loopy_paths"><a class="viewcode-back" href="../../../traversal.html#gunfolds.tools.traversal.length_d_loopy_paths">[docs]</a><span class="k">def</span> <span class="nf">length_d_loopy_paths</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Iterate over nodes in ``G`` reachable from ``s`` in exactly d steps</span>
 <span class="sd">    </span>
@@ -2349,7 +2371,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Trends Lab
+                Copyright &#169; neuroneural.net
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
-        <title>gunfolds.tools.clingo - Gunfolds documentation</title>
+        <title>gunfolds.tools.clingo - gunfolds documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">Gunfolds  documentation</div></a>
+      <a href="../../../index.html"><div class="brand">gunfolds  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">Gunfolds  documentation</span>
+  <span class="sidebar-brand-text">gunfolds  documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -160,7 +160,29 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">gunfolds</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../tools.html">tools package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../bfutils.html">bfutils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../calc_procs.html">calc_procs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo.html">clingo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_msl.html">clingo_msl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_rasl.html">clingo_rasl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../comparison.html">comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../conversions.html">conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dbn2latex.html">dbn2latex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ecj.html">ecj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../grangercausality.html">grangercausality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../graphkit.html">graphkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../gtool.html">gtool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../linear_model.html">linear_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../myTimeout.html">myTimeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../neighborhoods.html">neighborhoods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pc.html">pc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../simpleloops.html">simpleloops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../traversal.html">traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../unknownrate.html">unknownrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../zickle.html">zickle</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -210,7 +232,7 @@
 <span class="n">CLINGO_LIMIT</span> <span class="o">=</span> <span class="mi">64</span>
 <span class="n">PNUM</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">CLINGO_LIMIT</span><span class="p">,</span> <span class="n">get_process_count</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 
-<div class="viewcode-block" id="clingo_high_version"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.clingo.clingo_high_version">[docs]</a><span class="k">def</span> <span class="nf">clingo_high_version</span><span class="p">(</span><span class="n">cpath</span><span class="o">=</span><span class="n">CLINGOPATH</span><span class="p">):</span>
+<div class="viewcode-block" id="clingo_high_version"><a class="viewcode-back" href="../../../clingo.html#gunfolds.tools.clingo.clingo_high_version">[docs]</a><span class="k">def</span> <span class="nf">clingo_high_version</span><span class="p">(</span><span class="n">cpath</span><span class="o">=</span><span class="n">CLINGOPATH</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    (Ask it is not used)</span>
 
@@ -224,7 +246,7 @@
     <span class="c1">#v = subprocess.check_output([&#39;clingo&#39;, &#39;--version&#39;])[15:20]</span>
     <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="mi">5</span></div>
 
-<div class="viewcode-block" id="run_clingo"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.clingo.run_clingo">[docs]</a><span class="k">def</span> <span class="nf">run_clingo</span><span class="p">(</span><span class="n">command</span><span class="p">,</span>
+<div class="viewcode-block" id="run_clingo"><a class="viewcode-back" href="../../../clingo.html#gunfolds.tools.clingo.run_clingo">[docs]</a><span class="k">def</span> <span class="nf">run_clingo</span><span class="p">(</span><span class="n">command</span><span class="p">,</span>
                <span class="n">exact</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                <span class="n">timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
                <span class="n">capsize</span><span class="o">=</span><span class="n">CAPSIZE</span><span class="p">,</span>
@@ -283,7 +305,7 @@
             <span class="n">result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
     <span class="k">return</span> <span class="n">result</span></div>
 
-<div class="viewcode-block" id="clingo"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.clingo.clingo">[docs]</a><span class="k">def</span> <span class="nf">clingo</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">exact</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<div class="viewcode-block" id="clingo"><a class="viewcode-back" href="../../../clingo.html#gunfolds.tools.clingo.clingo">[docs]</a><span class="k">def</span> <span class="nf">clingo</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">exact</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
            <span class="n">convert</span><span class="o">=</span><span class="n">msl_jclingo2g</span><span class="p">,</span>
            <span class="n">timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
            <span class="n">capsize</span><span class="o">=</span><span class="n">CAPSIZE</span><span class="p">,</span>
@@ -348,7 +370,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Trends Lab
+                Copyright &#169; neuroneural.net
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

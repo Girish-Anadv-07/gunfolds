@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
-        <title>gunfolds.tools.comparison - Gunfolds documentation</title>
+        <title>gunfolds.tools.comparison - gunfolds documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">Gunfolds  documentation</div></a>
+      <a href="../../../index.html"><div class="brand">gunfolds  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">Gunfolds  documentation</span>
+  <span class="sidebar-brand-text">gunfolds  documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -160,7 +160,29 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">gunfolds</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../tools.html">tools package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../bfutils.html">bfutils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../calc_procs.html">calc_procs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo.html">clingo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_msl.html">clingo_msl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_rasl.html">clingo_rasl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../comparison.html">comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../conversions.html">conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dbn2latex.html">dbn2latex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ecj.html">ecj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../grangercausality.html">grangercausality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../graphkit.html">graphkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../gtool.html">gtool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../linear_model.html">linear_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../myTimeout.html">myTimeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../neighborhoods.html">neighborhoods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pc.html">pc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../simpleloops.html">simpleloops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../traversal.html">traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../unknownrate.html">unknownrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../zickle.html">zickle</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -209,7 +231,7 @@
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">()</span>
 
 
-<div class="viewcode-block" id="has_self_loops"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.comparison.has_self_loops">[docs]</a><span class="k">def</span> <span class="nf">has_self_loops</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="has_self_loops"><a class="viewcode-back" href="../../../comparison.html#gunfolds.tools.comparison.has_self_loops">[docs]</a><span class="k">def</span> <span class="nf">has_self_loops</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Checks if a graph has self loop and vise versa</span>
 
@@ -225,7 +247,7 @@
     <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<div class="viewcode-block" id="randSCC"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.comparison.randSCC">[docs]</a><span class="k">def</span> <span class="nf">randSCC</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="randSCC"><a class="viewcode-back" href="../../../comparison.html#gunfolds.tools.comparison.randSCC">[docs]</a><span class="k">def</span> <span class="nf">randSCC</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a random ``gunfolds`` graph with gcd&gt;1</span>
 
@@ -241,7 +263,7 @@
     <span class="k">return</span> <span class="n">G</span></div>
 
 
-<div class="viewcode-block" id="SM_fixed"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.comparison.SM_fixed">[docs]</a><span class="k">def</span> <span class="nf">SM_fixed</span><span class="p">(</span><span class="n">Gstar</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+<div class="viewcode-block" id="SM_fixed"><a class="viewcode-back" href="../../../comparison.html#gunfolds.tools.comparison.SM_fixed">[docs]</a><span class="k">def</span> <span class="nf">SM_fixed</span><span class="p">(</span><span class="n">Gstar</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    (Ask)</span>
 
@@ -264,7 +286,7 @@
     <span class="k">return</span> <span class="n">compat</span></div>
 
 
-<div class="viewcode-block" id="SM_converging"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.comparison.SM_converging">[docs]</a><span class="k">def</span> <span class="nf">SM_converging</span><span class="p">(</span><span class="n">Gstar</span><span class="p">,</span> <span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="SM_converging"><a class="viewcode-back" href="../../../comparison.html#gunfolds.tools.comparison.SM_converging">[docs]</a><span class="k">def</span> <span class="nf">SM_converging</span><span class="p">(</span><span class="n">Gstar</span><span class="p">,</span> <span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Gstar is the undersampled reference graph, while G is the starting</span>
 <span class="sd">    graph. The  code searches  over all undersampled  version of  G to</span>
 <span class="sd">    find all matches with Gstar</span>
@@ -294,7 +316,7 @@
     <span class="k">return</span> <span class="n">compat</span></div>
 
 
-<div class="viewcode-block" id="search_match"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.comparison.search_match">[docs]</a><span class="k">def</span> <span class="nf">search_match</span><span class="p">(</span><span class="n">Gstar</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+<div class="viewcode-block" id="search_match"><a class="viewcode-back" href="../../../comparison.html#gunfolds.tools.comparison.search_match">[docs]</a><span class="k">def</span> <span class="nf">search_match</span><span class="p">(</span><span class="n">Gstar</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    :param G_star:</span>
 <span class="sd">    :type G_star:</span>
@@ -313,7 +335,7 @@
     <span class="k">return</span> <span class="n">SM_converging</span><span class="p">(</span><span class="n">Gstar</span><span class="p">,</span> <span class="n">G</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="has_sink"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.comparison.has_sink">[docs]</a><span class="k">def</span> <span class="nf">has_sink</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="has_sink"><a class="viewcode-back" href="../../../comparison.html#gunfolds.tools.comparison.has_sink">[docs]</a><span class="k">def</span> <span class="nf">has_sink</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G: dictionary (``gunfolds`` graphs)</span>
@@ -324,7 +346,7 @@
     <span class="k">return</span> <span class="ow">not</span> <span class="n">reduce</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="n">and_</span><span class="p">,</span> <span class="p">[</span><span class="nb">bool</span><span class="p">(</span><span class="n">G</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">G</span><span class="p">],</span> <span class="kc">True</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="has_root"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.comparison.has_root">[docs]</a><span class="k">def</span> <span class="nf">has_root</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="has_root"><a class="viewcode-back" href="../../../comparison.html#gunfolds.tools.comparison.has_root">[docs]</a><span class="k">def</span> <span class="nf">has_root</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G: dictionary (``gunfolds`` graphs)</span>
@@ -335,7 +357,7 @@
     <span class="k">return</span> <span class="n">has_sink</span><span class="p">(</span><span class="n">ecj</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="n">G</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="gcd4scc"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.comparison.gcd4scc">[docs]</a><span class="k">def</span> <span class="nf">gcd4scc</span><span class="p">(</span><span class="n">SCC</span><span class="p">):</span>
+<div class="viewcode-block" id="gcd4scc"><a class="viewcode-back" href="../../../comparison.html#gunfolds.tools.comparison.gcd4scc">[docs]</a><span class="k">def</span> <span class="nf">gcd4scc</span><span class="p">(</span><span class="n">SCC</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Returns the greatest common divisor of simple loop lengths and in one SCC</span>
 
@@ -349,7 +371,7 @@
     <span class="k">return</span> <span class="n">ecj</span><span class="o">.</span><span class="n">listgcd</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nx</span><span class="o">.</span><span class="n">simple_cycles</span><span class="p">(</span><span class="n">g</span><span class="p">)])</span></div>
 
 
-<div class="viewcode-block" id="compatible_at_u"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.comparison.compatible_at_u">[docs]</a><span class="k">def</span> <span class="nf">compatible_at_u</span><span class="p">(</span><span class="n">uGstar</span><span class="p">):</span>
+<div class="viewcode-block" id="compatible_at_u"><a class="viewcode-back" href="../../../comparison.html#gunfolds.tools.comparison.compatible_at_u">[docs]</a><span class="k">def</span> <span class="nf">compatible_at_u</span><span class="p">(</span><span class="n">uGstar</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    :param uGstar:</span>
 <span class="sd">    :type uGstar:</span>
@@ -383,7 +405,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Trends Lab
+                Copyright &#169; neuroneural.net
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

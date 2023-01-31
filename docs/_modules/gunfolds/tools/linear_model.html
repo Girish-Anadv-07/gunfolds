@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
-        <title>gunfolds.tools.linear_model - Gunfolds documentation</title>
+        <title>gunfolds.tools.linear_model - gunfolds documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">Gunfolds  documentation</div></a>
+      <a href="../../../index.html"><div class="brand">gunfolds  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">Gunfolds  documentation</span>
+  <span class="sidebar-brand-text">gunfolds  documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -160,7 +160,29 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">gunfolds</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../tools.html">tools package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../bfutils.html">bfutils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../calc_procs.html">calc_procs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo.html">clingo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_msl.html">clingo_msl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_rasl.html">clingo_rasl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../comparison.html">comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../conversions.html">conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dbn2latex.html">dbn2latex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ecj.html">ecj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../grangercausality.html">grangercausality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../graphkit.html">graphkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../gtool.html">gtool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../linear_model.html">linear_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../myTimeout.html">myTimeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../neighborhoods.html">neighborhoods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pc.html">pc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../simpleloops.html">simpleloops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../traversal.html">traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../unknownrate.html">unknownrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../zickle.html">zickle</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -209,7 +231,7 @@
 <span class="kn">from</span> <span class="nn">sympy.matrices</span> <span class="kn">import</span> <span class="n">SparseMatrix</span>
 
 
-<div class="viewcode-block" id="symchol"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.symchol">[docs]</a><span class="k">def</span> <span class="nf">symchol</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>  <span class="c1"># symbolic Cholesky</span>
+<div class="viewcode-block" id="symchol"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.symchol">[docs]</a><span class="k">def</span> <span class="nf">symchol</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>  <span class="c1"># symbolic Cholesky</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param M:</span>
 <span class="sd">    :type M:</span>
@@ -225,7 +247,7 @@
     <span class="k">return</span> <span class="n">B</span></div>
 
 
-<div class="viewcode-block" id="G2SVAR"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.G2SVAR">[docs]</a><span class="k">def</span> <span class="nf">G2SVAR</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="G2SVAR"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.G2SVAR">[docs]</a><span class="k">def</span> <span class="nf">G2SVAR</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G: dictionary (``gunfolds`` graph)</span>
@@ -247,7 +269,7 @@
     <span class="k">return</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">P</span></div>
 
 
-<div class="viewcode-block" id="G2AH"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.G2AH">[docs]</a><span class="k">def</span> <span class="nf">G2AH</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="G2AH"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.G2AH">[docs]</a><span class="k">def</span> <span class="nf">G2AH</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G: dictionary (``gunfolds`` graph)</span>
@@ -269,7 +291,7 @@
     <span class="k">return</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">P</span></div>
 
 
-<div class="viewcode-block" id="bnf2CG"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.bnf2CG">[docs]</a><span class="k">def</span> <span class="nf">bnf2CG</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+<div class="viewcode-block" id="bnf2CG"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.bnf2CG">[docs]</a><span class="k">def</span> <span class="nf">bnf2CG</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param fname:</span>
 <span class="sd">    :type fname:</span>
@@ -287,7 +309,7 @@
         <span class="n">G</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">ld</span>
     <span class="k">return</span> <span class="n">G</span></div>
 
-<div class="viewcode-block" id="npG2SVAR"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.npG2SVAR">[docs]</a><span class="k">def</span> <span class="nf">npG2SVAR</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="npG2SVAR"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.npG2SVAR">[docs]</a><span class="k">def</span> <span class="nf">npG2SVAR</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G: dictionary (``gunfolds`` graph)</span>
@@ -311,7 +333,7 @@
     <span class="n">B</span> <span class="o">=</span> <span class="n">symchol</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span></div>
 
-<div class="viewcode-block" id="x2M"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.x2M">[docs]</a><span class="k">def</span> <span class="nf">x2M</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">aidx</span><span class="p">,</span> <span class="n">bidx</span><span class="p">):</span>
+<div class="viewcode-block" id="x2M"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.x2M">[docs]</a><span class="k">def</span> <span class="nf">x2M</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">aidx</span><span class="p">,</span> <span class="n">bidx</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param x:</span>
 <span class="sd">    :type x:</span>
@@ -336,7 +358,7 @@
     <span class="c1"># B[(bidx[1],bidx[0])] = x[len(aidx[0]):]</span>
     <span class="k">return</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span></div>
 
-<div class="viewcode-block" id="nllf"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.nllf">[docs]</a><span class="k">def</span> <span class="nf">nllf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">aidx</span><span class="p">,</span> <span class="n">bidx</span><span class="p">):</span> <span class="c1"># negative log likelihood</span>
+<div class="viewcode-block" id="nllf"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.nllf">[docs]</a><span class="k">def</span> <span class="nf">nllf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">aidx</span><span class="p">,</span> <span class="n">bidx</span><span class="p">):</span> <span class="c1"># negative log likelihood</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param x:</span>
 <span class="sd">    :type x:</span>
@@ -365,7 +387,7 @@
     <span class="n">ldB</span> <span class="o">=</span> <span class="n">T</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">B</span><span class="p">)))</span>
     <span class="k">return</span> <span class="n">ldB</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">)))</span></div>
 
-<div class="viewcode-block" id="nllf2"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.nllf2">[docs]</a><span class="k">def</span> <span class="nf">nllf2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">YY</span><span class="p">,</span> <span class="n">XX</span><span class="p">,</span> <span class="n">YX</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">aidx</span><span class="p">,</span> <span class="n">bidx</span><span class="p">):</span> <span class="c1"># negative log likelihood</span>
+<div class="viewcode-block" id="nllf2"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.nllf2">[docs]</a><span class="k">def</span> <span class="nf">nllf2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">YY</span><span class="p">,</span> <span class="n">XX</span><span class="p">,</span> <span class="n">YX</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">aidx</span><span class="p">,</span> <span class="n">bidx</span><span class="p">):</span> <span class="c1"># negative log likelihood</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param x:</span>
 <span class="sd">    :type x:</span>
@@ -404,7 +426,7 @@
     <span class="k">return</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">flat</span><span class="p">,</span> <span class="n">S</span><span class="o">.</span><span class="n">flat</span><span class="p">)</span> <span class="o">+</span> <span class="n">ldB</span></div>
     <span class="c1"># return ldB + 0.5*np.trace( np.dot(np.dot(B.T, B), S))</span>
 
-<div class="viewcode-block" id="VARbic"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.VARbic">[docs]</a><span class="k">def</span> <span class="nf">VARbic</span><span class="p">(</span><span class="n">nllf</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+<div class="viewcode-block" id="VARbic"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.VARbic">[docs]</a><span class="k">def</span> <span class="nf">VARbic</span><span class="p">(</span><span class="n">nllf</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param nllf:</span>
 <span class="sd">    :type nllf:</span>
@@ -420,7 +442,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">nllf</span> <span class="o">+</span> <span class="n">K</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">T</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="listplace"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.listplace">[docs]</a><span class="k">def</span> <span class="nf">listplace</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="viewcode-block" id="listplace"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.listplace">[docs]</a><span class="k">def</span> <span class="nf">listplace</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param l:</span>
 <span class="sd">    :type l:</span>
@@ -440,7 +462,7 @@
 <span class="c1"># data generation</span>
 <span class="c1"># -------------------------------------------------------------------</span>
 
-<div class="viewcode-block" id="randweights"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.randweights">[docs]</a><span class="k">def</span> <span class="nf">randweights</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mi">9</span><span class="p">):</span>
+<div class="viewcode-block" id="randweights"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.randweights">[docs]</a><span class="k">def</span> <span class="nf">randweights</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mi">9</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param n:</span>
 <span class="sd">    :type n:</span>
@@ -460,7 +482,7 @@
         <span class="n">rw</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">rw</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">+</span><span class="n">scipy</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">rw</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span><span class="o">*</span><span class="n">c</span><span class="o">*</span><span class="n">factor</span>
     <span class="k">return</span> <span class="n">rw</span></div>
 
-<div class="viewcode-block" id="transitionMatrix"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.transitionMatrix">[docs]</a><span class="k">def</span> <span class="nf">transitionMatrix</span><span class="p">(</span><span class="n">cg</span><span class="p">,</span> <span class="n">minstrength</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+<div class="viewcode-block" id="transitionMatrix"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.transitionMatrix">[docs]</a><span class="k">def</span> <span class="nf">transitionMatrix</span><span class="p">(</span><span class="n">cg</span><span class="p">,</span> <span class="n">minstrength</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param cg:</span>
 <span class="sd">    :type cg:</span>
@@ -485,7 +507,7 @@
     <span class="n">pbar</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">A</span></div>
 
-<div class="viewcode-block" id="sampleWeights"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.sampleWeights">[docs]</a><span class="k">def</span> <span class="nf">sampleWeights</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">minstrength</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+<div class="viewcode-block" id="sampleWeights"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.sampleWeights">[docs]</a><span class="k">def</span> <span class="nf">sampleWeights</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">minstrength</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param n:</span>
 <span class="sd">    :type n:</span>
@@ -501,7 +523,7 @@
     <span class="n">r</span> <span class="o">=</span> <span class="n">s</span><span class="o">*</span><span class="n">r</span>
     <span class="k">return</span> <span class="n">r</span></div>
 
-<div class="viewcode-block" id="transitionMatrix2"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.transitionMatrix2">[docs]</a><span class="k">def</span> <span class="nf">transitionMatrix2</span><span class="p">(</span><span class="n">cg</span><span class="p">,</span> <span class="n">minstrength</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+<div class="viewcode-block" id="transitionMatrix2"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.transitionMatrix2">[docs]</a><span class="k">def</span> <span class="nf">transitionMatrix2</span><span class="p">(</span><span class="n">cg</span><span class="p">,</span> <span class="n">minstrength</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param cg:</span>
 <span class="sd">    :type cg:</span>
@@ -528,7 +550,7 @@
     <span class="n">pbar</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">A</span></div>
 
-<div class="viewcode-block" id="transitionMatrix3"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.transitionMatrix3">[docs]</a><span class="k">def</span> <span class="nf">transitionMatrix3</span><span class="p">(</span><span class="n">cg</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">minstrength</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+<div class="viewcode-block" id="transitionMatrix3"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.transitionMatrix3">[docs]</a><span class="k">def</span> <span class="nf">transitionMatrix3</span><span class="p">(</span><span class="n">cg</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">minstrength</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param cg:</span>
 <span class="sd">    :type cg:</span>
@@ -581,7 +603,7 @@
     <span class="n">A</span><span class="p">[</span><span class="n">edges</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">o</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">A</span></div>
 
-<div class="viewcode-block" id="initRandomMatrix"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.initRandomMatrix">[docs]</a><span class="k">def</span> <span class="nf">initRandomMatrix</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">edges</span><span class="p">,</span> <span class="n">maxtries</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">distribution</span><span class="o">=</span><span class="s1">&#39;beta&#39;</span><span class="p">,</span> <span class="n">stable</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="initRandomMatrix"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.initRandomMatrix">[docs]</a><span class="k">def</span> <span class="nf">initRandomMatrix</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">edges</span><span class="p">,</span> <span class="n">maxtries</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">distribution</span><span class="o">=</span><span class="s1">&#39;beta&#39;</span><span class="p">,</span> <span class="n">stable</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    possible distributions:</span>
 <span class="sd">    flat</span>
@@ -640,7 +662,7 @@
 
     <span class="k">return</span> <span class="n">A</span></div>
 
-<div class="viewcode-block" id="transitionMatrix4"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.transitionMatrix4">[docs]</a><span class="k">def</span> <span class="nf">transitionMatrix4</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">minstrength</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">distribution</span><span class="o">=</span><span class="s1">&#39;normal&#39;</span><span class="p">,</span> <span class="n">maxtries</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+<div class="viewcode-block" id="transitionMatrix4"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.transitionMatrix4">[docs]</a><span class="k">def</span> <span class="nf">transitionMatrix4</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">minstrength</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">distribution</span><span class="o">=</span><span class="s1">&#39;normal&#39;</span><span class="p">,</span> <span class="n">maxtries</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graph)</span>
@@ -681,7 +703,7 @@
 
     <span class="k">return</span> <span class="n">A</span></div>
 
-<div class="viewcode-block" id="drawsamplesLG"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.drawsamplesLG">[docs]</a><span class="k">def</span> <span class="nf">drawsamplesLG</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">nstd</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">samples</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+<div class="viewcode-block" id="drawsamplesLG"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.drawsamplesLG">[docs]</a><span class="k">def</span> <span class="nf">drawsamplesLG</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">nstd</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">samples</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param A:</span>
 <span class="sd">    :type A:</span>
@@ -704,7 +726,7 @@
     <span class="k">return</span> <span class="n">data</span></div>
 
 
-<div class="viewcode-block" id="drawsamplesMA"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.drawsamplesMA">[docs]</a><span class="k">def</span> <span class="nf">drawsamplesMA</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">nstd</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+<div class="viewcode-block" id="drawsamplesMA"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.drawsamplesMA">[docs]</a><span class="k">def</span> <span class="nf">drawsamplesMA</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">nstd</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param A:</span>
 <span class="sd">    :type A:</span>
@@ -737,7 +759,7 @@
     <span class="k">return</span> <span class="n">data</span></div>
 
 
-<div class="viewcode-block" id="getAgraph"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.getAgraph">[docs]</a><span class="k">def</span> <span class="nf">getAgraph</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">mp</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">st</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="getAgraph"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.getAgraph">[docs]</a><span class="k">def</span> <span class="nf">getAgraph</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">mp</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">st</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param n:</span>
 <span class="sd">    :type n:</span>
@@ -768,7 +790,7 @@
             <span class="s1">&#39;transition&#39;</span><span class="p">:</span> <span class="n">A</span><span class="p">,</span>
             <span class="s1">&#39;converges&#39;</span><span class="p">:</span>  <span class="nb">len</span><span class="p">(</span><span class="n">bfu</span><span class="o">.</span><span class="n">call_undersamples</span><span class="p">(</span><span class="n">G</span><span class="p">))}</span></div>
 
-<div class="viewcode-block" id="getAring"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.getAring">[docs]</a><span class="k">def</span> <span class="nf">getAring</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">st</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;flatsigned&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="getAring"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.getAring">[docs]</a><span class="k">def</span> <span class="nf">getAring</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">st</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;flatsigned&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param n:</span>
 <span class="sd">    :type n:</span>
@@ -813,7 +835,7 @@
 <span class="c1"># estimation</span>
 <span class="c1"># -------------------------------------------------------------------</span>
 
-<div class="viewcode-block" id="scoreAGraph"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.scoreAGraph">[docs]</a><span class="k">def</span> <span class="nf">scoreAGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">x0</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="scoreAGraph"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.scoreAGraph">[docs]</a><span class="k">def</span> <span class="nf">scoreAGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">x0</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G: dictionary (``gunfolds`` graph)</span>
@@ -841,7 +863,7 @@
                                <span class="n">disp</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">full_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">o</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">K</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">T</span><span class="p">)</span> <span class="c1">#VARbic(o[1],K,data.shape[1])</span></div>
 
-<div class="viewcode-block" id="estimateG"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.estimateG">[docs]</a><span class="k">def</span> <span class="nf">estimateG</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">YY</span><span class="p">,</span> <span class="n">XX</span><span class="p">,</span> <span class="n">YX</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="estimateG"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.estimateG">[docs]</a><span class="k">def</span> <span class="nf">estimateG</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">YY</span><span class="p">,</span> <span class="n">XX</span><span class="p">,</span> <span class="n">YX</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G: dictionary (``gunfolds`` graph)</span>
@@ -881,7 +903,7 @@
     <span class="k">return</span>  <span class="n">A</span><span class="p">,</span> <span class="n">B</span></div>
 
 
-<div class="viewcode-block" id="data2AB"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.data2AB">[docs]</a><span class="k">def</span> <span class="nf">data2AB</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="data2AB"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.data2AB">[docs]</a><span class="k">def</span> <span class="nf">data2AB</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param data:</span>
 <span class="sd">    :type data:</span>
@@ -926,7 +948,7 @@
     <span class="n">B</span> <span class="o">=</span> <span class="n">B</span><span class="o">+</span><span class="n">B</span><span class="o">.</span><span class="n">T</span>
     <span class="k">return</span>  <span class="n">A</span><span class="p">,</span> <span class="n">B</span></div>
 
-<div class="viewcode-block" id="amap"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.amap">[docs]</a><span class="k">def</span> <span class="nf">amap</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+<div class="viewcode-block" id="amap"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.amap">[docs]</a><span class="k">def</span> <span class="nf">amap</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param f:</span>
 <span class="sd">    :type f:</span>
@@ -940,7 +962,7 @@
     <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">v</span><span class="p">(</span><span class="n">a</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="AB2intAB"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.AB2intAB">[docs]</a><span class="k">def</span> <span class="nf">AB2intAB</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span> <span class="n">th</span><span class="o">=</span><span class="mf">0.09</span><span class="p">):</span>
+<div class="viewcode-block" id="AB2intAB"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.AB2intAB">[docs]</a><span class="k">def</span> <span class="nf">AB2intAB</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span> <span class="n">th</span><span class="o">=</span><span class="mf">0.09</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param A:</span>
 <span class="sd">    :type A:</span>
@@ -961,7 +983,7 @@
     <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span></div>
 
-<div class="viewcode-block" id="data2graph"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.data2graph">[docs]</a><span class="k">def</span> <span class="nf">data2graph</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">x0</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="data2graph"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.data2graph">[docs]</a><span class="k">def</span> <span class="nf">data2graph</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">x0</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param data:</span>
 <span class="sd">    :type data:</span>
@@ -976,7 +998,7 @@
     <span class="n">Ab</span><span class="p">,</span> <span class="n">Bb</span> <span class="o">=</span> <span class="n">AB2intAB</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">adjs2graph</span><span class="p">(</span><span class="n">Ab</span><span class="p">,</span> <span class="n">Bb</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="data2VARgraph"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.data2VARgraph">[docs]</a><span class="k">def</span> <span class="nf">data2VARgraph</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pval</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
+<div class="viewcode-block" id="data2VARgraph"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.data2VARgraph">[docs]</a><span class="k">def</span> <span class="nf">data2VARgraph</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pval</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param data:</span>
 <span class="sd">    :type data:</span>
@@ -1001,7 +1023,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 <span class="c1"># this is for the SAT solver project</span>
-<div class="viewcode-block" id="stableVAR"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.stableVAR">[docs]</a><span class="k">def</span> <span class="nf">stableVAR</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">dist</span><span class="o">=</span><span class="s1">&#39;beta&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="stableVAR"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.stableVAR">[docs]</a><span class="k">def</span> <span class="nf">stableVAR</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">dist</span><span class="o">=</span><span class="s1">&#39;beta&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This function keeps trying to create a random graph and a random</span>
 <span class="sd">    corresponding transition matrix until it succeeds.</span>
@@ -1032,7 +1054,7 @@
             <span class="n">sst</span> <span class="o">=</span> <span class="mf">0.02</span>
     <span class="k">return</span> <span class="n">r</span><span class="p">[</span><span class="s1">&#39;graph&#39;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s1">&#39;transition&#39;</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="genData"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.genData">[docs]</a><span class="k">def</span> <span class="nf">genData</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">burnin</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">ssize</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;beta&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="genData"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.genData">[docs]</a><span class="k">def</span> <span class="nf">genData</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">burnin</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">ssize</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;beta&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given a number of nodes this function randomly generates a ring</span>
 <span class="sd">    SCC and the corresponding stable transition matrix. It tries until</span>
@@ -1073,7 +1095,7 @@
     <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="n">burnin</span><span class="p">:]</span>
     <span class="k">return</span> <span class="n">g</span><span class="p">,</span> <span class="n">Agt</span><span class="p">,</span> <span class="n">data</span><span class="p">[:,::</span><span class="n">rate</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="estimateSVAR"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.estimateSVAR">[docs]</a><span class="k">def</span> <span class="nf">estimateSVAR</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">th</span><span class="o">=</span><span class="mf">0.09</span><span class="p">):</span>
+<div class="viewcode-block" id="estimateSVAR"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.estimateSVAR">[docs]</a><span class="k">def</span> <span class="nf">estimateSVAR</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">th</span><span class="o">=</span><span class="mf">0.09</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param data:</span>
 <span class="sd">    :type data:</span>
@@ -1089,7 +1111,7 @@
     <span class="k">return</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span></div>
 
 <span class="c1"># option #1</span>
-<div class="viewcode-block" id="randomSVAR"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.randomSVAR">[docs]</a><span class="k">def</span> <span class="nf">randomSVAR</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">th</span><span class="o">=</span><span class="mf">0.09</span><span class="p">,</span> <span class="n">burnin</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+<div class="viewcode-block" id="randomSVAR"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.randomSVAR">[docs]</a><span class="k">def</span> <span class="nf">randomSVAR</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">th</span><span class="o">=</span><span class="mf">0.09</span><span class="p">,</span> <span class="n">burnin</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
                <span class="n">ssize</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;beta&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given a number of nodes this function randomly generates a ring</span>
@@ -1144,7 +1166,7 @@
             <span class="p">}</span></div>
 
 <span class="c1"># option #2</span>
-<div class="viewcode-block" id="noiseData"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.noiseData">[docs]</a><span class="k">def</span> <span class="nf">noiseData</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+<div class="viewcode-block" id="noiseData"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.noiseData">[docs]</a><span class="k">def</span> <span class="nf">noiseData</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param data:</span>
 <span class="sd">    :type data:</span>
@@ -1158,7 +1180,7 @@
     <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span>
     <span class="k">return</span> <span class="n">data</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">w</span><span class="p">)</span><span class="o">*</span><span class="n">noise</span></div>
 
-<div class="viewcode-block" id="decide_absences"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.decide_absences">[docs]</a><span class="k">def</span> <span class="nf">decide_absences</span><span class="p">(</span><span class="n">As</span><span class="p">):</span>
+<div class="viewcode-block" id="decide_absences"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.decide_absences">[docs]</a><span class="k">def</span> <span class="nf">decide_absences</span><span class="p">(</span><span class="n">As</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given a list of binary matrices returns a binary mask for absence</span>
 <span class="sd">    and presence of edges</span>
@@ -1173,7 +1195,7 @@
     <span class="n">M</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">As</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">As</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">M</span></div>
 
-<div class="viewcode-block" id="presence_probs"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.presence_probs">[docs]</a><span class="k">def</span> <span class="nf">presence_probs</span><span class="p">(</span><span class="n">As</span><span class="p">):</span>
+<div class="viewcode-block" id="presence_probs"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.presence_probs">[docs]</a><span class="k">def</span> <span class="nf">presence_probs</span><span class="p">(</span><span class="n">As</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given a list of binary matrices returns a frequency of edge</span>
 <span class="sd">    presence</span>
@@ -1188,7 +1210,7 @@
     <span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">As</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">As</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)]</span><span class="o">+</span><span class="n">As</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">M</span><span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mf">2.0</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="weight_and_mask"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.weight_and_mask">[docs]</a><span class="k">def</span> <span class="nf">weight_and_mask</span><span class="p">(</span><span class="n">As</span><span class="p">):</span>
+<div class="viewcode-block" id="weight_and_mask"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.weight_and_mask">[docs]</a><span class="k">def</span> <span class="nf">weight_and_mask</span><span class="p">(</span><span class="n">As</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given a list o fbinary matrices returns a weight matrix for</span>
 <span class="sd">    presences and absences and a mask to identify which are which</span>
@@ -1206,7 +1228,7 @@
     <span class="k">return</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">A</span><span class="p">)))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">),</span> <span class="n">M</span></div>
 
 
-<div class="viewcode-block" id="randomSVARs"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.linear_model.randomSVARs">[docs]</a><span class="k">def</span> <span class="nf">randomSVARs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">repeats</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">th</span><span class="o">=</span><span class="mf">0.09</span><span class="p">,</span>
+<div class="viewcode-block" id="randomSVARs"><a class="viewcode-back" href="../../../linear_model.html#gunfolds.tools.linear_model.randomSVARs">[docs]</a><span class="k">def</span> <span class="nf">randomSVARs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">repeats</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">th</span><span class="o">=</span><span class="mf">0.09</span><span class="p">,</span>
                 <span class="n">burnin</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">ssize</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">strap_noise</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    does what requested - help is on the way</span>
@@ -1280,7 +1302,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Trends Lab
+                Copyright &#169; neuroneural.net
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

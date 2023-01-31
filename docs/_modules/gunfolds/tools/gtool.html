@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
-        <title>gunfolds.tools.gtool - Gunfolds documentation</title>
+        <title>gunfolds.tools.gtool - gunfolds documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">Gunfolds  documentation</div></a>
+      <a href="../../../index.html"><div class="brand">gunfolds  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">Gunfolds  documentation</span>
+  <span class="sidebar-brand-text">gunfolds  documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -160,7 +160,29 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">gunfolds</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../tools.html">tools package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../bfutils.html">bfutils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../calc_procs.html">calc_procs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo.html">clingo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_msl.html">clingo_msl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_rasl.html">clingo_rasl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../comparison.html">comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../conversions.html">conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dbn2latex.html">dbn2latex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ecj.html">ecj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../grangercausality.html">grangercausality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../graphkit.html">graphkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../gtool.html">gtool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../linear_model.html">linear_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../myTimeout.html">myTimeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../neighborhoods.html">neighborhoods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pc.html">pc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../simpleloops.html">simpleloops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../traversal.html">traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../unknownrate.html">unknownrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../zickle.html">zickle</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -209,7 +231,7 @@
 <span class="n">require_version</span><span class="p">(</span><span class="s2">&quot;Gdk&quot;</span><span class="p">,</span> <span class="s2">&quot;3.0&quot;</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">gi.repository</span> <span class="kn">import</span> <span class="n">Gdk</span>
 
-<div class="viewcode-block" id="getscreensize"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.gtool.getscreensize">[docs]</a><span class="k">def</span> <span class="nf">getscreensize</span><span class="p">():</span>
+<div class="viewcode-block" id="getscreensize"><a class="viewcode-back" href="../../../gtool.html#gunfolds.tools.gtool.getscreensize">[docs]</a><span class="k">def</span> <span class="nf">getscreensize</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a tuple ``(w,h)`` with the largest width ``w`` and height ``h`` among all connected monitors.</span>
 
@@ -227,7 +249,7 @@
         <span class="k">if</span> <span class="p">(</span> <span class="n">h</span> <span class="o">&lt;</span> <span class="n">xh</span> <span class="p">):</span> <span class="n">h</span> <span class="o">=</span> <span class="n">xh</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="circ_position"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.gtool.circ_position">[docs]</a><span class="k">def</span> <span class="nf">circ_position</span><span class="p">(</span><span class="n">gg</span><span class="p">):</span>
+<div class="viewcode-block" id="circ_position"><a class="viewcode-back" href="../../../gtool.html#gunfolds.tools.gtool.circ_position">[docs]</a><span class="k">def</span> <span class="nf">circ_position</span><span class="p">(</span><span class="n">gg</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generates node positions for graph-tool graph that arrange them in a ring</span>
 
@@ -243,7 +265,7 @@
                              <span class="n">n</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">s</span> <span class="o">*</span> <span class="n">idx</span><span class="p">))</span>
     <span class="n">gg</span><span class="o">.</span><span class="n">vertex_properties</span><span class="p">[</span><span class="s2">&quot;pos&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pos</span></div>
 
-<div class="viewcode-block" id="every_edge_control_points"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.gtool.every_edge_control_points">[docs]</a><span class="k">def</span> <span class="nf">every_edge_control_points</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="every_edge_control_points"><a class="viewcode-back" href="../../../gtool.html#gunfolds.tools.gtool.every_edge_control_points">[docs]</a><span class="k">def</span> <span class="nf">every_edge_control_points</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate a graph-tool Graph class object with all possible edges (a superclicue).</span>
 
@@ -298,7 +320,7 @@
 
     <span class="k">return</span> <span class="n">gr</span></div>
 
-<div class="viewcode-block" id="colorcomponents"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.gtool.colorcomponents">[docs]</a><span class="k">def</span> <span class="nf">colorcomponents</span><span class="p">(</span><span class="n">gr</span><span class="p">):</span>
+<div class="viewcode-block" id="colorcomponents"><a class="viewcode-back" href="../../../gtool.html#gunfolds.tools.gtool.colorcomponents">[docs]</a><span class="k">def</span> <span class="nf">colorcomponents</span><span class="p">(</span><span class="n">gr</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Assigns a color to each vertex to ensure that vertices from the same strongly connected component have the same color.</span>
 
@@ -328,7 +350,7 @@
             <span class="n">vcolor</span><span class="p">[</span><span class="n">vertex</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;#00000000&#39;</span>
     <span class="n">gr</span><span class="o">.</span><span class="n">vertex_properties</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vcolor</span></div>
 
-<div class="viewcode-block" id="g2gt"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.gtool.g2gt">[docs]</a><span class="k">def</span> <span class="nf">g2gt</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="g2gt"><a class="viewcode-back" href="../../../gtool.html#gunfolds.tools.gtool.g2gt">[docs]</a><span class="k">def</span> <span class="nf">g2gt</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts a ``gunfolds`` graph to an object of class Graph of ``graph-tool`` package. This includes setting all parameters of edges and vertices but vertex colors.</span>
 
@@ -357,7 +379,7 @@
 
     <span class="k">return</span> <span class="n">gr</span></div>
 
-<div class="viewcode-block" id="gt2g"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.gtool.gt2g">[docs]</a><span class="k">def</span> <span class="nf">gt2g</span><span class="p">(</span><span class="n">gr</span><span class="p">,</span> <span class="n">dir_c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">bidir_c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="gt2g"><a class="viewcode-back" href="../../../gtool.html#gunfolds.tools.gtool.gt2g">[docs]</a><span class="k">def</span> <span class="nf">gt2g</span><span class="p">(</span><span class="n">gr</span><span class="p">,</span> <span class="n">dir_c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">bidir_c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts a ``graph-tool`` object of class Graph to ``gunfolds`` graph</span>
 
@@ -398,7 +420,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="hshift"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.gtool.hshift">[docs]</a><span class="k">def</span> <span class="nf">hshift</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
+<div class="viewcode-block" id="hshift"><a class="viewcode-back" href="../../../gtool.html#gunfolds.tools.gtool.hshift">[docs]</a><span class="k">def</span> <span class="nf">hshift</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Horizontally shift positions of all nodes of ``graph-tool`` graph ``g`` by the value of ``shift``</span>
 
@@ -413,7 +435,7 @@
         <span class="n">pos</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">shift</span></div>
 
 
-<div class="viewcode-block" id="linegraph"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.gtool.linegraph">[docs]</a><span class="k">def</span> <span class="nf">linegraph</span><span class="p">(</span><span class="n">glist</span><span class="p">,</span> <span class="n">sccs</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="linegraph"><a class="viewcode-back" href="../../../gtool.html#gunfolds.tools.gtool.linegraph">[docs]</a><span class="k">def</span> <span class="nf">linegraph</span><span class="p">(</span><span class="n">glist</span><span class="p">,</span> <span class="n">sccs</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Takes a list of ``gunfolds`` graphs and merges them into a single Graph class ``graph-tool`` object taking care of node positions of each graph to ensure that the constituent graphs are arranged in a single raw when plotted.</span>
 
@@ -443,7 +465,7 @@
 
     <span class="k">return</span> <span class="n">gr</span></div>
 
-<div class="viewcode-block" id="plotg"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.gtool.plotg">[docs]</a><span class="k">def</span> <span class="nf">plotg</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">sccs</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="plotg"><a class="viewcode-back" href="../../../gtool.html#gunfolds.tools.gtool.plotg">[docs]</a><span class="k">def</span> <span class="nf">plotg</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">sccs</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given a ``gunfolds`` graph, plots it in an interactive window</span>
 
@@ -470,7 +492,7 @@
            <span class="n">edge_color</span><span class="o">=</span><span class="n">gg</span><span class="o">.</span><span class="n">edge_properties</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">],</span>
            <span class="n">vertex_fill_color</span><span class="o">=</span><span class="n">vcolors</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="plotgunfolds"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.gtool.plotgunfolds">[docs]</a><span class="k">def</span> <span class="nf">plotgunfolds</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">interactive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sccs</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="plotgunfolds"><a class="viewcode-back" href="../../../gtool.html#gunfolds.tools.gtool.plotgunfolds">[docs]</a><span class="k">def</span> <span class="nf">plotgunfolds</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">interactive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sccs</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given a ``gunfolds`` graph plots all of its undersamples versions arranged sequentially in a horizontal line.</span>
 
@@ -524,7 +546,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Trends Lab
+                Copyright &#169; neuroneural.net
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

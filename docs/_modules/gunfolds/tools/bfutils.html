@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
-        <title>gunfolds.tools.bfutils - Gunfolds documentation</title>
+        <title>gunfolds.tools.bfutils - gunfolds documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">Gunfolds  documentation</div></a>
+      <a href="../../../index.html"><div class="brand">gunfolds  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">Gunfolds  documentation</span>
+  <span class="sidebar-brand-text">gunfolds  documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -160,7 +160,29 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">gunfolds</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../tools.html">tools package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../bfutils.html">bfutils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../calc_procs.html">calc_procs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo.html">clingo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_msl.html">clingo_msl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_rasl.html">clingo_rasl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../comparison.html">comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../conversions.html">conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dbn2latex.html">dbn2latex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ecj.html">ecj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../grangercausality.html">grangercausality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../graphkit.html">graphkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../gtool.html">gtool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../linear_model.html">linear_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../myTimeout.html">myTimeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../neighborhoods.html">neighborhoods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pc.html">pc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../simpleloops.html">simpleloops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../traversal.html">traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../unknownrate.html">unknownrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../zickle.html">zickle</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -206,7 +228,7 @@
 
 <span class="c1">#### Undersampling functions</span>
 
-<div class="viewcode-block" id="is_sclique"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.is_sclique">[docs]</a><span class="k">def</span> <span class="nf">is_sclique</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="is_sclique"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.is_sclique">[docs]</a><span class="k">def</span> <span class="nf">is_sclique</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Tests if the graph is a superclique (all possible connections) </span>
 <span class="sd">    </span>
@@ -224,7 +246,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="directed_inc"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.directed_inc">[docs]</a><span class="k">def</span> <span class="nf">directed_inc</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">D</span><span class="p">):</span>
+<div class="viewcode-block" id="directed_inc"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.directed_inc">[docs]</a><span class="k">def</span> <span class="nf">directed_inc</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">D</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    helper function for determining directed edges in an undersampled</span>
 <span class="sd">    graph given a previously undersampled graph </span>
@@ -249,7 +271,7 @@
     <span class="k">return</span> <span class="n">G_un</span></div>
 
 
-<div class="viewcode-block" id="bidirected_inc"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.bidirected_inc">[docs]</a><span class="k">def</span> <span class="nf">bidirected_inc</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">D</span><span class="p">):</span>
+<div class="viewcode-block" id="bidirected_inc"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.bidirected_inc">[docs]</a><span class="k">def</span> <span class="nf">bidirected_inc</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">D</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    helper function for determining bidirected edges in an undersampled</span>
 <span class="sd">    graph given a previously undersampled graph </span>
@@ -275,7 +297,7 @@
     <span class="k">return</span> <span class="n">G</span></div>
 
 
-<div class="viewcode-block" id="increment_u"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.increment_u">[docs]</a><span class="k">def</span> <span class="nf">increment_u</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">G_u</span><span class="p">):</span>
+<div class="viewcode-block" id="increment_u"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.increment_u">[docs]</a><span class="k">def</span> <span class="nf">increment_u</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">G_u</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    (Ask)</span>
 
@@ -295,7 +317,7 @@
     <span class="k">return</span> <span class="n">G_un</span></div>
 
 
-<div class="viewcode-block" id="pure_directed_inc"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.pure_directed_inc">[docs]</a><span class="k">def</span> <span class="nf">pure_directed_inc</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">D</span><span class="p">):</span>
+<div class="viewcode-block" id="pure_directed_inc"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.pure_directed_inc">[docs]</a><span class="k">def</span> <span class="nf">pure_directed_inc</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">D</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G:  dictionary (``gunfolds`` graphs)</span>
@@ -316,7 +338,7 @@
     <span class="k">return</span> <span class="n">G_un</span></div>
 
 
-<div class="viewcode-block" id="increment"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.increment">[docs]</a><span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="increment"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.increment">[docs]</a><span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    undersample ``G`` by 2</span>
 <span class="sd">    only works for G1 to G2 directed</span>
@@ -351,7 +373,7 @@
     <span class="k">return</span> <span class="n">G2</span></div>
 
 
-<div class="viewcode-block" id="dincrement_u"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.dincrement_u">[docs]</a><span class="k">def</span> <span class="nf">dincrement_u</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">G_u</span><span class="p">):</span>
+<div class="viewcode-block" id="dincrement_u"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.dincrement_u">[docs]</a><span class="k">def</span> <span class="nf">dincrement_u</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">G_u</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    :param G_star: ``gunfolds`` format graph</span>
 <span class="sd">    :type G_star: dictionary (``gunfolds`` graphs)</span>
@@ -367,7 +389,7 @@
     <span class="k">return</span> <span class="n">G_un</span></div>
 
 
-<div class="viewcode-block" id="undersample"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.undersample">[docs]</a><span class="k">def</span> <span class="nf">undersample</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
+<div class="viewcode-block" id="undersample"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.undersample">[docs]</a><span class="k">def</span> <span class="nf">undersample</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Undersample graph ``G`` by rate ``u``</span>
 <span class="sd">    </span>
@@ -387,7 +409,7 @@
     <span class="k">return</span> <span class="n">Gu</span></div>
 
 
-<div class="viewcode-block" id="all_undersamples"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.all_undersamples">[docs]</a><span class="k">def</span> <span class="nf">all_undersamples</span><span class="p">(</span><span class="n">G_star</span><span class="p">):</span>
+<div class="viewcode-block" id="all_undersamples"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.all_undersamples">[docs]</a><span class="k">def</span> <span class="nf">all_undersamples</span><span class="p">(</span><span class="n">G_star</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    return a list of all undersampled graphs (excluding superclique) </span>
 <span class="sd"> </span>
@@ -409,7 +431,7 @@
     <span class="k">return</span> <span class="n">glist</span></div>
 
 
-<div class="viewcode-block" id="call_undersamples"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.call_undersamples">[docs]</a><span class="k">def</span> <span class="nf">call_undersamples</span><span class="p">(</span><span class="n">G_star</span><span class="p">):</span>
+<div class="viewcode-block" id="call_undersamples"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.call_undersamples">[docs]</a><span class="k">def</span> <span class="nf">call_undersamples</span><span class="p">(</span><span class="n">G_star</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    return a list of all undersampled graphs (including superclique) </span>
 <span class="sd">    </span>
@@ -428,7 +450,7 @@
     <span class="k">return</span> <span class="n">glist</span></div>
 
 
-<div class="viewcode-block" id="compact_call_undersamples"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.compact_call_undersamples">[docs]</a><span class="k">def</span> <span class="nf">compact_call_undersamples</span><span class="p">(</span><span class="n">G_star</span><span class="p">):</span>
+<div class="viewcode-block" id="compact_call_undersamples"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.compact_call_undersamples">[docs]</a><span class="k">def</span> <span class="nf">compact_call_undersamples</span><span class="p">(</span><span class="n">G_star</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    return a list of all undersampled graphs (including superclique)</span>
 <span class="sd">    in binary encoded format </span>
@@ -452,13 +474,15 @@
     <span class="k">return</span> <span class="n">glist</span></div>
 
 
-<div class="viewcode-block" id="cc_undersamples"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.cc_undersamples">[docs]</a><span class="k">def</span> <span class="nf">cc_undersamples</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="cc_undersamples"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.cc_undersamples">[docs]</a><span class="k">def</span> <span class="nf">cc_undersamples</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns ``G_u`` for ``G_star`` with default value of ``u=2``. If the input graph converges before the requested ``u`` - an empty list is returned.</span>
+<span class="sd">    </span>
 <span class="sd">    :param G_star: ``gunfolds`` format graph</span>
 <span class="sd">    :type G_star: dictionary (``gunfolds`` graphs)</span>
 <span class="sd">    </span>
-<span class="sd">    :param steps:</span>
-<span class="sd">    :type steps: (guess)integer</span>
+<span class="sd">    :param steps: undersampling rate to compute for</span>
+<span class="sd">    :type steps: integer</span>
 <span class="sd">    </span>
 <span class="sd">    :returns: </span>
 <span class="sd">    :rtype: </span>
@@ -477,16 +501,18 @@
 
 <span class="c1">#### Misc graph functions</span>
 
-<div class="viewcode-block" id="overshoot"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.overshoot">[docs]</a><span class="k">def</span> <span class="nf">overshoot</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
+<div class="viewcode-block" id="overshoot"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.overshoot">[docs]</a><span class="k">def</span> <span class="nf">overshoot</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    :param G_star: ``gunfolds`` format graph</span>
+<span class="sd">    Undersample ``G_star`` until it turns into a ``G_u`` for which ``H`` is an edge subset. Return ``True`` in this case. If this does not happen for either of the undersampling rates until teh convergence - return ``False``</span>
+
+<span class="sd">    :param G_star: ``gunfolds`` format graph at ``u=1``</span>
 <span class="sd">    :type G_star: dictionary (``gunfolds`` graphs)</span>
-<span class="sd">    </span>
-<span class="sd">    :param H:</span>
-<span class="sd">    :type H:</span>
-<span class="sd">    </span>
-<span class="sd">    :returns: </span>
-<span class="sd">    :rtype: </span>
+
+<span class="sd">    :param H: ``gunfolds`` format graph at some ``u``</span>
+<span class="sd">    :type H: dictionary (``gunfolds`` graphs)</span>
+
+<span class="sd">    :returns:</span>
+<span class="sd">    :rtype: boolean</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">glist</span> <span class="o">=</span> <span class="p">[</span><span class="n">G_star</span><span class="p">]</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -501,7 +527,7 @@
     <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<div class="viewcode-block" id="forms_loop"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.forms_loop">[docs]</a><span class="k">def</span> <span class="nf">forms_loop</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">loop</span><span class="p">):</span>
+<div class="viewcode-block" id="forms_loop"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.forms_loop">[docs]</a><span class="k">def</span> <span class="nf">forms_loop</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">loop</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G_star: ``gunfolds`` format graph</span>
 <span class="sd">    :type G_star: dictionary (``gunfolds`` graphs)</span>
@@ -523,7 +549,7 @@
     <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<div class="viewcode-block" id="call_u_conflicts_d"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.call_u_conflicts_d">[docs]</a><span class="k">def</span> <span class="nf">call_u_conflicts_d</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">checkrate</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<div class="viewcode-block" id="call_u_conflicts_d"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.call_u_conflicts_d">[docs]</a><span class="k">def</span> <span class="nf">call_u_conflicts_d</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">checkrate</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G_star: ``gunfolds`` format graph</span>
 <span class="sd">    :type G_star: dictionary (``gunfolds`` graphs)</span>
@@ -548,7 +574,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="call_u_conflicts"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.call_u_conflicts">[docs]</a><span class="k">def</span> <span class="nf">call_u_conflicts</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">checkrate</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<div class="viewcode-block" id="call_u_conflicts"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.call_u_conflicts">[docs]</a><span class="k">def</span> <span class="nf">call_u_conflicts</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">checkrate</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G_star: ``gunfolds`` format graph</span>
 <span class="sd">    :type G_star: dictionary (``gunfolds`` graphs)</span>
@@ -577,7 +603,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="call_u_conflicts2"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.call_u_conflicts2">[docs]</a><span class="k">def</span> <span class="nf">call_u_conflicts2</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
+<div class="viewcode-block" id="call_u_conflicts2"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.call_u_conflicts2">[docs]</a><span class="k">def</span> <span class="nf">call_u_conflicts2</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G_star: ``gunfolds`` format graph</span>
 <span class="sd">    :type G_star: dictionary (``gunfolds`` graphs)</span>
@@ -599,7 +625,7 @@
     <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="n">glist</span></div>
 
 
-<div class="viewcode-block" id="call_u_equals2"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.call_u_equals2">[docs]</a><span class="k">def</span> <span class="nf">call_u_equals2</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">glist</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
+<div class="viewcode-block" id="call_u_equals2"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.call_u_equals2">[docs]</a><span class="k">def</span> <span class="nf">call_u_equals2</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">glist</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G_star: ``gunfolds`` format graph</span>
 <span class="sd">    :type G_star: dictionary (``gunfolds`` graphs)</span>
@@ -624,7 +650,7 @@
     <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<div class="viewcode-block" id="call_u_equals"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.call_u_equals">[docs]</a><span class="k">def</span> <span class="nf">call_u_equals</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
+<div class="viewcode-block" id="call_u_equals"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.call_u_equals">[docs]</a><span class="k">def</span> <span class="nf">call_u_equals</span><span class="p">(</span><span class="n">G_star</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G_star: ``gunfolds`` format graph</span>
 <span class="sd">    :type G_star: dictionary (``gunfolds`` graphs)</span>
@@ -646,7 +672,7 @@
     <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<div class="viewcode-block" id="compatible"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.compatible">[docs]</a><span class="k">def</span> <span class="nf">compatible</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
+<div class="viewcode-block" id="compatible"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.compatible">[docs]</a><span class="k">def</span> <span class="nf">compatible</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param d1:</span>
 <span class="sd">    :type d1:</span>
@@ -661,7 +687,7 @@
     <span class="k">return</span> <span class="n">idx</span></div>
 
 
-<div class="viewcode-block" id="compat"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.compat">[docs]</a><span class="k">def</span> <span class="nf">compat</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="compat"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.compat">[docs]</a><span class="k">def</span> <span class="nf">compat</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G: dictionary (``gunfolds`` graphs)</span>
@@ -684,7 +710,7 @@
     <span class="k">return</span> <span class="n">hits</span></div>
 
 
-<div class="viewcode-block" id="icompat"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.icompat">[docs]</a><span class="k">def</span> <span class="nf">icompat</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">nodes</span><span class="p">):</span>
+<div class="viewcode-block" id="icompat"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.icompat">[docs]</a><span class="k">def</span> <span class="nf">icompat</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">nodes</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param i:</span>
 <span class="sd">    :type i:</span>
@@ -700,7 +726,7 @@
     <span class="k">return</span> <span class="n">compat</span><span class="p">(</span><span class="n">g</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="ilength"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.ilength">[docs]</a><span class="k">def</span> <span class="nf">ilength</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">nodes</span><span class="p">):</span>
+<div class="viewcode-block" id="ilength"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.ilength">[docs]</a><span class="k">def</span> <span class="nf">ilength</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">nodes</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param i:</span>
 <span class="sd">    :type i:</span>
@@ -716,7 +742,7 @@
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">call_undersamples</span><span class="p">(</span><span class="n">g</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="iall"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.iall">[docs]</a><span class="k">def</span> <span class="nf">iall</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">nodes</span><span class="p">):</span>
+<div class="viewcode-block" id="iall"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.iall">[docs]</a><span class="k">def</span> <span class="nf">iall</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">nodes</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param i:</span>
 <span class="sd">    :type i:</span>
@@ -732,7 +758,7 @@
     <span class="k">return</span> <span class="n">compact_call_undersamples</span><span class="p">(</span><span class="n">g</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="cc_all"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.cc_all">[docs]</a><span class="k">def</span> <span class="nf">cc_all</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">nodes</span><span class="p">,</span> <span class="n">steps</span><span class="p">):</span>
+<div class="viewcode-block" id="cc_all"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.cc_all">[docs]</a><span class="k">def</span> <span class="nf">cc_all</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">nodes</span><span class="p">,</span> <span class="n">steps</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param i:</span>
 <span class="sd">    :type i:</span>
@@ -750,7 +776,7 @@
     <span class="k">return</span> <span class="n">cc_undersamples</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="n">steps</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="make_rect"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.make_rect">[docs]</a><span class="k">def</span> <span class="nf">make_rect</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+<div class="viewcode-block" id="make_rect"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.make_rect">[docs]</a><span class="k">def</span> <span class="nf">make_rect</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param l:</span>
 <span class="sd">    :type l:</span>
@@ -766,7 +792,7 @@
     <span class="k">return</span> <span class="n">nl</span></div>
 
 
-<div class="viewcode-block" id="loadgraphs"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.loadgraphs">[docs]</a><span class="k">def</span> <span class="nf">loadgraphs</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+<div class="viewcode-block" id="loadgraphs"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.loadgraphs">[docs]</a><span class="k">def</span> <span class="nf">loadgraphs</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Loads a graph from a zickle file</span>
 
@@ -780,7 +806,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="savegraphs"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.savegraphs">[docs]</a><span class="k">def</span> <span class="nf">savegraphs</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">fname</span><span class="p">):</span>
+<div class="viewcode-block" id="savegraphs"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.savegraphs">[docs]</a><span class="k">def</span> <span class="nf">savegraphs</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">fname</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Saves a graph into a zickle file format</span>
 
@@ -794,9 +820,9 @@
 
 
 <span class="c1"># talking about extra edges on top of the ring</span>
-    
 
-<div class="viewcode-block" id="dens2edgenum"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.dens2edgenum">[docs]</a><span class="k">def</span> <span class="nf">dens2edgenum</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+
+<div class="viewcode-block" id="dens2edgenum"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.dens2edgenum">[docs]</a><span class="k">def</span> <span class="nf">dens2edgenum</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert density into the number of extra edges needed for a ring</span>
 <span class="sd">    graph to achieve that density</span>
@@ -814,7 +840,7 @@
     <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">d</span> <span class="o">*</span> <span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="n">n</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="edgenum2dens"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.edgenum2dens">[docs]</a><span class="k">def</span> <span class="nf">edgenum2dens</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<div class="viewcode-block" id="edgenum2dens"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.edgenum2dens">[docs]</a><span class="k">def</span> <span class="nf">edgenum2dens</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert number of edges excluding edges of the ring to density </span>
 
@@ -830,7 +856,7 @@
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">double</span><span class="p">(</span><span class="n">e</span> <span class="o">+</span> <span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span></div>
 
 
-<div class="viewcode-block" id="check_conflict"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.check_conflict">[docs]</a><span class="k">def</span> <span class="nf">check_conflict</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">G_test</span><span class="p">,</span> <span class="n">au</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="check_conflict"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.check_conflict">[docs]</a><span class="k">def</span> <span class="nf">check_conflict</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">G_test</span><span class="p">,</span> <span class="n">au</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param H:</span>
 <span class="sd">    :type H:</span>
@@ -854,7 +880,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="check_conflict_"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.check_conflict_">[docs]</a><span class="k">def</span> <span class="nf">check_conflict_</span><span class="p">(</span><span class="n">Hnum</span><span class="p">,</span> <span class="n">G_test</span><span class="p">,</span> <span class="n">au</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="check_conflict_"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.check_conflict_">[docs]</a><span class="k">def</span> <span class="nf">check_conflict_</span><span class="p">(</span><span class="n">Hnum</span><span class="p">,</span> <span class="n">G_test</span><span class="p">,</span> <span class="n">au</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param H:</span>
 <span class="sd">    :type H:</span>
@@ -880,7 +906,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="check_equality"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.bfutils.check_equality">[docs]</a><span class="k">def</span> <span class="nf">check_equality</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">G_test</span><span class="p">,</span> <span class="n">au</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="check_equality"><a class="viewcode-back" href="../../../bfutils.html#gunfolds.tools.bfutils.check_equality">[docs]</a><span class="k">def</span> <span class="nf">check_equality</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">G_test</span><span class="p">,</span> <span class="n">au</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param H:</span>
 <span class="sd">    :type H:</span>
@@ -914,7 +940,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Trends Lab
+                Copyright &#169; neuroneural.net
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

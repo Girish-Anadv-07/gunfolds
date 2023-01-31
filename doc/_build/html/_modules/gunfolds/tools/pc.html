@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
-        <title>gunfolds.tools.pc - Gunfolds documentation</title>
+        <title>gunfolds.tools.pc - gunfolds documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">Gunfolds  documentation</div></a>
+      <a href="../../../index.html"><div class="brand">gunfolds  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">Gunfolds  documentation</span>
+  <span class="sidebar-brand-text">gunfolds  documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -160,7 +160,29 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">gunfolds</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../tools.html">tools package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../bfutils.html">bfutils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../calc_procs.html">calc_procs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo.html">clingo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_msl.html">clingo_msl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_rasl.html">clingo_rasl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../comparison.html">comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../conversions.html">conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dbn2latex.html">dbn2latex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ecj.html">ecj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../grangercausality.html">grangercausality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../graphkit.html">graphkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../gtool.html">gtool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../linear_model.html">linear_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../myTimeout.html">myTimeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../neighborhoods.html">neighborhoods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pc.html">pc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../simpleloops.html">simpleloops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../traversal.html">traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../unknownrate.html">unknownrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../zickle.html">zickle</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -208,7 +230,7 @@
 <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">zscore</span><span class="p">,</span> <span class="n">norm</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
 
-<div class="viewcode-block" id="independent"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.pc.independent">[docs]</a><span class="k">def</span> <span class="nf">independent</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">pval</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
+<div class="viewcode-block" id="independent"><a class="viewcode-back" href="../../../pc.html#gunfolds.tools.pc.independent">[docs]</a><span class="k">def</span> <span class="nf">independent</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">pval</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param y:</span>
 <span class="sd">    :type y:</span>
@@ -226,7 +248,7 @@
     <span class="n">est</span>  <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">est</span><span class="o">.</span><span class="n">pvalues</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">pval</span></div>
 
-<div class="viewcode-block" id="kernel"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.pc.kernel">[docs]</a><span class="k">def</span> <span class="nf">kernel</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+<div class="viewcode-block" id="kernel"><a class="viewcode-back" href="../../../pc.html#gunfolds.tools.pc.kernel">[docs]</a><span class="k">def</span> <span class="nf">kernel</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param z:</span>
 <span class="sd">    :type z:</span>
@@ -238,7 +260,7 @@
         <span class="k">return</span> <span class="mf">0.</span>
     <span class="k">return</span> <span class="mf">.5</span></div>
 
-<div class="viewcode-block" id="residuals_"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.pc.residuals_">[docs]</a><span class="k">def</span> <span class="nf">residuals_</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<div class="viewcode-block" id="residuals_"><a class="viewcode-back" href="../../../pc.html#gunfolds.tools.pc.residuals_">[docs]</a><span class="k">def</span> <span class="nf">residuals_</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param x:</span>
 <span class="sd">    :type x:</span>
@@ -263,7 +285,7 @@
 
     <span class="k">return</span> <span class="n">residualsx</span><span class="p">,</span> <span class="n">residualsy</span></div>
 
-<div class="viewcode-block" id="moment22"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.pc.moment22">[docs]</a><span class="k">def</span> <span class="nf">moment22</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<div class="viewcode-block" id="moment22"><a class="viewcode-back" href="../../../pc.html#gunfolds.tools.pc.moment22">[docs]</a><span class="k">def</span> <span class="nf">moment22</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param x:</span>
 <span class="sd">    :type x:</span>
@@ -276,7 +298,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="fdr"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.pc.fdr">[docs]</a><span class="k">def</span> <span class="nf">fdr</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="n">pvalues</span><span class="p">):</span>
+<div class="viewcode-block" id="fdr"><a class="viewcode-back" href="../../../pc.html#gunfolds.tools.pc.fdr">[docs]</a><span class="k">def</span> <span class="nf">fdr</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="n">pvalues</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param alpha:</span>
 <span class="sd">    :type alpha:</span>
@@ -295,7 +317,7 @@
         <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
     <span class="k">return</span> <span class="n">idx</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="fdrQ"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.pc.fdrQ">[docs]</a><span class="k">def</span> <span class="nf">fdrQ</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="n">pvalues</span><span class="p">):</span>
+<div class="viewcode-block" id="fdrQ"><a class="viewcode-back" href="../../../pc.html#gunfolds.tools.pc.fdrQ">[docs]</a><span class="k">def</span> <span class="nf">fdrQ</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="n">pvalues</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param alpha:</span>
 <span class="sd">    :type alpha:</span>
@@ -326,7 +348,7 @@
             <span class="n">high</span> <span class="o">=</span> <span class="n">midpoint</span>
     <span class="k">return</span> <span class="n">q</span></div>
 
-<div class="viewcode-block" id="fdrCutoff"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.pc.fdrCutoff">[docs]</a><span class="k">def</span> <span class="nf">fdrCutoff</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="n">pvalues</span><span class="p">):</span>
+<div class="viewcode-block" id="fdrCutoff"><a class="viewcode-back" href="../../../pc.html#gunfolds.tools.pc.fdrCutoff">[docs]</a><span class="k">def</span> <span class="nf">fdrCutoff</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="n">pvalues</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param alpha:</span>
 <span class="sd">    :type alpha:</span>
@@ -343,7 +365,7 @@
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">return</span> <span class="n">pvalues</span><span class="p">[</span><span class="n">k</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="np_fisherZ"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.pc.np_fisherZ">[docs]</a><span class="k">def</span> <span class="nf">np_fisherZ</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+<div class="viewcode-block" id="np_fisherZ"><a class="viewcode-back" href="../../../pc.html#gunfolds.tools.pc.np_fisherZ">[docs]</a><span class="k">def</span> <span class="nf">np_fisherZ</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param x:</span>
 <span class="sd">    :type x:</span>
@@ -366,7 +388,7 @@
     <span class="n">p</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">-</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">w</span><span class="p">),</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">t</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">p</span></div>
 
-<div class="viewcode-block" id="independent_"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.pc.independent_">[docs]</a><span class="k">def</span> <span class="nf">independent_</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">):</span>
+<div class="viewcode-block" id="independent_"><a class="viewcode-back" href="../../../pc.html#gunfolds.tools.pc.independent_">[docs]</a><span class="k">def</span> <span class="nf">independent_</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param x:</span>
 <span class="sd">    :type x:</span>
@@ -403,7 +425,7 @@
     <span class="k">return</span> <span class="n">fdrCutoff</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="n">ps</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">alpha</span></div>
 
 
-<div class="viewcode-block" id="dpc"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.pc.dpc">[docs]</a><span class="k">def</span> <span class="nf">dpc</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pval</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
+<div class="viewcode-block" id="dpc"><a class="viewcode-back" href="../../../pc.html#gunfolds.tools.pc.dpc">[docs]</a><span class="k">def</span> <span class="nf">dpc</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pval</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param data:</span>
 <span class="sd">    :type data:</span>
@@ -492,7 +514,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Trends Lab
+                Copyright &#169; neuroneural.net
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

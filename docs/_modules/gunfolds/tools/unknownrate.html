@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
-        <title>gunfolds.tools.unknownrate - Gunfolds documentation</title>
+        <title>gunfolds.tools.unknownrate - gunfolds documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">Gunfolds  documentation</div></a>
+      <a href="../../../index.html"><div class="brand">gunfolds  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">Gunfolds  documentation</span>
+  <span class="sidebar-brand-text">gunfolds  documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -160,7 +160,29 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">gunfolds</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../tools.html">tools package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../bfutils.html">bfutils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../calc_procs.html">calc_procs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo.html">clingo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_msl.html">clingo_msl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_rasl.html">clingo_rasl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../comparison.html">comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../conversions.html">conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dbn2latex.html">dbn2latex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ecj.html">ecj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../grangercausality.html">grangercausality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../graphkit.html">graphkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../gtool.html">gtool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../linear_model.html">linear_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../myTimeout.html">myTimeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../neighborhoods.html">neighborhoods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pc.html">pc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../simpleloops.html">simpleloops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../traversal.html">traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../unknownrate.html">unknownrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../zickle.html">zickle</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -210,7 +232,7 @@
 
 
 
-<div class="viewcode-block" id="prune_conflicts"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.prune_conflicts">[docs]</a><span class="k">def</span> <span class="nf">prune_conflicts</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">elist</span><span class="p">):</span>
+<div class="viewcode-block" id="prune_conflicts"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.prune_conflicts">[docs]</a><span class="k">def</span> <span class="nf">prune_conflicts</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">elist</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;checks if adding an edge from the list to graph g causes a</span>
 <span class="sd">    conflict with respect to H and if it does removes the edge</span>
 <span class="sd">    from the list</span>
@@ -236,7 +258,7 @@
     <span class="k">return</span> <span class="n">l</span></div>
 
 
-<div class="viewcode-block" id="e2num"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.e2num">[docs]</a><span class="k">def</span> <span class="nf">e2num</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="e2num"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.e2num">[docs]</a><span class="k">def</span> <span class="nf">e2num</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param e:</span>
 <span class="sd">    :type e:</span>
@@ -250,7 +272,7 @@
     <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">n</span> <span class="o">+</span> <span class="n">n</span> <span class="o">-</span> <span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span> <span class="o">-</span> <span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span></div>
 
 
-<div class="viewcode-block" id="le2num"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.le2num">[docs]</a><span class="k">def</span> <span class="nf">le2num</span><span class="p">(</span><span class="n">elist</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="le2num"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.le2num">[docs]</a><span class="k">def</span> <span class="nf">le2num</span><span class="p">(</span><span class="n">elist</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param elist: list of edges to check</span>
 <span class="sd">    :type elist:</span>
@@ -267,7 +289,7 @@
     <span class="k">return</span> <span class="n">num</span></div>
 
 
-<div class="viewcode-block" id="ekey2e"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.ekey2e">[docs]</a><span class="k">def</span> <span class="nf">ekey2e</span><span class="p">(</span><span class="n">ekey</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="ekey2e"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.ekey2e">[docs]</a><span class="k">def</span> <span class="nf">ekey2e</span><span class="p">(</span><span class="n">ekey</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param ekey:</span>
 <span class="sd">    :type ekey:</span>
@@ -283,7 +305,7 @@
     <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;</span><span class="si">%i</span><span class="s1"> </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">idx</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="cacheconflicts"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.cacheconflicts">[docs]</a><span class="k">def</span> <span class="nf">cacheconflicts</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">cache</span><span class="p">):</span>
+<div class="viewcode-block" id="cacheconflicts"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.cacheconflicts">[docs]</a><span class="k">def</span> <span class="nf">cacheconflicts</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">cache</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Given a number representation of a graph and an iterable of</span>
 <span class="sd">    conflicting subgraphs return True if the graph conflicts with any</span>
 <span class="sd">    of them and false otherwise</span>
@@ -313,7 +335,7 @@
         <span class="k">return</span> <span class="kc">None</span>
 
 
-<div class="viewcode-block" id="start_progress_bar"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.start_progress_bar">[docs]</a><span class="k">def</span> <span class="nf">start_progress_bar</span><span class="p">(</span><span class="nb">iter</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="start_progress_bar"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.start_progress_bar">[docs]</a><span class="k">def</span> <span class="nf">start_progress_bar</span><span class="p">(</span><span class="nb">iter</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param iter:</span>
 <span class="sd">    :type iter:</span>
@@ -337,7 +359,7 @@
     <span class="k">return</span> <span class="n">pbar</span></div>
 
 
-<div class="viewcode-block" id="add2set_loop"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.add2set_loop">[docs]</a><span class="k">def</span> <span class="nf">add2set_loop</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">cp</span><span class="p">,</span> <span class="n">ccf</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<div class="viewcode-block" id="add2set_loop"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.add2set_loop">[docs]</a><span class="k">def</span> <span class="nf">add2set_loop</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">cp</span><span class="p">,</span> <span class="n">ccf</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                  <span class="n">capsize</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">currsize</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param ds:</span>
@@ -409,7 +431,7 @@
     <span class="k">return</span> <span class="n">dsr</span><span class="p">,</span> <span class="n">ss</span></div>
 
 
-<div class="viewcode-block" id="add2set_"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.add2set_">[docs]</a><span class="k">def</span> <span class="nf">add2set_</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">cp</span><span class="p">,</span> <span class="n">ccf</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+<div class="viewcode-block" id="add2set_"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.add2set_">[docs]</a><span class="k">def</span> <span class="nf">add2set_</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">cp</span><span class="p">,</span> <span class="n">ccf</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param ds:</span>
 <span class="sd">    :type ds:</span>
@@ -487,7 +509,7 @@
     <span class="k">return</span> <span class="n">dsr</span><span class="p">,</span> <span class="n">ss</span></div>
 
 
-<div class="viewcode-block" id="skip_conflictors"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.skip_conflictors">[docs]</a><span class="k">def</span> <span class="nf">skip_conflictors</span><span class="p">(</span><span class="n">gnum</span><span class="p">,</span> <span class="n">ccf</span><span class="p">):</span>
+<div class="viewcode-block" id="skip_conflictors"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.skip_conflictors">[docs]</a><span class="k">def</span> <span class="nf">skip_conflictors</span><span class="p">(</span><span class="n">gnum</span><span class="p">,</span> <span class="n">ccf</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param gnum:</span>
 <span class="sd">    :type gnum:</span>
@@ -506,7 +528,7 @@
     <span class="k">return</span> <span class="n">pss</span></div>
 
 
-<div class="viewcode-block" id="bconflictor"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.bconflictor">[docs]</a><span class="k">def</span> <span class="nf">bconflictor</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
+<div class="viewcode-block" id="bconflictor"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.bconflictor">[docs]</a><span class="k">def</span> <span class="nf">bconflictor</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param e:</span>
 <span class="sd">    :type e:</span>
@@ -524,7 +546,7 @@
     <span class="k">return</span> <span class="n">s</span></div>
 
 
-<div class="viewcode-block" id="conflictor"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.conflictor">[docs]</a><span class="k">def</span> <span class="nf">conflictor</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
+<div class="viewcode-block" id="conflictor"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.conflictor">[docs]</a><span class="k">def</span> <span class="nf">conflictor</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param e:</span>
 <span class="sd">    :type e:</span>
@@ -560,7 +582,7 @@
     <span class="k">return</span> <span class="n">trios</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">H</span><span class="p">)</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">pairs</span><span class="p">(</span><span class="n">e</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="conflictor_set"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.conflictor_set">[docs]</a><span class="k">def</span> <span class="nf">conflictor_set</span><span class="p">(</span><span class="n">H</span><span class="p">):</span>
+<div class="viewcode-block" id="conflictor_set"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.conflictor_set">[docs]</a><span class="k">def</span> <span class="nf">conflictor_set</span><span class="p">(</span><span class="n">H</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param H:</span>
 <span class="sd">    :type H:</span>
@@ -576,7 +598,7 @@
     <span class="k">return</span> <span class="n">s</span></div>
 
 
-<div class="viewcode-block" id="conflictors"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.conflictors">[docs]</a><span class="k">def</span> <span class="nf">conflictors</span><span class="p">(</span><span class="n">H</span><span class="p">):</span>
+<div class="viewcode-block" id="conflictors"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.conflictors">[docs]</a><span class="k">def</span> <span class="nf">conflictors</span><span class="p">(</span><span class="n">H</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param H:</span>
 <span class="sd">    :type H:</span>
@@ -593,7 +615,7 @@
     <span class="k">return</span> <span class="n">ds</span></div>
 
 
-<div class="viewcode-block" id="prune_loops"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.prune_loops">[docs]</a><span class="k">def</span> <span class="nf">prune_loops</span><span class="p">(</span><span class="n">loops</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
+<div class="viewcode-block" id="prune_loops"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.prune_loops">[docs]</a><span class="k">def</span> <span class="nf">prune_loops</span><span class="p">(</span><span class="n">loops</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param loops:</span>
 <span class="sd">    :type loops:</span>
@@ -613,7 +635,7 @@
     <span class="k">return</span> <span class="n">l</span></div>
 
 
-<div class="viewcode-block" id="lconflictors"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.lconflictors">[docs]</a><span class="k">def</span> <span class="nf">lconflictors</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">sloops</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="lconflictors"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.lconflictors">[docs]</a><span class="k">def</span> <span class="nf">lconflictors</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">sloops</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param H:</span>
 <span class="sd">    :type H:</span>
@@ -638,7 +660,7 @@
     <span class="k">return</span> <span class="n">ds</span></div>
 
 
-<div class="viewcode-block" id="confpairs"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.confpairs">[docs]</a><span class="k">def</span> <span class="nf">confpairs</span><span class="p">(</span><span class="n">H</span><span class="p">):</span>
+<div class="viewcode-block" id="confpairs"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.confpairs">[docs]</a><span class="k">def</span> <span class="nf">confpairs</span><span class="p">(</span><span class="n">H</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param H:</span>
 <span class="sd">    :type H:</span>
@@ -665,7 +687,7 @@
     <span class="k">return</span> <span class="n">d</span></div>
 
 
-<div class="viewcode-block" id="lconfpairs"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.lconfpairs">[docs]</a><span class="k">def</span> <span class="nf">lconfpairs</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">cap</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">sloops</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="lconfpairs"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.lconfpairs">[docs]</a><span class="k">def</span> <span class="nf">lconfpairs</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">cap</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">sloops</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param H:</span>
 <span class="sd">    :type H:</span>
@@ -695,7 +717,7 @@
     <span class="k">return</span> <span class="n">d</span></div>
 
 
-<div class="viewcode-block" id="iteqclass"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.iteqclass">[docs]</a><span class="k">def</span> <span class="nf">iteqclass</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+<div class="viewcode-block" id="iteqclass"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.iteqclass">[docs]</a><span class="k">def</span> <span class="nf">iteqclass</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Find all graphs in the same equivalence class with respect to</span>
 <span class="sd">    graph H and any undesampling rate.</span>
@@ -742,7 +764,7 @@
     <span class="k">return</span> <span class="n">s</span></div>
 
 
-<div class="viewcode-block" id="liteqclass"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.liteqclass">[docs]</a><span class="k">def</span> <span class="nf">liteqclass</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">asl</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="liteqclass"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.liteqclass">[docs]</a><span class="k">def</span> <span class="nf">liteqclass</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">asl</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Find all graphs in the same equivalence class with respect to</span>
 <span class="sd">    graph H and any undesampling rate.</span>
@@ -794,7 +816,7 @@
     <span class="k">return</span> <span class="n">s</span></div>
 
 
-<div class="viewcode-block" id="skip_conflict"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.skip_conflict">[docs]</a><span class="k">def</span> <span class="nf">skip_conflict</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">ds</span><span class="p">):</span>
+<div class="viewcode-block" id="skip_conflict"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.skip_conflict">[docs]</a><span class="k">def</span> <span class="nf">skip_conflict</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">ds</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g1:</span>
 <span class="sd">    :type g1:</span>
@@ -817,7 +839,7 @@
     <span class="k">return</span> <span class="n">pss</span></div>
 
 
-<div class="viewcode-block" id="loop2graph"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.loop2graph">[docs]</a><span class="k">def</span> <span class="nf">loop2graph</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="loop2graph"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.loop2graph">[docs]</a><span class="k">def</span> <span class="nf">loop2graph</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param l:</span>
 <span class="sd">    :type l: (GUESS)integer</span>
@@ -835,7 +857,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="perm_circular"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.perm_circular">[docs]</a><span class="k">def</span> <span class="nf">perm_circular</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">cp</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="perm_circular"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.perm_circular">[docs]</a><span class="k">def</span> <span class="nf">perm_circular</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">cp</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param l:</span>
 <span class="sd">    :type l: (GUESS)integer</span>
@@ -856,7 +878,7 @@
     <span class="k">return</span> <span class="n">r</span></div>
 
 
-<div class="viewcode-block" id="gen_loops"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.gen_loops">[docs]</a><span class="k">def</span> <span class="nf">gen_loops</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="gen_loops"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.gen_loops">[docs]</a><span class="k">def</span> <span class="nf">gen_loops</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param n:</span>
 <span class="sd">    :type n: (GUESS)integer</span>
@@ -872,7 +894,7 @@
     <span class="k">return</span> <span class="n">s</span></div>
 
 
-<div class="viewcode-block" id="allsloops"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.allsloops">[docs]</a><span class="k">def</span> <span class="nf">allsloops</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">asl</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="allsloops"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.allsloops">[docs]</a><span class="k">def</span> <span class="nf">allsloops</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">asl</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param n:</span>
 <span class="sd">    :type n: (GUESS)integer</span>
@@ -894,7 +916,7 @@
     <span class="k">return</span> <span class="n">s</span></div>
 
 
-<div class="viewcode-block" id="reverse"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.reverse">[docs]</a><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+<div class="viewcode-block" id="reverse"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.reverse">[docs]</a><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param H:</span>
 <span class="sd">    :type H:</span>
@@ -933,7 +955,7 @@
 <span class="c1"># ----------------------</span>
 
 
-<div class="viewcode-block" id="build_loop_step"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.build_loop_step">[docs]</a><span class="k">def</span> <span class="nf">build_loop_step</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">loop</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="build_loop_step"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.build_loop_step">[docs]</a><span class="k">def</span> <span class="nf">build_loop_step</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">loop</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param ds:</span>
 <span class="sd">    :type ds:</span>
@@ -982,7 +1004,7 @@
     <span class="k">return</span> <span class="n">dsr</span><span class="p">,</span> <span class="n">ss</span></div>
 
 
-<div class="viewcode-block" id="forward_loop_match"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.forward_loop_match">[docs]</a><span class="k">def</span> <span class="nf">forward_loop_match</span><span class="p">(</span><span class="n">loop</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="forward_loop_match"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.forward_loop_match">[docs]</a><span class="k">def</span> <span class="nf">forward_loop_match</span><span class="p">(</span><span class="n">loop</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    start with an empty graph and keep adding simple loops until</span>
 <span class="sd">    the loop is generated at some undersampling rate</span>
@@ -1009,7 +1031,7 @@
     <span class="k">return</span> <span class="n">s</span></div>
 
 
-<div class="viewcode-block" id="delAloop"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.delAloop">[docs]</a><span class="k">def</span> <span class="nf">delAloop</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">loop</span><span class="p">):</span>
+<div class="viewcode-block" id="delAloop"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.delAloop">[docs]</a><span class="k">def</span> <span class="nf">delAloop</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">loop</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: (GUESS)graph that generates the loop</span>
 <span class="sd">    :param g:</span>
@@ -1028,7 +1050,7 @@
     <span class="k">return</span> <span class="n">num2CG</span><span class="p">(</span><span class="n">reduce</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="n">or_</span><span class="p">,</span> <span class="n">l</span><span class="p">),</span> <span class="n">n</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="reverse_loop_match"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.reverse_loop_match">[docs]</a><span class="k">def</span> <span class="nf">reverse_loop_match</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">loop</span><span class="p">):</span>
+<div class="viewcode-block" id="reverse_loop_match"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.reverse_loop_match">[docs]</a><span class="k">def</span> <span class="nf">reverse_loop_match</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">loop</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    start with a graph and keep removing loops while the loop is still matched</span>
 
@@ -1060,7 +1082,7 @@
     <span class="k">return</span> <span class="n">s</span></div>
 
 
-<div class="viewcode-block" id="reverse_edge_match"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.reverse_edge_match">[docs]</a><span class="k">def</span> <span class="nf">reverse_edge_match</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">loop</span><span class="p">):</span>
+<div class="viewcode-block" id="reverse_edge_match"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.reverse_edge_match">[docs]</a><span class="k">def</span> <span class="nf">reverse_edge_match</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">loop</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    start with a graph and keep removing loops while the loop is still matched</span>
 
@@ -1092,7 +1114,7 @@
     <span class="k">return</span> <span class="n">s</span></div>
 
 
-<div class="viewcode-block" id="matchAloop"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.matchAloop">[docs]</a><span class="k">def</span> <span class="nf">matchAloop</span><span class="p">(</span><span class="n">loop</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="matchAloop"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.matchAloop">[docs]</a><span class="k">def</span> <span class="nf">matchAloop</span><span class="p">(</span><span class="n">loop</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;returns a set of minimal graphs that generate this loop</span>
 
 <span class="sd">    :param loop: binary encoding of the loop</span>
@@ -1115,7 +1137,7 @@
 <span class="c1"># ----------------------</span>
 
 
-<div class="viewcode-block" id="del_loop"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.unknownrate.del_loop">[docs]</a><span class="k">def</span> <span class="nf">del_loop</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+<div class="viewcode-block" id="del_loop"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.del_loop">[docs]</a><span class="k">def</span> <span class="nf">del_loop</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param ds:</span>
 <span class="sd">    :type ds:</span>
@@ -1163,11 +1185,11 @@
     <span class="k">return</span> <span class="n">dsr</span><span class="p">,</span> <span class="n">ss</span></div>
 
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">g</span> <span class="o">=</span> <span class="n">gk</span><span class="o">.</span><span class="n">ringmore</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
     <span class="n">H</span> <span class="o">=</span> <span class="n">bfu</span><span class="o">.</span><span class="n">undersample</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
     <span class="n">ss</span> <span class="o">=</span> <span class="n">liteqclass</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span></div>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
@@ -1183,7 +1205,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Trends Lab
+                Copyright &#169; neuroneural.net
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

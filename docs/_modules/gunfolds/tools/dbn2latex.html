@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
-        <title>gunfolds.tools.dbn2latex - Gunfolds documentation</title>
+        <title>gunfolds.tools.dbn2latex - gunfolds documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">Gunfolds  documentation</div></a>
+      <a href="../../../index.html"><div class="brand">gunfolds  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">Gunfolds  documentation</span>
+  <span class="sidebar-brand-text">gunfolds  documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -160,7 +160,29 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">gunfolds</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../tools.html">tools package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../bfutils.html">bfutils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../calc_procs.html">calc_procs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo.html">clingo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_msl.html">clingo_msl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_rasl.html">clingo_rasl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../comparison.html">comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../conversions.html">conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dbn2latex.html">dbn2latex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ecj.html">ecj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../grangercausality.html">grangercausality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../graphkit.html">graphkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../gtool.html">gtool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../linear_model.html">linear_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../myTimeout.html">myTimeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../neighborhoods.html">neighborhoods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pc.html">pc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../simpleloops.html">simpleloops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../traversal.html">traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../unknownrate.html">unknownrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../zickle.html">zickle</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -212,7 +234,7 @@
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">deg2rad</span><span class="p">,</span> <span class="n">rad2deg</span>
 <span class="kn">import</span> <span class="nn">io</span> <span class="k">as</span> <span class="nn">StringIO</span>
 
-<div class="viewcode-block" id="graph2dict"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.graph2dict">[docs]</a><span class="k">def</span> <span class="nf">graph2dict</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="graph2dict"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.graph2dict">[docs]</a><span class="k">def</span> <span class="nf">graph2dict</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -228,7 +250,7 @@
     <span class="k">return</span> <span class="n">D</span></div>
 
 
-<div class="viewcode-block" id="paintSCC"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.paintSCC">[docs]</a><span class="k">def</span> <span class="nf">paintSCC</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">cm</span><span class="p">):</span>
+<div class="viewcode-block" id="paintSCC"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.paintSCC">[docs]</a><span class="k">def</span> <span class="nf">paintSCC</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">cm</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -248,7 +270,7 @@
 <span class="n">fstr</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%.5f</span><span class="s2">&quot;</span>  <span class="c1"># precision to use</span>
 
 
-<div class="viewcode-block" id="dict2graph"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.dict2graph">[docs]</a><span class="k">def</span> <span class="nf">dict2graph</span><span class="p">(</span><span class="n">D</span><span class="p">):</span>
+<div class="viewcode-block" id="dict2graph"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.dict2graph">[docs]</a><span class="k">def</span> <span class="nf">dict2graph</span><span class="p">(</span><span class="n">D</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param D:</span>
 <span class="sd">    :type D: dictionary</span>
@@ -276,7 +298,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<span class="k">def</span> <span class="nf">matrix_start</span><span class="p">(</span><span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.45</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="matrix_start"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.matrix_start">[docs]</a><span class="k">def</span> <span class="nf">matrix_start</span><span class="p">(</span><span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.45</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;\matrix (&quot;</span>\
           <span class="o">+</span> <span class="n">mname</span>\
           <span class="o">+</span> <span class="s2">&quot;) [matrix of nodes, row sep=&quot;</span>\
@@ -286,14 +308,14 @@
           <span class="o">+</span> <span class="s2">&quot;cm&quot;</span>\
           <span class="o">+</span> <span class="n">stl</span>\
           <span class="o">+</span> <span class="s2">&quot;]&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{&quot;</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">matrix_end</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;};&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="matrix_end"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.matrix_end">[docs]</a><span class="k">def</span> <span class="nf">matrix_end</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;};&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="matrix_grid"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.matrix_grid">[docs]</a><span class="k">def</span> <span class="nf">matrix_grid</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;obs&quot;</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="matrix_grid"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.matrix_grid">[docs]</a><span class="k">def</span> <span class="nf">matrix_grid</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;obs&quot;</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G: dictionary (``gunfolds`` graphs)</span>
@@ -328,7 +350,7 @@
     <span class="n">matrix_end</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="matrix_edges"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.matrix_edges">[docs]</a><span class="k">def</span> <span class="nf">matrix_edges</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="matrix_edges"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.matrix_edges">[docs]</a><span class="k">def</span> <span class="nf">matrix_edges</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G: dictionary (``gunfolds`` graphs)</span>
@@ -357,14 +379,14 @@
                 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;};&#39;</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">emacs_vars</span><span class="p">():</span>
+<div class="viewcode-block" id="emacs_vars"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.emacs_vars">[docs]</a><span class="k">def</span> <span class="nf">emacs_vars</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%% Lo</span><span class="s1">cal Variables:&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%</span><span class="s1">% mode: latex&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%</span><span class="s1">% TeX-master: &quot;../master&quot;&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%% E</span><span class="s1">nd:&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%% E</span><span class="s1">nd:&#39;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="dbnprint"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.dbnprint">[docs]</a><span class="k">def</span> <span class="nf">dbnprint</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;obs&quot;</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="dbnprint"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.dbnprint">[docs]</a><span class="k">def</span> <span class="nf">dbnprint</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;obs&quot;</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G: dictionary (``gunfolds`` graphs)</span>
@@ -394,7 +416,7 @@
     <span class="n">matrix_edges</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="n">mname</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="getangle"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.getangle">[docs]</a><span class="k">def</span> <span class="nf">getangle</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+<div class="viewcode-block" id="getangle"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.getangle">[docs]</a><span class="k">def</span> <span class="nf">getangle</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    When A and  B are two angles around the clock  returns an angle of</span>
 <span class="sd">    the line that is connecting them.</span>
@@ -414,7 +436,7 @@
     <span class="k">return</span> <span class="n">rad2deg</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">atan2</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span></div>
 
 
-<div class="viewcode-block" id="cdbnprint"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.cdbnprint">[docs]</a><span class="k">def</span> <span class="nf">cdbnprint</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">mtype</span><span class="o">=</span><span class="s2">&quot;obs&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">curve</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="cdbnprint"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.cdbnprint">[docs]</a><span class="k">def</span> <span class="nf">cdbnprint</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">mtype</span><span class="o">=</span><span class="s2">&quot;obs&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">curve</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Prints  out  a  compressed  dbn  repesentation  of  the  graph  in</span>
 <span class="sd">    TikZ/Latex format</span>
@@ -490,7 +512,7 @@
     <span class="k">return</span> <span class="n">output</span></div>
 
 
-<div class="viewcode-block" id="gprint"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.gprint">[docs]</a><span class="k">def</span> <span class="nf">gprint</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">mtype</span><span class="o">=</span><span class="s2">&quot;obs&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">curve</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+<div class="viewcode-block" id="gprint"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.gprint">[docs]</a><span class="k">def</span> <span class="nf">gprint</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">mtype</span><span class="o">=</span><span class="s2">&quot;obs&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">curve</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Prints out an automatically layout compressed dbn repesentation of</span>
 <span class="sd">    the graph in TikZ/Latex format</span>
@@ -582,7 +604,7 @@
     <span class="k">return</span> <span class="n">output</span></div>
 
 
-<div class="viewcode-block" id="cdbnwrap"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.cdbnwrap">[docs]</a><span class="k">def</span> <span class="nf">cdbnwrap</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;AAA&#39;</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+<div class="viewcode-block" id="cdbnwrap"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.cdbnwrap">[docs]</a><span class="k">def</span> <span class="nf">cdbnwrap</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;AAA&#39;</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G: dictionary (``gunfolds`` graphs)</span>
@@ -615,7 +637,7 @@
     <span class="k">return</span> <span class="n">output</span></div>
 
 
-<div class="viewcode-block" id="cdbnsingle"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.cdbnsingle">[docs]</a><span class="k">def</span> <span class="nf">cdbnsingle</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mtype</span><span class="o">=</span><span class="s2">&quot;lahid&quot;</span><span class="p">):</span>
+<div class="viewcode-block" id="cdbnsingle"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.cdbnsingle">[docs]</a><span class="k">def</span> <span class="nf">cdbnsingle</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mtype</span><span class="o">=</span><span class="s2">&quot;lahid&quot;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -646,7 +668,7 @@
     <span class="k">return</span> <span class="n">output</span></div>
 
 
-<div class="viewcode-block" id="cdbn_single"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.cdbn_single">[docs]</a><span class="k">def</span> <span class="nf">cdbn_single</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mtype</span><span class="o">=</span><span class="s2">&quot;lahid&quot;</span><span class="p">):</span>
+<div class="viewcode-block" id="cdbn_single"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.cdbn_single">[docs]</a><span class="k">def</span> <span class="nf">cdbn_single</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mtype</span><span class="o">=</span><span class="s2">&quot;lahid&quot;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G: dictionary (``gunfolds`` graphs)</span>
@@ -672,7 +694,7 @@
     <span class="k">return</span> <span class="n">cdbnsingle</span><span class="p">(</span><span class="n">undersample</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">u</span><span class="p">),</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="n">R</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="n">gap</span><span class="p">,</span> <span class="n">mtype</span><span class="o">=</span><span class="n">mtype</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="gsingle"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.gsingle">[docs]</a><span class="k">def</span> <span class="nf">gsingle</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mtype</span><span class="o">=</span><span class="s2">&quot;lahid&quot;</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="gsingle"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.gsingle">[docs]</a><span class="k">def</span> <span class="nf">gsingle</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mtype</span><span class="o">=</span><span class="s2">&quot;lahid&quot;</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graphs)</span>
@@ -706,7 +728,7 @@
     <span class="k">return</span> <span class="n">output</span></div>
 
 
-<div class="viewcode-block" id="g_single"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.g_single">[docs]</a><span class="k">def</span> <span class="nf">g_single</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mtype</span><span class="o">=</span><span class="s2">&quot;lahid&quot;</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="g_single"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.g_single">[docs]</a><span class="k">def</span> <span class="nf">g_single</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mtype</span><span class="o">=</span><span class="s2">&quot;lahid&quot;</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G:  dictionary (``gunfolds`` graphs)</span>
@@ -736,7 +758,7 @@
     <span class="k">return</span> <span class="n">gsingle</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="n">R</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="n">gap</span><span class="p">,</span> <span class="n">mtype</span><span class="o">=</span><span class="n">mtype</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="unfoldplot"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.unfoldplot">[docs]</a><span class="k">def</span> <span class="nf">unfoldplot</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">repeats</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">hg</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">wgap</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;AAA&#39;</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="unfoldplot"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.unfoldplot">[docs]</a><span class="k">def</span> <span class="nf">unfoldplot</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">repeats</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">hg</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">wgap</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;AAA&#39;</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G:  dictionary (``gunfolds`` graphs)</span>
@@ -788,7 +810,7 @@
     <span class="n">emacs_vars</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="foldplot"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.foldplot">[docs]</a><span class="k">def</span> <span class="nf">foldplot</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">hg</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;AAA&#39;</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">bend</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">curve</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<div class="viewcode-block" id="foldplot"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.foldplot">[docs]</a><span class="k">def</span> <span class="nf">foldplot</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">hg</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;AAA&#39;</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">bend</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">curve</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G:  dictionary (``gunfolds`` graphs)</span>
@@ -838,7 +860,7 @@
     <span class="n">emacs_vars</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="matrix_fold"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.matrix_fold">[docs]</a><span class="k">def</span> <span class="nf">matrix_fold</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="matrix_fold"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.matrix_fold">[docs]</a><span class="k">def</span> <span class="nf">matrix_fold</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G:  dictionary (``gunfolds`` graphs)</span>
@@ -882,7 +904,7 @@
     <span class="n">matrix_end</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="gmatrix_fold"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.gmatrix_fold">[docs]</a><span class="k">def</span> <span class="nf">gmatrix_fold</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<div class="viewcode-block" id="gmatrix_fold"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.gmatrix_fold">[docs]</a><span class="k">def</span> <span class="nf">gmatrix_fold</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="c1"># g = dict2graph(ecj.cloneBfree(G))</span>
     <span class="c1"># layout = g.layout_graphopt(niter=50000, node_charge=0.02)</span>
     <span class="c1"># layout.center([0,0])</span>
@@ -930,7 +952,7 @@
     <span class="n">matrix_end</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="addselfedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.addselfedge">[docs]</a><span class="k">def</span> <span class="nf">addselfedge</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+<div class="viewcode-block" id="addselfedge"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.addselfedge">[docs]</a><span class="k">def</span> <span class="nf">addselfedge</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
 <span class="sd">    :type G:  dictionary (``gunfolds`` graphs)</span>
@@ -944,7 +966,7 @@
     <span class="n">G</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">v</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span></div>
 
 
-<div class="viewcode-block" id="gmatrix_list"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.gmatrix_list">[docs]</a><span class="k">def</span> <span class="nf">gmatrix_list</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<div class="viewcode-block" id="gmatrix_list"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.gmatrix_list">[docs]</a><span class="k">def</span> <span class="nf">gmatrix_list</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given a list of graphs prints them out as latex laying out each graph in a force-based layout</span>
 <span class="sd">    </span>
@@ -992,7 +1014,7 @@
     <span class="n">matrix_end</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="matrix_list"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.matrix_list">[docs]</a><span class="k">def</span> <span class="nf">matrix_list</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<div class="viewcode-block" id="matrix_list"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.matrix_list">[docs]</a><span class="k">def</span> <span class="nf">matrix_list</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given a list of graphs prints them out as latex laying out each in a circle layout</span>
 <span class="sd">    </span>
@@ -1049,7 +1071,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="output_graph_figure"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.dbn2latex.output_graph_figure">[docs]</a><span class="k">def</span> <span class="nf">output_graph_figure</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="output_graph_figure"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.output_graph_figure">[docs]</a><span class="k">def</span> <span class="nf">output_graph_figure</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Given a graph will out put a latex file of the graph visualization to figures directory</span>
 <span class="sd">        </span>
@@ -1075,7 +1097,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Trends Lab
+                Copyright &#169; neuroneural.net
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

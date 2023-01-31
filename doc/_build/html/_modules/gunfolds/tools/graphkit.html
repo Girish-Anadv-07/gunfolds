@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
-        <title>gunfolds.tools.graphkit - Gunfolds documentation</title>
+        <title>gunfolds.tools.graphkit - gunfolds documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">Gunfolds  documentation</div></a>
+      <a href="../../../index.html"><div class="brand">gunfolds  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">Gunfolds  documentation</span>
+  <span class="sidebar-brand-text">gunfolds  documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -160,7 +160,29 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">gunfolds</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../tools.html">tools package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../bfutils.html">bfutils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../calc_procs.html">calc_procs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo.html">clingo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_msl.html">clingo_msl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../clingo_rasl.html">clingo_rasl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../comparison.html">comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../conversions.html">conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dbn2latex.html">dbn2latex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ecj.html">ecj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../grangercausality.html">grangercausality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../graphkit.html">graphkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../gtool.html">gtool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../linear_model.html">linear_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../myTimeout.html">myTimeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../neighborhoods.html">neighborhoods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pc.html">pc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../simpleloops.html">simpleloops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../traversal.html">traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../unknownrate.html">unknownrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../zickle.html">zickle</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -208,7 +230,7 @@
 <span class="kn">import</span> <span class="nn">random</span>
 
 
-<div class="viewcode-block" id="edgelist"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.edgelist">[docs]</a><span class="k">def</span> <span class="nf">edgelist</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>  <span class="c1"># directed</span>
+<div class="viewcode-block" id="edgelist"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.edgelist">[docs]</a><span class="k">def</span> <span class="nf">edgelist</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>  <span class="c1"># directed</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    return a list of tuples for edges of ``g``</span>
 <span class="sd">    </span>
@@ -224,7 +246,7 @@
     <span class="k">return</span> <span class="n">l</span></div>
 
 
-<div class="viewcode-block" id="inedgelist"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.inedgelist">[docs]</a><span class="k">def</span> <span class="nf">inedgelist</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>  <span class="c1"># missing directed iterator</span>
+<div class="viewcode-block" id="inedgelist"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.inedgelist">[docs]</a><span class="k">def</span> <span class="nf">inedgelist</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>  <span class="c1"># missing directed iterator</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    iterate over the list of tuples for edges of ``g``</span>
 <span class="sd">    </span>
@@ -240,7 +262,7 @@
                 <span class="k">yield</span> <span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="inbedgelist"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.inbedgelist">[docs]</a><span class="k">def</span> <span class="nf">inbedgelist</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>  <span class="c1"># missing bidirected iterator</span>
+<div class="viewcode-block" id="inbedgelist"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.inbedgelist">[docs]</a><span class="k">def</span> <span class="nf">inbedgelist</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>  <span class="c1"># missing bidirected iterator</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    iterate over the list of tuples for edges of ``g``</span>
 <span class="sd">    </span>
@@ -256,7 +278,7 @@
                     <span class="k">yield</span> <span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="bedgelist"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.bedgelist">[docs]</a><span class="k">def</span> <span class="nf">bedgelist</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="bedgelist"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.bedgelist">[docs]</a><span class="k">def</span> <span class="nf">bedgelist</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    bidirected edge list with flips </span>
 <span class="sd">    </span>
@@ -273,7 +295,7 @@
     <span class="n">l</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">l</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">l</span></div>
 
-<div class="viewcode-block" id="undedgelist"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.undedgelist">[docs]</a><span class="k">def</span> <span class="nf">undedgelist</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">exclude_bi</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="undedgelist"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.undedgelist">[docs]</a><span class="k">def</span> <span class="nf">undedgelist</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">exclude_bi</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    returns a list of tuples for undirected edges of ``g`` with nodes</span>
 <span class="sd">    sorted in ascending order.</span>
@@ -299,7 +321,7 @@
     <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">l</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="superclique"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.superclique">[docs]</a><span class="k">def</span> <span class="nf">superclique</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="superclique"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.superclique">[docs]</a><span class="k">def</span> <span class="nf">superclique</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Returns a Graph with all possible edges</span>
 <span class="sd">    </span>
@@ -315,7 +337,7 @@
         <span class="n">g</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">g</span></div>
 
-<div class="viewcode-block" id="fullyconnected"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.fullyconnected">[docs]</a><span class="k">def</span> <span class="nf">fullyconnected</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="fullyconnected"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.fullyconnected">[docs]</a><span class="k">def</span> <span class="nf">fullyconnected</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a graph with all possible directed edges</span>
 
@@ -331,7 +353,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="complement"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.complement">[docs]</a><span class="k">def</span> <span class="nf">complement</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="complement"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.complement">[docs]</a><span class="k">def</span> <span class="nf">complement</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    return the complement of ``G``</span>
 <span class="sd">    </span>
@@ -351,7 +373,7 @@
     <span class="k">return</span> <span class="n">sq</span></div>
 
 
-<div class="viewcode-block" id="gtranspose"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.gtranspose">[docs]</a><span class="k">def</span> <span class="nf">gtranspose</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="gtranspose"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.gtranspose">[docs]</a><span class="k">def</span> <span class="nf">gtranspose</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Transpose (rev. edges of) ``G``</span>
 <span class="sd">    </span>
@@ -369,7 +391,7 @@
     <span class="k">return</span> <span class="n">GT</span></div>
 
 
-<div class="viewcode-block" id="scale_free"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.scale_free">[docs]</a><span class="k">def</span> <span class="nf">scale_free</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span>
+<div class="viewcode-block" id="scale_free"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.scale_free">[docs]</a><span class="k">def</span> <span class="nf">scale_free</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span>
                <span class="n">delta_in</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">delta_out</span><span class="o">=</span><span class="mf">0.2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param n:</span>
@@ -399,7 +421,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="randH"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.randH">[docs]</a><span class="k">def</span> <span class="nf">randH</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
+<div class="viewcode-block" id="randH"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.randH">[docs]</a><span class="k">def</span> <span class="nf">randH</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Generate a random H with ``n`` nodes </span>
 <span class="sd">    </span>
@@ -423,7 +445,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="ring"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.ring">[docs]</a><span class="k">def</span> <span class="nf">ring</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="ring"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.ring">[docs]</a><span class="k">def</span> <span class="nf">ring</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create a Ring Graph with ``n`` number of nodes</span>
 
@@ -440,7 +462,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="addAring"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.addAring">[docs]</a><span class="k">def</span> <span class="nf">addAring</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="addAring"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.addAring">[docs]</a><span class="k">def</span> <span class="nf">addAring</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Add a ring to ``g`` in place</span>
 <span class="sd">    </span>
@@ -458,7 +480,7 @@
         <span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span></div>
 
 
-<div class="viewcode-block" id="upairs"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.upairs">[docs]</a><span class="k">def</span> <span class="nf">upairs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<div class="viewcode-block" id="upairs"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.upairs">[docs]</a><span class="k">def</span> <span class="nf">upairs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    n unique nonsequential pairs</span>
 <span class="sd">    </span>
@@ -479,7 +501,7 @@
     <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">s</span><span class="p">)[:</span><span class="n">k</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="ringarcs"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.ringarcs">[docs]</a><span class="k">def</span> <span class="nf">ringarcs</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="ringarcs"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.ringarcs">[docs]</a><span class="k">def</span> <span class="nf">ringarcs</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    (Ask)</span>
 
@@ -497,7 +519,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="ringmore"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.ringmore">[docs]</a><span class="k">def</span> <span class="nf">ringmore</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+<div class="viewcode-block" id="ringmore"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.ringmore">[docs]</a><span class="k">def</span> <span class="nf">ringmore</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a ``n`` node ring graph with ``m`` additional edges</span>
 
@@ -513,7 +535,7 @@
     <span class="k">return</span> <span class="n">ringarcs</span><span class="p">(</span><span class="n">ring</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">m</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="digonly"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.digonly">[docs]</a><span class="k">def</span> <span class="nf">digonly</span><span class="p">(</span><span class="n">H</span><span class="p">):</span>
+<div class="viewcode-block" id="digonly"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.digonly">[docs]</a><span class="k">def</span> <span class="nf">digonly</span><span class="p">(</span><span class="n">H</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;   </span>
 <span class="sd">    Returns a subgraph of ``H`` contatining all directed edges of ``H``</span>
 
@@ -530,7 +552,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<span class="k">def</span> <span class="nf">_OCE</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="_OCE"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit._OCE">[docs]</a><span class="k">def</span> <span class="nf">_OCE</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Omission/commision error of ``g1`` referenced to ``g2``</span>
 <span class="sd">    </span>
@@ -555,10 +577,10 @@
 
     <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;directed&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">omitted</span><span class="p">,</span> <span class="n">comitted</span><span class="p">),</span>
             <span class="s1">&#39;bidirected&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">bomitted</span><span class="p">,</span> <span class="n">bcomitted</span><span class="p">),</span>
-            <span class="s1">&#39;total&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">omitted</span><span class="o">+</span><span class="n">bomitted</span><span class="p">,</span> <span class="n">comitted</span><span class="o">+</span><span class="n">bcomitted</span><span class="p">)}</span>
+            <span class="s1">&#39;total&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">omitted</span><span class="o">+</span><span class="n">bomitted</span><span class="p">,</span> <span class="n">comitted</span><span class="o">+</span><span class="n">bcomitted</span><span class="p">)}</span></div>
 
 
-<span class="k">def</span> <span class="nf">_normed_OCE</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="_normed_OCE"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit._normed_OCE">[docs]</a><span class="k">def</span> <span class="nf">_normed_OCE</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Return omission and comission errors for directed and</span>
 <span class="sd">    bidirected edges.</span>
@@ -575,7 +597,7 @@
 <span class="sd">    :type g2: dictionary (``gunfolds`` graph)</span>
 <span class="sd">    </span>
 <span class="sd">    :returns: normalized omission and comission errors for directed and</span>
-<span class="sd">    bidirected edges.</span>
+<span class="sd">              bidirected edges.</span>
 <span class="sd">    :rtype: dictionary</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">sdiv</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
@@ -597,9 +619,9 @@
                       <span class="n">sdiv</span><span class="p">((</span><span class="n">err</span><span class="p">[</span><span class="s1">&#39;directed&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">err</span><span class="p">[</span><span class="s1">&#39;bidirected&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]),</span>
                            <span class="p">(</span><span class="n">DEN</span><span class="o">+</span><span class="n">BEN</span> <span class="o">-</span> <span class="n">gt_BEN</span> <span class="o">-</span> <span class="n">gt_DEN</span><span class="p">)))</span>
             <span class="p">}</span>
-    <span class="k">return</span> <span class="n">nerr</span>
+    <span class="k">return</span> <span class="n">nerr</span></div>
 
-<span class="k">def</span> <span class="nf">_undirected_OCE</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span><span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="_undirected_OCE"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit._undirected_OCE">[docs]</a><span class="k">def</span> <span class="nf">_undirected_OCE</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span><span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    omission/commision error of ``g1`` referenced to ``g2``</span>
 <span class="sd">    if both are undirected graphs.</span>
@@ -620,9 +642,9 @@
     <span class="n">comitted</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s1</span> <span class="o">-</span> <span class="n">s2</span><span class="p">)</span>
 
 
-    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;undirected&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">omitted</span><span class="p">,</span> <span class="n">comitted</span><span class="p">)}</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;undirected&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">omitted</span><span class="p">,</span> <span class="n">comitted</span><span class="p">)}</span></div>
 
-<span class="k">def</span> <span class="nf">_normed_undirected_OCE</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="_normed_undirected_OCE"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit._normed_undirected_OCE">[docs]</a><span class="k">def</span> <span class="nf">_normed_undirected_OCE</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Return omission and comission errors for undirected edges.</span>
 
@@ -652,10 +674,10 @@
     <span class="n">err</span> <span class="o">=</span> <span class="n">_undirected_OCE</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span> <span class="n">g2</span><span class="p">)</span>
     <span class="n">nerr</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;undirected&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">err</span><span class="p">[</span><span class="s1">&#39;undirected&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">gt_DEN</span><span class="p">,</span>
                          <span class="n">sdiv</span><span class="p">(</span><span class="n">err</span><span class="p">[</span><span class="s1">&#39;undirected&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">],(</span><span class="n">DEN</span> <span class="o">-</span> <span class="n">gt_DEN</span><span class="p">)))}</span>
-    <span class="k">return</span> <span class="n">nerr</span>
+    <span class="k">return</span> <span class="n">nerr</span></div>
 
 
-<div class="viewcode-block" id="OCE"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.OCE">[docs]</a><span class="k">def</span> <span class="nf">OCE</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">undirected</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="OCE"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.OCE">[docs]</a><span class="k">def</span> <span class="nf">OCE</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span> <span class="n">g2</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">undirected</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Return omission and comission errors for graphs.</span>
 
@@ -687,7 +709,7 @@
     <span class="k">return</span> <span class="n">err</span></div>
 
 
-<div class="viewcode-block" id="clean_leaf_nodes"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.clean_leaf_nodes">[docs]</a><span class="k">def</span> <span class="nf">clean_leaf_nodes</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="clean_leaf_nodes"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.clean_leaf_nodes">[docs]</a><span class="k">def</span> <span class="nf">clean_leaf_nodes</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    (Ask)</span>
 
@@ -698,7 +720,7 @@
         <span class="n">g</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">w</span><span class="p">:</span> <span class="n">g</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="k">if</span> <span class="n">g</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">}</span></div>
 
 
-<div class="viewcode-block" id="cerror"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.cerror">[docs]</a><span class="k">def</span> <span class="nf">cerror</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+<div class="viewcode-block" id="cerror"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.cerror">[docs]</a><span class="k">def</span> <span class="nf">cerror</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns normalized comission error</span>
 
@@ -711,7 +733,7 @@
     <span class="k">return</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;OCE&#39;</span><span class="p">][</span><span class="s1">&#39;directed&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">double</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;gt&#39;</span><span class="p">][</span><span class="s1">&#39;graph&#39;</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">edgelist</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;gt&#39;</span><span class="p">][</span><span class="s1">&#39;graph&#39;</span><span class="p">])))</span></div>
 
 
-<div class="viewcode-block" id="oerror"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.oerror">[docs]</a><span class="k">def</span> <span class="nf">oerror</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+<div class="viewcode-block" id="oerror"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.oerror">[docs]</a><span class="k">def</span> <span class="nf">oerror</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns normalized omission error</span>
 
@@ -724,7 +746,7 @@
     <span class="k">return</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;OCE&#39;</span><span class="p">][</span><span class="s1">&#39;directed&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">double</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">edgelist</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;gt&#39;</span><span class="p">][</span><span class="s1">&#39;graph&#39;</span><span class="p">])))</span></div>
 
 
-<div class="viewcode-block" id="bidirected_no_fork"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.bidirected_no_fork">[docs]</a><span class="k">def</span> <span class="nf">bidirected_no_fork</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="bidirected_no_fork"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.bidirected_no_fork">[docs]</a><span class="k">def</span> <span class="nf">bidirected_no_fork</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    (Ask)</span>
 
@@ -742,7 +764,7 @@
     <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<div class="viewcode-block" id="no_parents"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.no_parents">[docs]</a><span class="k">def</span> <span class="nf">no_parents</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="no_parents"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.no_parents">[docs]</a><span class="k">def</span> <span class="nf">no_parents</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    (Ask)</span>
 
@@ -759,7 +781,7 @@
     <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<div class="viewcode-block" id="no_children"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.no_children">[docs]</a><span class="k">def</span> <span class="nf">no_children</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="no_children"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.no_children">[docs]</a><span class="k">def</span> <span class="nf">no_children</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    (Ask)</span>
 
@@ -775,7 +797,7 @@
     <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<div class="viewcode-block" id="scc_unreachable"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.scc_unreachable">[docs]</a><span class="k">def</span> <span class="nf">scc_unreachable</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="scc_unreachable"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.scc_unreachable">[docs]</a><span class="k">def</span> <span class="nf">scc_unreachable</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    (Ask)</span>
 
@@ -796,7 +818,7 @@
 <span class="c1"># unlike functions from traversal package these do no checking</span>
 
 
-<div class="viewcode-block" id="addanedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.addanedge">[docs]</a><span class="k">def</span> <span class="nf">addanedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+<div class="viewcode-block" id="addanedge"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.addanedge">[docs]</a><span class="k">def</span> <span class="nf">addanedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graph)</span>
@@ -807,7 +829,7 @@
     <span class="n">g</span><span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span></div>
 
 
-<div class="viewcode-block" id="delanedge"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.delanedge">[docs]</a><span class="k">def</span> <span class="nf">delanedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+<div class="viewcode-block" id="delanedge"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.delanedge">[docs]</a><span class="k">def</span> <span class="nf">delanedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graph)</span>
@@ -818,7 +840,7 @@
     <span class="n">g</span><span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="kc">None</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="addedges"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.addedges">[docs]</a><span class="k">def</span> <span class="nf">addedges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">es</span><span class="p">):</span>
+<div class="viewcode-block" id="addedges"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.addedges">[docs]</a><span class="k">def</span> <span class="nf">addedges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">es</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graph)</span>
@@ -830,7 +852,7 @@
         <span class="n">addanedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="deledges"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.deledges">[docs]</a><span class="k">def</span> <span class="nf">deledges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">es</span><span class="p">):</span>
+<div class="viewcode-block" id="deledges"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.deledges">[docs]</a><span class="k">def</span> <span class="nf">deledges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">es</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graph)</span>
@@ -842,7 +864,7 @@
         <span class="n">delanedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="isdedgesubset"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.isdedgesubset">[docs]</a><span class="k">def</span> <span class="nf">isdedgesubset</span><span class="p">(</span><span class="n">g2star</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="isdedgesubset"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.isdedgesubset">[docs]</a><span class="k">def</span> <span class="nf">isdedgesubset</span><span class="p">(</span><span class="n">g2star</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    check if ``g2star`` directed edges are a subset of those of ``g2``</span>
 <span class="sd">    </span>
@@ -866,7 +888,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="isedgesubset"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.isedgesubset">[docs]</a><span class="k">def</span> <span class="nf">isedgesubset</span><span class="p">(</span><span class="n">g2star</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="isedgesubset"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.isedgesubset">[docs]</a><span class="k">def</span> <span class="nf">isedgesubset</span><span class="p">(</span><span class="n">g2star</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    check if all ``g2star`` edges are a subset of those of ``g2``</span>
 <span class="sd">    </span>
@@ -892,7 +914,7 @@
                 <span class="k">return</span> <span class="kc">False</span>
     <span class="k">return</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="degree_ring"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.degree_ring">[docs]</a><span class="k">def</span> <span class="nf">degree_ring</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+<div class="viewcode-block" id="degree_ring"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.degree_ring">[docs]</a><span class="k">def</span> <span class="nf">degree_ring</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate a ring graph with ``n`` nodes and average degree ``d``</span>
 <span class="sd">    </span>
@@ -911,7 +933,7 @@
     <span class="k">return</span> <span class="n">gn</span></div>
 
 
-<div class="viewcode-block" id="density"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.density">[docs]</a><span class="k">def</span> <span class="nf">density</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="density"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.density">[docs]</a><span class="k">def</span> <span class="nf">density</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the density of the graph</span>
 
@@ -924,7 +946,7 @@
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">edgelist</span><span class="p">(</span><span class="n">g</span><span class="p">))</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">double</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="udensity"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.udensity">[docs]</a><span class="k">def</span> <span class="nf">udensity</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="udensity"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.udensity">[docs]</a><span class="k">def</span> <span class="nf">udensity</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    (Ask)</span>
 
@@ -937,7 +959,7 @@
     <span class="k">return</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">gedgelist</span><span class="p">(</span><span class="n">g</span><span class="p">))</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">bedgelist</span><span class="p">(</span><span class="n">g</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">double</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="mean_degree_graph"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.mean_degree_graph">[docs]</a><span class="k">def</span> <span class="nf">mean_degree_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="p">):</span>
+<div class="viewcode-block" id="mean_degree_graph"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.mean_degree_graph">[docs]</a><span class="k">def</span> <span class="nf">mean_degree_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns mean outgoing degree of the graph</span>
 
@@ -955,7 +977,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="pow_degree_graph"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.pow_degree_graph">[docs]</a><span class="k">def</span> <span class="nf">pow_degree_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="pow_degree_graph"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.pow_degree_graph">[docs]</a><span class="k">def</span> <span class="nf">pow_degree_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    (Ask)</span>
 
@@ -982,7 +1004,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="bp_mean_degree_graph"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.bp_mean_degree_graph">[docs]</a><span class="k">def</span> <span class="nf">bp_mean_degree_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="bp_mean_degree_graph"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.bp_mean_degree_graph">[docs]</a><span class="k">def</span> <span class="nf">bp_mean_degree_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generates a random graph with ``node_num``, nodes and mean outgoing degree of ``degree``</span>
 
@@ -1004,7 +1026,7 @@
 
 
 <span class="c1"># this function does not work yet - WIP</span>
-<div class="viewcode-block" id="bp_pow_degree_graph"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.bp_pow_degree_graph">[docs]</a><span class="k">def</span> <span class="nf">bp_pow_degree_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="p">,</span> <span class="n">prob</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="bp_pow_degree_graph"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.bp_pow_degree_graph">[docs]</a><span class="k">def</span> <span class="nf">bp_pow_degree_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="p">,</span> <span class="n">prob</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    (Ask)</span>
 
@@ -1033,7 +1055,7 @@
     <span class="n">g</span> <span class="o">=</span> <span class="n">nxbp2graph</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">g</span></div>
 
-<div class="viewcode-block" id="remove_tril_singletons"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.remove_tril_singletons">[docs]</a><span class="k">def</span> <span class="nf">remove_tril_singletons</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+<div class="viewcode-block" id="remove_tril_singletons"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.remove_tril_singletons">[docs]</a><span class="k">def</span> <span class="nf">remove_tril_singletons</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Ensure that the DAG resulting from this matrix will not have</span>
 <span class="sd">    singleton nodes not connected to anything.</span>
@@ -1058,7 +1080,7 @@
                 <span class="n">T</span><span class="p">[</span><span class="n">v1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">T</span></div>
 
-<div class="viewcode-block" id="randomTRIL"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.randomTRIL">[docs]</a><span class="k">def</span> <span class="nf">randomTRIL</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">connected</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="randomTRIL"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.randomTRIL">[docs]</a><span class="k">def</span> <span class="nf">randomTRIL</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">connected</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate a random triangular matrix</span>
 
@@ -1091,7 +1113,7 @@
     <span class="k">return</span> <span class="n">mat</span></div>
 
 
-<div class="viewcode-block" id="randomDAG"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.randomDAG">[docs]</a><span class="k">def</span> <span class="nf">randomDAG</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">connected</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="randomDAG"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.randomDAG">[docs]</a><span class="k">def</span> <span class="nf">randomDAG</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">connected</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generates a random DAG</span>
 
@@ -1126,7 +1148,7 @@
 
 
 
-<div class="viewcode-block" id="shift_labels"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.shift_labels">[docs]</a><span class="k">def</span> <span class="nf">shift_labels</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
+<div class="viewcode-block" id="shift_labels"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.shift_labels">[docs]</a><span class="k">def</span> <span class="nf">shift_labels</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns same graph with shifted labels</span>
 
@@ -1147,7 +1169,7 @@
     <span class="k">return</span> <span class="n">new_g</span></div>
 
 
-<div class="viewcode-block" id="shift_list_labels"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.shift_list_labels">[docs]</a><span class="k">def</span> <span class="nf">shift_list_labels</span><span class="p">(</span><span class="n">glist</span><span class="p">):</span>
+<div class="viewcode-block" id="shift_list_labels"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.shift_list_labels">[docs]</a><span class="k">def</span> <span class="nf">shift_list_labels</span><span class="p">(</span><span class="n">glist</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Shifts the labels for a list of graphs</span>
 
@@ -1168,7 +1190,7 @@
     <span class="k">return</span> <span class="n">components</span></div>
 
 
-<div class="viewcode-block" id="merge_list"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.merge_list">[docs]</a><span class="k">def</span> <span class="nf">merge_list</span><span class="p">(</span><span class="n">glist</span><span class="p">):</span>
+<div class="viewcode-block" id="merge_list"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.merge_list">[docs]</a><span class="k">def</span> <span class="nf">merge_list</span><span class="p">(</span><span class="n">glist</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Merge the graphs in the list</span>
 
@@ -1185,7 +1207,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="subgraph"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.subgraph">[docs]</a><span class="k">def</span> <span class="nf">subgraph</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">nodes</span><span class="p">):</span>
+<div class="viewcode-block" id="subgraph"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.subgraph">[docs]</a><span class="k">def</span> <span class="nf">subgraph</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">nodes</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a subgraph of ``g`` that consists of ``nodes`` and their</span>
 <span class="sd">    interconnections.</span>
@@ -1206,7 +1228,7 @@
         <span class="n">sg</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">g</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">node</span><span class="p">]}</span>
     <span class="k">return</span> <span class="n">sg</span></div>
 
-<div class="viewcode-block" id="gcd4scc"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.gcd4scc">[docs]</a><span class="k">def</span> <span class="nf">gcd4scc</span><span class="p">(</span><span class="n">SCC</span><span class="p">):</span>
+<div class="viewcode-block" id="gcd4scc"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.gcd4scc">[docs]</a><span class="k">def</span> <span class="nf">gcd4scc</span><span class="p">(</span><span class="n">SCC</span><span class="p">):</span>
     <span class="c1"># first check if there is at least a single simple loop</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the greatest common divisor of the strongly connected component</span>
@@ -1223,7 +1245,7 @@
     <span class="k">return</span> <span class="n">ecj</span><span class="o">.</span><span class="n">listgcd</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nx</span><span class="o">.</span><span class="n">simple_cycles</span><span class="p">(</span><span class="n">g</span><span class="p">)])</span></div>
 
 
-<div class="viewcode-block" id="ensure_gcd1"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.ensure_gcd1">[docs]</a><span class="k">def</span> <span class="nf">ensure_gcd1</span><span class="p">(</span><span class="n">scc</span><span class="p">):</span>
+<div class="viewcode-block" id="ensure_gcd1"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.ensure_gcd1">[docs]</a><span class="k">def</span> <span class="nf">ensure_gcd1</span><span class="p">(</span><span class="n">scc</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    If ``scc``&#39;s loop structure is not ``gcd=1`` pick a random node and</span>
 <span class="sd">    add a self-loop</span>
@@ -1240,7 +1262,7 @@
     <span class="k">return</span> <span class="n">scc</span></div>
 
 
-<div class="viewcode-block" id="update_graph"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.update_graph">[docs]</a><span class="k">def</span> <span class="nf">update_graph</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
+<div class="viewcode-block" id="update_graph"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.update_graph">[docs]</a><span class="k">def</span> <span class="nf">update_graph</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">g2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Update ``g`` with connections (or nodes) from ``g2``. Both must be at ``u=1``</span>
 <span class="sd">    </span>
@@ -1260,7 +1282,7 @@
             <span class="n">g</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">g2</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">g</span></div>
 
-<div class="viewcode-block" id="merge_graphs"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.merge_graphs">[docs]</a><span class="k">def</span> <span class="nf">merge_graphs</span><span class="p">(</span><span class="n">glist</span><span class="p">):</span>
+<div class="viewcode-block" id="merge_graphs"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.merge_graphs">[docs]</a><span class="k">def</span> <span class="nf">merge_graphs</span><span class="p">(</span><span class="n">glist</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Merge a list of graphs at ``u=1`` into a single new graph ``g``</span>
 <span class="sd">    </span>
@@ -1277,7 +1299,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="ensure_graph_gcd1"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.ensure_graph_gcd1">[docs]</a><span class="k">def</span> <span class="nf">ensure_graph_gcd1</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="ensure_graph_gcd1"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.ensure_graph_gcd1">[docs]</a><span class="k">def</span> <span class="nf">ensure_graph_gcd1</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    this function takes any graph, breaks it into SCCs and make sure each SCC has a gcd of 1</span>
 
@@ -1292,7 +1314,7 @@
     <span class="k">return</span> <span class="n">merge_graphs</span><span class="p">([</span><span class="n">g</span><span class="p">]</span><span class="o">+</span><span class="n">x</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="gcd1_bp_mean_degree_graph"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.gcd1_bp_mean_degree_graph">[docs]</a><span class="k">def</span> <span class="nf">gcd1_bp_mean_degree_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="gcd1_bp_mean_degree_graph"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.gcd1_bp_mean_degree_graph">[docs]</a><span class="k">def</span> <span class="nf">gcd1_bp_mean_degree_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a random graph with ``gcd=1``</span>
 
@@ -1312,7 +1334,7 @@
     <span class="k">return</span> <span class="n">ensure_graph_gcd1</span><span class="p">(</span><span class="n">g</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="ring_sccs"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.ring_sccs">[docs]</a><span class="k">def</span> <span class="nf">ring_sccs</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">num_sccs</span><span class="p">,</span> <span class="n">dens</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">max_cross_connections</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+<div class="viewcode-block" id="ring_sccs"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.ring_sccs">[docs]</a><span class="k">def</span> <span class="nf">ring_sccs</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">num_sccs</span><span class="p">,</span> <span class="n">dens</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">max_cross_connections</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate a random graph with ``num_sccs`` SCCs, n-nodes each</span>
 <span class="sd">    </span>
@@ -1351,7 +1373,7 @@
                 <span class="n">ss</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">a</span><span class="p">][</span><span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">merge_list</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="selfloop"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.selfloop">[docs]</a><span class="k">def</span> <span class="nf">selfloop</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="selfloop"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.selfloop">[docs]</a><span class="k">def</span> <span class="nf">selfloop</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Checks if ``g`` has a self loop at node n</span>
 
@@ -1366,7 +1388,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">n</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="remove_loop"><a class="viewcode-back" href="../../../tools.html#gunfolds.tools.graphkit.remove_loop">[docs]</a><span class="k">def</span> <span class="nf">remove_loop</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">dag</span><span class="p">):</span>
+<div class="viewcode-block" id="remove_loop"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.remove_loop">[docs]</a><span class="k">def</span> <span class="nf">remove_loop</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">dag</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;  </span>
 <span class="sd">    Removes the loops from ``G`` according to ``dag``</span>
 
@@ -1402,7 +1424,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Trends Lab
+                Copyright &#169; neuroneural.net
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
