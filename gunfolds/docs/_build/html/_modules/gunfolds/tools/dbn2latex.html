@@ -143,8 +143,11 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../../index.html">
   
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../../_static/gunfolds.png" alt="Logo"/>
+  </div>
   
   <span class="sidebar-brand-text">gunfolds  documentation</span>
   
@@ -304,7 +307,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="matrix_start"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.matrix_start">[docs]</a><span class="k">def</span> <span class="nf">matrix_start</span><span class="p">(</span><span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.45</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">matrix_start</span><span class="p">(</span><span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.45</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;\matrix (&quot;</span>\
           <span class="o">+</span> <span class="n">mname</span>\
           <span class="o">+</span> <span class="s2">&quot;) [matrix of nodes, row sep=&quot;</span>\
@@ -314,11 +317,11 @@
           <span class="o">+</span> <span class="s2">&quot;cm&quot;</span>\
           <span class="o">+</span> <span class="n">stl</span>\
           <span class="o">+</span> <span class="s2">&quot;]&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{&quot;</span><span class="p">)</span></div>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{&quot;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="matrix_end"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.matrix_end">[docs]</a><span class="k">def</span> <span class="nf">matrix_end</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;};&quot;</span><span class="p">)</span></div>
+<span class="k">def</span> <span class="nf">matrix_end</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;};&quot;</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="matrix_grid"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.matrix_grid">[docs]</a><span class="k">def</span> <span class="nf">matrix_grid</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;obs&quot;</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
@@ -385,11 +388,11 @@
                 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;};&#39;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="emacs_vars"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.emacs_vars">[docs]</a><span class="k">def</span> <span class="nf">emacs_vars</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">emacs_vars</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%% Lo</span><span class="s1">cal Variables:&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%</span><span class="s1">% mode: latex&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%</span><span class="s1">% TeX-master: &quot;../master&quot;&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%% E</span><span class="s1">nd:&#39;</span><span class="p">)</span></div>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%% E</span><span class="s1">nd:&#39;</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="dbnprint"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.dbnprint">[docs]</a><span class="k">def</span> <span class="nf">dbnprint</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;obs&quot;</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>

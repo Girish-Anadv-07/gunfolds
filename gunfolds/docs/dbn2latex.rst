@@ -38,11 +38,6 @@ dict2graph
 .. autofunction:: gunfolds.tools.dbn2latex.dict2graph
 
 
-emacs\_vars
------------
-.. autofunction:: gunfolds.tools.dbn2latex.emacs_vars
-
-
 foldplot
 --------
 .. autofunction:: gunfolds.tools.dbn2latex.foldplot
@@ -88,11 +83,6 @@ matrix\_edges
 .. autofunction:: gunfolds.tools.dbn2latex.matrix_edges
 
 
-matrix\_end
------------
-.. autofunction:: gunfolds.tools.dbn2latex.matrix_end
-
-
 matrix\_fold
 ------------
 .. autofunction:: gunfolds.tools.dbn2latex.matrix_fold
@@ -106,11 +96,6 @@ matrix\_grid
 matrix\_list
 ------------
 .. autofunction:: gunfolds.tools.dbn2latex.matrix_list
-
-
-matrix\_start
--------------
-.. autofunction:: gunfolds.tools.dbn2latex.matrix_start
 
 
 output\_graph\_figure
