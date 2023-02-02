@@ -143,8 +143,11 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../../index.html">
   
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../../_static/gunfolds.png" alt="Logo"/>
+  </div>
   
   <span class="sidebar-brand-text">gunfolds  documentation</span>
   
@@ -1191,11 +1194,11 @@
     <span class="k">return</span> <span class="n">dsr</span><span class="p">,</span> <span class="n">ss</span></div>
 
 
-<div class="viewcode-block" id="main"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">g</span> <span class="o">=</span> <span class="n">gk</span><span class="o">.</span><span class="n">ringmore</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
     <span class="n">H</span> <span class="o">=</span> <span class="n">bfu</span><span class="o">.</span><span class="n">undersample</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
     <span class="n">ss</span> <span class="o">=</span> <span class="n">liteqclass</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span></div>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>

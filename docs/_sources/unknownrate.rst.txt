@@ -113,11 +113,6 @@ loop2graph
 .. autofunction:: gunfolds.tools.unknownrate.loop2graph
 
 
-main
-----
-.. autofunction:: gunfolds.tools.unknownrate.main
-
-
 matchAloop
 ----------
 .. autofunction:: gunfolds.tools.unknownrate.matchAloop
