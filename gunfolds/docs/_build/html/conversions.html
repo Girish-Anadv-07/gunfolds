@@ -1,183 +1,97 @@
-<!doctype html>
-<html class="no-js">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="dbn2latex" href="dbn2latex.html" /><link rel="prev" title="comparison" href="comparison.html" />
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
-        <title>conversions - gunfolds documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
-    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
-    
-    
-
-
-<style>
-  body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>conversions &mdash; gunfolds  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  }
-  @media not print {
-    body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-    }
-    @media (prefers-color-scheme: dark) {
-      body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-      }
-    }
-  }
-</style></head>
-  <body>
-    
-    <script>
-      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
-    </script>
-    
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dbn2latex" href="dbn2latex.html" />
+    <link rel="prev" title="comparison" href="comparison.html" /> 
+</head>
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="svg-toc" viewBox="0 0 24 24">
-    <title>Contents</title>
-    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
-      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-menu" viewBox="0 0 24 24">
-    <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-    <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </symbol>
-  <symbol id="svg-sun" viewBox="0 0 24 24">
-    <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-moon" viewBox="0 0 24 24">
-    <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-    </svg>
-  </symbol>
-  <symbol id="svg-sun-half" viewBox="0 0 24 24">
-    <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M13 12h5" />
-      <path d="M13 15h4" />
-      <path d="M13 18h1" />
-      <path d="M13 9h4" />
-      <path d="M13 6h1" />
-    </svg>
-  </symbol>
-</svg>
-
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
-</label>
-<label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
-</label>
-
-
-
-<div class="page">
-  <header class="mobile-header">
-    <div class="header-left">
-      <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
-      </label>
-    </div>
-    <div class="header-center">
-      <a href="index.html"><div class="brand">gunfolds  documentation</div></a>
-    </div>
-    <div class="header-right">
-      <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-        </button>
-      </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-      </label>
-    </div>
-  </header>
-  <aside class="sidebar-drawer">
-    <div class="sidebar-container">
-      
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="index.html">
-  
-  <div class="sidebar-logo-container">
-    <img class="sidebar-logo" src="_static/gunfolds.png" alt="Logo"/>
-  </div>
-  
-  <span class="sidebar-brand-text">gunfolds  documentation</span>
-  
-</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
-  <input type="hidden" name="check_keywords" value="yes">
-  <input type="hidden" name="area" value="default">
-</form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="getting_started.html">Getting started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html">Running examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="benchmarks.html">Benchmarks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributers.html">Contributors</a></li>
-</ul>
-</li>
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> gunfolds
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">gunfolds</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current has-children"><a class="reference internal" href="tools.html">tools package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">gunfolds</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tools.html">tools package</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="bfutils.html">bfutils</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calc_procs.html">calc_procs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="clingo.html">clingo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="clingo_msl.html">clingo_msl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="clingo_rasl.html">clingo_rasl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="comparison.html">comparison</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">conversions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">conversions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a2edgetuple">a2edgetuple</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adjs2graph">adjs2graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bg2num">bg2num</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c2edgepairs">c2edgepairs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clingo2num">clingo2num</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clingo-preamble">clingo_preamble</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clingo-wedge">clingo_wedge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dict-format-converter">dict_format_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#drasl-jclingo2g">drasl_jclingo2g</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edgepairs2g">edgepairs2g</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#encode-list-sccs">encode_list_sccs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#encode-sccs">encode_sccs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#g2clingo">g2clingo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#g2ian">g2ian</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#g2ig">g2ig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#g2num">g2num</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#g2vec">g2vec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#g2wclingo">g2wclingo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#graph2adj">graph2adj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#graph2badj">graph2badj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#graph2dot">graph2dot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#graph2nx">graph2nx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ian2g">ian2g</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#msl-jclingo2g">msl_jclingo2g</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nodenum">nodenum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#num2cg">num2CG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numbered-g2clingo">numbered_g2clingo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numbered-g2wclingo">numbered_g2wclingo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nx2graph">nx2graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nxbp2graph">nxbp2graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#old-g2clingo">old_g2clingo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rasl-a2edgetuple">rasl_a2edgetuple</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rasl-c2edgepairs">rasl_c2edgepairs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rasl-jclingo2g">rasl_jclingo2g</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rate">rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ug2num">ug2num</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vec2adj">vec2adj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vec2g">vec2g</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html">dbn2latex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ecj.html">ecj</a></li>
 <li class="toctree-l3"><a class="reference internal" href="grangercausality.html">grangercausality</a></li>
@@ -197,45 +111,39 @@
 </li>
 </ul>
 
-</div>
-</div>
-
-      </div>
-      
-    </div>
-  </aside>
-  <div class="main">
-    <div class="content">
-      <div class="article-container">
-        <a href="#" class="back-to-top muted-link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
-          </svg>
-          <span>Back to top</span>
-        </a>
-        <div class="content-icon-container">
-          
-<div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-            </button>
-          </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-          </label>
         </div>
-        <article role="main">
-          <section id="conversions">
-<h1>conversions<a class="headerlink" href="#conversions" title="Permalink to this headline">#</a></h1>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">gunfolds</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">gunfolds</a></li>
+          <li class="breadcrumb-item"><a href="tools.html">tools package</a></li>
+      <li class="breadcrumb-item active">conversions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/conversions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="conversions">
+<h1>conversions<a class="headerlink" href="#conversions" title="Permalink to this headline"></a></h1>
 <section id="a2edgetuple">
-<h2>a2edgetuple<a class="headerlink" href="#a2edgetuple" title="Permalink to this headline">#</a></h2>
+<h2>a2edgetuple<a class="headerlink" href="#a2edgetuple" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.a2edgetuple">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">a2edgetuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">answer</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#a2edgetuple"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.a2edgetuple" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">a2edgetuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">answer</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#a2edgetuple"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.a2edgetuple" title="Permalink to this definition"></a></dt>
 <dd><p>Converts the output of <code class="docutils literal notranslate"><span class="pre">clingo</span></code> into list of edges and under sampling rates for <code class="docutils literal notranslate"><span class="pre">drasl</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -252,10 +160,10 @@
 
 </section>
 <section id="adjs2graph">
-<h2>adjs2graph<a class="headerlink" href="#adjs2graph" title="Permalink to this headline">#</a></h2>
+<h2>adjs2graph<a class="headerlink" href="#adjs2graph" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.adjs2graph">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">adjs2graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bidirected</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#adjs2graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.adjs2graph" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">adjs2graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bidirected</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#adjs2graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.adjs2graph" title="Permalink to this definition"></a></dt>
 <dd><p>Convert an adjacency matrix of directed and bidirected edges to a graph</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -275,10 +183,10 @@
 
 </section>
 <section id="bg2num">
-<h2>bg2num<a class="headerlink" href="#bg2num" title="Permalink to this headline">#</a></h2>
+<h2>bg2num<a class="headerlink" href="#bg2num" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.bg2num">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">bg2num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#bg2num"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.bg2num" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">bg2num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#bg2num"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.bg2num" title="Permalink to this definition"></a></dt>
 <dd><p>Convert bidirected edges into a binary format</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -295,10 +203,10 @@
 
 </section>
 <section id="c2edgepairs">
-<h2>c2edgepairs<a class="headerlink" href="#c2edgepairs" title="Permalink to this headline">#</a></h2>
+<h2>c2edgepairs<a class="headerlink" href="#c2edgepairs" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.c2edgepairs">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">c2edgepairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clist</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#c2edgepairs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.c2edgepairs" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">c2edgepairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clist</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#c2edgepairs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.c2edgepairs" title="Permalink to this definition"></a></dt>
 <dd><p>Converts <code class="docutils literal notranslate"><span class="pre">clingo</span></code> predicates to edge pairs for <code class="docutils literal notranslate"><span class="pre">drasl</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -315,10 +223,10 @@
 
 </section>
 <section id="clingo2num">
-<h2>clingo2num<a class="headerlink" href="#clingo2num" title="Permalink to this headline">#</a></h2>
+<h2>clingo2num<a class="headerlink" href="#clingo2num" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.clingo2num">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">clingo2num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#clingo2num"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.clingo2num" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">clingo2num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#clingo2num"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.clingo2num" title="Permalink to this definition"></a></dt>
 <dd><p>Converts the output of <code class="docutils literal notranslate"><span class="pre">clingo</span></code> into list of edges and under sampling rates for <code class="docutils literal notranslate"><span class="pre">drasl</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -335,10 +243,10 @@
 
 </section>
 <section id="clingo-preamble">
-<h2>clingo_preamble<a class="headerlink" href="#clingo-preamble" title="Permalink to this headline">#</a></h2>
+<h2>clingo_preamble<a class="headerlink" href="#clingo-preamble" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.clingo_preamble">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">clingo_preamble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#clingo_preamble"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.clingo_preamble" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">clingo_preamble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#clingo_preamble"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.clingo_preamble" title="Permalink to this definition"></a></dt>
 <dd><p>Converts number of nodes into a <code class="docutils literal notranslate"><span class="pre">clingo</span></code> predicate</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -355,10 +263,10 @@
 
 </section>
 <section id="clingo-wedge">
-<h2>clingo_wedge<a class="headerlink" href="#clingo-wedge" title="Permalink to this headline">#</a></h2>
+<h2>clingo_wedge<a class="headerlink" href="#clingo-wedge" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.clingo_wedge">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">clingo_wedge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'edge'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#clingo_wedge"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.clingo_wedge" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">clingo_wedge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'edge'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#clingo_wedge"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.clingo_wedge" title="Permalink to this definition"></a></dt>
 <dd><p>Returns <code class="docutils literal notranslate"><span class="pre">clingo</span></code> predicate for weighted edge</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -381,10 +289,10 @@
 
 </section>
 <section id="dict-format-converter">
-<h2>dict_format_converter<a class="headerlink" href="#dict-format-converter" title="Permalink to this headline">#</a></h2>
+<h2>dict_format_converter<a class="headerlink" href="#dict-format-converter" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.dict_format_converter">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">dict_format_converter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#dict_format_converter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.dict_format_converter" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">dict_format_converter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#dict_format_converter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.dict_format_converter" title="Permalink to this definition"></a></dt>
 <dd><p>Convert a graph from the set style dictionary format to the integer style</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -419,10 +327,10 @@
 
 </section>
 <section id="drasl-jclingo2g">
-<h2>drasl_jclingo2g<a class="headerlink" href="#drasl-jclingo2g" title="Permalink to this headline">#</a></h2>
+<h2>drasl_jclingo2g<a class="headerlink" href="#drasl-jclingo2g" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.drasl_jclingo2g">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">drasl_jclingo2g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#drasl_jclingo2g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.drasl_jclingo2g" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">drasl_jclingo2g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#drasl_jclingo2g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.drasl_jclingo2g" title="Permalink to this definition"></a></dt>
 <dd><p>Converts the output of <code class="docutils literal notranslate"><span class="pre">clingo</span></code> to <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph for <code class="docutils literal notranslate"><span class="pre">drasl</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -439,10 +347,10 @@
 
 </section>
 <section id="edgepairs2g">
-<h2>edgepairs2g<a class="headerlink" href="#edgepairs2g" title="Permalink to this headline">#</a></h2>
+<h2>edgepairs2g<a class="headerlink" href="#edgepairs2g" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.edgepairs2g">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">edgepairs2g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edgepairs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#edgepairs2g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.edgepairs2g" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">edgepairs2g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edgepairs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#edgepairs2g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.edgepairs2g" title="Permalink to this definition"></a></dt>
 <dd><p>Converts edge pairs to a <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -459,10 +367,10 @@
 
 </section>
 <section id="encode-list-sccs">
-<h2>encode_list_sccs<a class="headerlink" href="#encode-list-sccs" title="Permalink to this headline">#</a></h2>
+<h2>encode_list_sccs<a class="headerlink" href="#encode-list-sccs" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.encode_list_sccs">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">encode_list_sccs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">glist</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#encode_list_sccs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.encode_list_sccs" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">encode_list_sccs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">glist</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#encode_list_sccs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.encode_list_sccs" title="Permalink to this definition"></a></dt>
 <dd><p>Encodes strongly connected components of a list of <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph to <code class="docutils literal notranslate"><span class="pre">clingo</span></code> predicates</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -480,10 +388,10 @@ the same system</p>
 
 </section>
 <section id="encode-sccs">
-<h2>encode_sccs<a class="headerlink" href="#encode-sccs" title="Permalink to this headline">#</a></h2>
+<h2>encode_sccs<a class="headerlink" href="#encode-sccs" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.encode_sccs">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">encode_sccs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SCCS</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#encode_sccs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.encode_sccs" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">encode_sccs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SCCS</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#encode_sccs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.encode_sccs" title="Permalink to this definition"></a></dt>
 <dd><p>Encodes strongly connected components of <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph to <code class="docutils literal notranslate"><span class="pre">clingo</span></code> predicates</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -505,10 +413,10 @@ the same system</p>
 
 </section>
 <section id="g2clingo">
-<h2>g2clingo<a class="headerlink" href="#g2clingo" title="Permalink to this headline">#</a></h2>
+<h2>g2clingo<a class="headerlink" href="#g2clingo" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.g2clingo">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">g2clingo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hdirected'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bidirected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hbidirected'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">both_bidirected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preamble</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#g2clingo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.g2clingo" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">g2clingo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hdirected'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bidirected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hbidirected'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">both_bidirected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preamble</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#g2clingo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.g2clingo" title="Permalink to this definition"></a></dt>
 <dd><p>Convert a graph to a string of grounded terms for clingo</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -537,10 +445,10 @@ the same system</p>
 
 </section>
 <section id="g2ian">
-<h2>g2ian<a class="headerlink" href="#g2ian" title="Permalink to this headline">#</a></h2>
+<h2>g2ian<a class="headerlink" href="#g2ian" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.g2ian">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">g2ian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#g2ian"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.g2ian" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">g2ian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#g2ian"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.g2ian" title="Permalink to this definition"></a></dt>
 <dd><p>(Ask)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -557,10 +465,10 @@ the same system</p>
 
 </section>
 <section id="g2ig">
-<h2>g2ig<a class="headerlink" href="#g2ig" title="Permalink to this headline">#</a></h2>
+<h2>g2ig<a class="headerlink" href="#g2ig" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.g2ig">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">g2ig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#g2ig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.g2ig" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">g2ig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#g2ig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.g2ig" title="Permalink to this definition"></a></dt>
 <dd><p>Converts our graph representation to an igraph for plotting</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -577,10 +485,10 @@ the same system</p>
 
 </section>
 <section id="g2num">
-<h2>g2num<a class="headerlink" href="#g2num" title="Permalink to this headline">#</a></h2>
+<h2>g2num<a class="headerlink" href="#g2num" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.g2num">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">g2num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#g2num"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.g2num" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">g2num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#g2num"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.g2num" title="Permalink to this definition"></a></dt>
 <dd><p>Convert a graph into a long int</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -597,10 +505,10 @@ the same system</p>
 
 </section>
 <section id="g2vec">
-<h2>g2vec<a class="headerlink" href="#g2vec" title="Permalink to this headline">#</a></h2>
+<h2>g2vec<a class="headerlink" href="#g2vec" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.g2vec">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">g2vec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#g2vec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.g2vec" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">g2vec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#g2vec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.g2vec" title="Permalink to this definition"></a></dt>
 <dd><p>Converts <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph to a vector</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -617,10 +525,10 @@ the same system</p>
 
 </section>
 <section id="g2wclingo">
-<h2>g2wclingo<a class="headerlink" href="#g2wclingo" title="Permalink to this headline">#</a></h2>
+<h2>g2wclingo<a class="headerlink" href="#g2wclingo" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.g2wclingo">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">g2wclingo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#g2wclingo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.g2wclingo" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">g2wclingo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#g2wclingo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.g2wclingo" title="Permalink to this definition"></a></dt>
 <dd><p>Convert a graph to a string of grounded terms for <code class="docutils literal notranslate"><span class="pre">clingo</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -637,10 +545,10 @@ the same system</p>
 
 </section>
 <section id="graph2adj">
-<h2>graph2adj<a class="headerlink" href="#graph2adj" title="Permalink to this headline">#</a></h2>
+<h2>graph2adj<a class="headerlink" href="#graph2adj" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.graph2adj">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">graph2adj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#graph2adj"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.graph2adj" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">graph2adj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#graph2adj"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.graph2adj" title="Permalink to this definition"></a></dt>
 <dd><p>Convert the directed edges to an adjacency matrix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -657,10 +565,10 @@ the same system</p>
 
 </section>
 <section id="graph2badj">
-<h2>graph2badj<a class="headerlink" href="#graph2badj" title="Permalink to this headline">#</a></h2>
+<h2>graph2badj<a class="headerlink" href="#graph2badj" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.graph2badj">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">graph2badj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#graph2badj"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.graph2badj" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">graph2badj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#graph2badj"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.graph2badj" title="Permalink to this definition"></a></dt>
 <dd><p>Convert the bidirected edges to an adjacency matrix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -677,10 +585,10 @@ the same system</p>
 
 </section>
 <section id="graph2dot">
-<h2>graph2dot<a class="headerlink" href="#graph2dot" title="Permalink to this headline">#</a></h2>
+<h2>graph2dot<a class="headerlink" href="#graph2dot" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.graph2dot">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">graph2dot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#graph2dot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.graph2dot" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">graph2dot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#graph2dot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.graph2dot" title="Permalink to this definition"></a></dt>
 <dd><p>Save the graph structure of <cite>g</cite> to a graphviz format dot file with the name <cite>filename</cite></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -694,10 +602,10 @@ the same system</p>
 
 </section>
 <section id="graph2nx">
-<h2>graph2nx<a class="headerlink" href="#graph2nx" title="Permalink to this headline">#</a></h2>
+<h2>graph2nx<a class="headerlink" href="#graph2nx" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.graph2nx">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">graph2nx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#graph2nx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.graph2nx" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">graph2nx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#graph2nx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.graph2nx" title="Permalink to this definition"></a></dt>
 <dd><p>Convert a <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph to NetworkX format ignoring bidirected edges</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -714,10 +622,10 @@ the same system</p>
 
 </section>
 <section id="ian2g">
-<h2>ian2g<a class="headerlink" href="#ian2g" title="Permalink to this headline">#</a></h2>
+<h2>ian2g<a class="headerlink" href="#ian2g" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.ian2g">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">ian2g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#ian2g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.ian2g" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">ian2g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#ian2g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.ian2g" title="Permalink to this definition"></a></dt>
 <dd><p>(Ask)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -734,10 +642,10 @@ the same system</p>
 
 </section>
 <section id="msl-jclingo2g">
-<h2>msl_jclingo2g<a class="headerlink" href="#msl-jclingo2g" title="Permalink to this headline">#</a></h2>
+<h2>msl_jclingo2g<a class="headerlink" href="#msl-jclingo2g" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.msl_jclingo2g">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">msl_jclingo2g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#msl_jclingo2g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.msl_jclingo2g" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">msl_jclingo2g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#msl_jclingo2g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.msl_jclingo2g" title="Permalink to this definition"></a></dt>
 <dd><p>Converts the output of <code class="docutils literal notranslate"><span class="pre">clingo</span></code> to <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph for <code class="docutils literal notranslate"><span class="pre">rasl_msl</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -754,10 +662,10 @@ the same system</p>
 
 </section>
 <section id="nodenum">
-<h2>nodenum<a class="headerlink" href="#nodenum" title="Permalink to this headline">#</a></h2>
+<h2>nodenum<a class="headerlink" href="#nodenum" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.nodenum">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">nodenum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edgepairs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#nodenum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.nodenum" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">nodenum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edgepairs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#nodenum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.nodenum" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the number of nodes in the graph</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -774,10 +682,10 @@ the same system</p>
 
 </section>
 <section id="num2cg">
-<h2>num2CG<a class="headerlink" href="#num2cg" title="Permalink to this headline">#</a></h2>
+<h2>num2CG<a class="headerlink" href="#num2cg" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.num2CG">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">num2CG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#num2CG"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.num2CG" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">num2CG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#num2CG"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.num2CG" title="Permalink to this definition"></a></dt>
 <dd><p>Converts a number  whose binary representaion encodes edge
 presence/absence into a compressed graph representaion</p>
 <dl class="field-list simple">
@@ -798,10 +706,10 @@ presence/absence into a compressed graph representaion</p>
 
 </section>
 <section id="numbered-g2clingo">
-<h2>numbered_g2clingo<a class="headerlink" href="#numbered-g2clingo" title="Permalink to this headline">#</a></h2>
+<h2>numbered_g2clingo<a class="headerlink" href="#numbered-g2clingo" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.numbered_g2clingo">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">numbered_g2clingo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hdirected'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bidirected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hbidirected'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#numbered_g2clingo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.numbered_g2clingo" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">numbered_g2clingo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hdirected'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bidirected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hbidirected'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#numbered_g2clingo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.numbered_g2clingo" title="Permalink to this definition"></a></dt>
 <dd><p>Convert a graph to a string of grounded terms for clingo</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -830,10 +738,10 @@ presence/absence into a compressed graph representaion</p>
 
 </section>
 <section id="numbered-g2wclingo">
-<h2>numbered_g2wclingo<a class="headerlink" href="#numbered-g2wclingo" title="Permalink to this headline">#</a></h2>
+<h2>numbered_g2wclingo<a class="headerlink" href="#numbered-g2wclingo" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.numbered_g2wclingo">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">numbered_g2wclingo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed_weights_matrix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bidirected_weights_matrix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hdirected'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bidirected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hbidirected'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#numbered_g2wclingo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.numbered_g2wclingo" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">numbered_g2wclingo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed_weights_matrix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bidirected_weights_matrix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hdirected'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bidirected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hbidirected'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#numbered_g2wclingo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.numbered_g2wclingo" title="Permalink to this definition"></a></dt>
 <dd><p>Convert a graph to a string of grounded terms for <code class="docutils literal notranslate"><span class="pre">clingo</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -858,10 +766,10 @@ graph</p></li>
 
 </section>
 <section id="nx2graph">
-<h2>nx2graph<a class="headerlink" href="#nx2graph" title="Permalink to this headline">#</a></h2>
+<h2>nx2graph<a class="headerlink" href="#nx2graph" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.nx2graph">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">nx2graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#nx2graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.nx2graph" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">nx2graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#nx2graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.nx2graph" title="Permalink to this definition"></a></dt>
 <dd><p>Convert NetworkX format graph to <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph ignoring bidirected edges
 :param G: <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> format graph
 :type G: dictionary (<code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graphs)</p>
@@ -877,10 +785,10 @@ graph</p></li>
 
 </section>
 <section id="nxbp2graph">
-<h2>nxbp2graph<a class="headerlink" href="#nxbp2graph" title="Permalink to this headline">#</a></h2>
+<h2>nxbp2graph<a class="headerlink" href="#nxbp2graph" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.nxbp2graph">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">nxbp2graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#nxbp2graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.nxbp2graph" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">nxbp2graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#nxbp2graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.nxbp2graph" title="Permalink to this definition"></a></dt>
 <dd><p>Ask</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -897,10 +805,10 @@ graph</p></li>
 
 </section>
 <section id="old-g2clingo">
-<h2>old_g2clingo<a class="headerlink" href="#old-g2clingo" title="Permalink to this headline">#</a></h2>
+<h2>old_g2clingo<a class="headerlink" href="#old-g2clingo" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.old_g2clingo">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">old_g2clingo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file=&lt;_io.TextIOWrapper</span> <span class="pre">name='&lt;stdout&gt;'</span> <span class="pre">mode='w'</span> <span class="pre">encoding='utf-8'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#old_g2clingo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.old_g2clingo" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">old_g2clingo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file=&lt;_io.TextIOWrapper</span> <span class="pre">name='&lt;stdout&gt;'</span> <span class="pre">mode='w'</span> <span class="pre">encoding='utf-8'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#old_g2clingo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.old_g2clingo" title="Permalink to this definition"></a></dt>
 <dd><p>(Ask)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -914,10 +822,10 @@ graph</p></li>
 
 </section>
 <section id="rasl-a2edgetuple">
-<h2>rasl_a2edgetuple<a class="headerlink" href="#rasl-a2edgetuple" title="Permalink to this headline">#</a></h2>
+<h2>rasl_a2edgetuple<a class="headerlink" href="#rasl-a2edgetuple" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.rasl_a2edgetuple">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">rasl_a2edgetuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">answer</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#rasl_a2edgetuple"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.rasl_a2edgetuple" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">rasl_a2edgetuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">answer</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#rasl_a2edgetuple"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.rasl_a2edgetuple" title="Permalink to this definition"></a></dt>
 <dd><p>Returns list of edges and the under sampling rate for <code class="docutils literal notranslate"><span class="pre">rasl</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -934,10 +842,10 @@ graph</p></li>
 
 </section>
 <section id="rasl-c2edgepairs">
-<h2>rasl_c2edgepairs<a class="headerlink" href="#rasl-c2edgepairs" title="Permalink to this headline">#</a></h2>
+<h2>rasl_c2edgepairs<a class="headerlink" href="#rasl-c2edgepairs" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.rasl_c2edgepairs">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">rasl_c2edgepairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clist</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#rasl_c2edgepairs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.rasl_c2edgepairs" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">rasl_c2edgepairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clist</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#rasl_c2edgepairs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.rasl_c2edgepairs" title="Permalink to this definition"></a></dt>
 <dd><p>Converts <code class="docutils literal notranslate"><span class="pre">clingo</span></code> predicates to edge pairs for <code class="docutils literal notranslate"><span class="pre">rasl</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -954,10 +862,10 @@ graph</p></li>
 
 </section>
 <section id="rasl-jclingo2g">
-<h2>rasl_jclingo2g<a class="headerlink" href="#rasl-jclingo2g" title="Permalink to this headline">#</a></h2>
+<h2>rasl_jclingo2g<a class="headerlink" href="#rasl-jclingo2g" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.rasl_jclingo2g">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">rasl_jclingo2g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#rasl_jclingo2g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.rasl_jclingo2g" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">rasl_jclingo2g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#rasl_jclingo2g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.rasl_jclingo2g" title="Permalink to this definition"></a></dt>
 <dd><p>Converts the output of <code class="docutils literal notranslate"><span class="pre">clingo</span></code> to <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph for <code class="docutils literal notranslate"><span class="pre">rasl</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -974,10 +882,10 @@ graph</p></li>
 
 </section>
 <section id="rate">
-<h2>rate<a class="headerlink" href="#rate" title="Permalink to this headline">#</a></h2>
+<h2>rate<a class="headerlink" href="#rate" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.rate">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.rate" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.rate" title="Permalink to this definition"></a></dt>
 <dd><p>Converts under sampling rate to <code class="docutils literal notranslate"><span class="pre">clingo</span></code> predicate</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -994,10 +902,10 @@ graph</p></li>
 
 </section>
 <section id="ug2num">
-<h2>ug2num<a class="headerlink" href="#ug2num" title="Permalink to this headline">#</a></h2>
+<h2>ug2num<a class="headerlink" href="#ug2num" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.ug2num">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">ug2num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#ug2num"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.ug2num" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">ug2num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#ug2num"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.ug2num" title="Permalink to this definition"></a></dt>
 <dd><p>Convert non-empty edges into a tuple of (directed, bidriected) in
 binary format</p>
 <dl class="field-list simple">
@@ -1015,10 +923,10 @@ binary format</p>
 
 </section>
 <section id="vec2adj">
-<h2>vec2adj<a class="headerlink" href="#vec2adj" title="Permalink to this headline">#</a></h2>
+<h2>vec2adj<a class="headerlink" href="#vec2adj" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.vec2adj">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">vec2adj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#vec2adj"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.vec2adj" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">vec2adj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#vec2adj"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.vec2adj" title="Permalink to this definition"></a></dt>
 <dd><p>Converts a vector representation to adjacency matrix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1038,10 +946,10 @@ binary format</p>
 
 </section>
 <section id="vec2g">
-<h2>vec2g<a class="headerlink" href="#vec2g" title="Permalink to this headline">#</a></h2>
+<h2>vec2g<a class="headerlink" href="#vec2g" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="gunfolds.tools.conversions.vec2g">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">vec2g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#vec2g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.vec2g" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">vec2g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#vec2g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.vec2g" title="Permalink to this definition"></a></dt>
 <dd><p>Converts a vector representation to <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1062,117 +970,35 @@ binary format</p>
 </section>
 </section>
 
-        </article>
-      </div>
-      <footer>
-        
-        <div class="related-pages">
-          <a class="next-page" href="dbn2latex.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">dbn2latex</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="comparison.html">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">comparison</div>
-                
-              </div>
-            </a>
-        </div>
-        <div class="bottom-of-page">
-          <div class="left-details">
-            <div class="copyright">
-                Copyright &#169; neuroneural.net
-            </div>
-            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-            
-            <a href="https://github.com/pradyunsg/furo">Furo</a>
-            
-          </div>
-          <div class="right-details">
-            <div class="icons">
-              
-            </div>
-          </div>
-        </div>
-        
-      </footer>
-    </div>
-    <aside class="toc-drawer">
-      
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">conversions</a><ul>
-<li><a class="reference internal" href="#a2edgetuple">a2edgetuple</a></li>
-<li><a class="reference internal" href="#adjs2graph">adjs2graph</a></li>
-<li><a class="reference internal" href="#bg2num">bg2num</a></li>
-<li><a class="reference internal" href="#c2edgepairs">c2edgepairs</a></li>
-<li><a class="reference internal" href="#clingo2num">clingo2num</a></li>
-<li><a class="reference internal" href="#clingo-preamble">clingo_preamble</a></li>
-<li><a class="reference internal" href="#clingo-wedge">clingo_wedge</a></li>
-<li><a class="reference internal" href="#dict-format-converter">dict_format_converter</a></li>
-<li><a class="reference internal" href="#drasl-jclingo2g">drasl_jclingo2g</a></li>
-<li><a class="reference internal" href="#edgepairs2g">edgepairs2g</a></li>
-<li><a class="reference internal" href="#encode-list-sccs">encode_list_sccs</a></li>
-<li><a class="reference internal" href="#encode-sccs">encode_sccs</a></li>
-<li><a class="reference internal" href="#g2clingo">g2clingo</a></li>
-<li><a class="reference internal" href="#g2ian">g2ian</a></li>
-<li><a class="reference internal" href="#g2ig">g2ig</a></li>
-<li><a class="reference internal" href="#g2num">g2num</a></li>
-<li><a class="reference internal" href="#g2vec">g2vec</a></li>
-<li><a class="reference internal" href="#g2wclingo">g2wclingo</a></li>
-<li><a class="reference internal" href="#graph2adj">graph2adj</a></li>
-<li><a class="reference internal" href="#graph2badj">graph2badj</a></li>
-<li><a class="reference internal" href="#graph2dot">graph2dot</a></li>
-<li><a class="reference internal" href="#graph2nx">graph2nx</a></li>
-<li><a class="reference internal" href="#ian2g">ian2g</a></li>
-<li><a class="reference internal" href="#msl-jclingo2g">msl_jclingo2g</a></li>
-<li><a class="reference internal" href="#nodenum">nodenum</a></li>
-<li><a class="reference internal" href="#num2cg">num2CG</a></li>
-<li><a class="reference internal" href="#numbered-g2clingo">numbered_g2clingo</a></li>
-<li><a class="reference internal" href="#numbered-g2wclingo">numbered_g2wclingo</a></li>
-<li><a class="reference internal" href="#nx2graph">nx2graph</a></li>
-<li><a class="reference internal" href="#nxbp2graph">nxbp2graph</a></li>
-<li><a class="reference internal" href="#old-g2clingo">old_g2clingo</a></li>
-<li><a class="reference internal" href="#rasl-a2edgetuple">rasl_a2edgetuple</a></li>
-<li><a class="reference internal" href="#rasl-c2edgepairs">rasl_c2edgepairs</a></li>
-<li><a class="reference internal" href="#rasl-jclingo2g">rasl_jclingo2g</a></li>
-<li><a class="reference internal" href="#rate">rate</a></li>
-<li><a class="reference internal" href="#ug2num">ug2num</a></li>
-<li><a class="reference internal" href="#vec2adj">vec2adj</a></li>
-<li><a class="reference internal" href="#vec2g">vec2g</a></li>
-</ul>
-</li>
-</ul>
 
+           </div>
           </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="comparison.html" class="btn btn-neutral float-left" title="comparison" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dbn2latex.html" class="btn btn-neutral float-right" title="dbn2latex" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright neuroneural.net.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
         </div>
       </div>
-      
-      
-    </aside>
+    </section>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/scripts/furo.js"></script>
-    </body>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>
