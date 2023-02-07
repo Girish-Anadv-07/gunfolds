@@ -5,3 +5,4 @@ gunfolds
    :maxdepth: 4
 
    tools
+   conversions

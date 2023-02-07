@@ -8,7 +8,6 @@ tools
     clingo_msl
     clingo_rasl
     comparison
-    conversions
     dbn2latex
     ecj
     grangercausality
