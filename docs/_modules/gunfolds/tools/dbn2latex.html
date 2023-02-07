@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     
     
 
@@ -18,6 +19,11 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --font-stack: FreightSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --font-family: FreightSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --color-api-overall: green;
+  --color-api-pre-name: #2f05ff;
+  --font-size: 0.5em;
   
   }
   @media not print {
@@ -166,14 +172,19 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">gunfolds</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../bfutils.html">bfutils</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../calc_procs.html">calc_procs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../clingo.html">clingo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../clingo_msl.html">clingo_msl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../clingo_rasl.html">clingo_rasl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../comparison.html">comparison</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../conversions.html">conversions</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../conversions.html">conversions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../graph_conv.html">Graph Conversions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../clingo_conv.html">Clingo Conversions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../other_conv.html">Graph Conversions to igraph, NetworkX and graph-tool formats</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../../dbn2latex.html">dbn2latex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../ecj.html">ecj</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../grangercausality.html">grangercausality</a></li>
@@ -304,7 +315,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<span class="k">def</span> <span class="nf">matrix_start</span><span class="p">(</span><span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.45</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="matrix_start"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.matrix_start">[docs]</a><span class="k">def</span> <span class="nf">matrix_start</span><span class="p">(</span><span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.45</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;\matrix (&quot;</span>\
           <span class="o">+</span> <span class="n">mname</span>\
           <span class="o">+</span> <span class="s2">&quot;) [matrix of nodes, row sep=&quot;</span>\
@@ -314,11 +325,11 @@
           <span class="o">+</span> <span class="s2">&quot;cm&quot;</span>\
           <span class="o">+</span> <span class="n">stl</span>\
           <span class="o">+</span> <span class="s2">&quot;]&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{&quot;</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">matrix_end</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;};&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="matrix_end"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.matrix_end">[docs]</a><span class="k">def</span> <span class="nf">matrix_end</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;};&quot;</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="matrix_grid"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.matrix_grid">[docs]</a><span class="k">def</span> <span class="nf">matrix_grid</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;obs&quot;</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
@@ -385,11 +396,11 @@
                 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;};&#39;</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">emacs_vars</span><span class="p">():</span>
+<div class="viewcode-block" id="emacs_vars"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.emacs_vars">[docs]</a><span class="k">def</span> <span class="nf">emacs_vars</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%% Lo</span><span class="s1">cal Variables:&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%</span><span class="s1">% mode: latex&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%</span><span class="s1">% TeX-master: &quot;../master&quot;&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%% E</span><span class="s1">nd:&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%%% E</span><span class="s1">nd:&#39;</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="dbnprint"><a class="viewcode-back" href="../../../dbn2latex.html#gunfolds.tools.dbn2latex.dbnprint">[docs]</a><span class="k">def</span> <span class="nf">dbnprint</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">mname</span><span class="o">=</span><span class="s1">&#39;generic&#39;</span><span class="p">,</span> <span class="n">w_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">h_gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;obs&quot;</span><span class="p">,</span> <span class="n">stl</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>

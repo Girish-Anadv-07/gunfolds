@@ -1,0 +1,25 @@
+Graph Conversions to igraph, NetworkX and graph-tool formats
+============================================================
+.. currentmodule:: gunfolds.tools.conversions
+
+
+g2ig
+----
+.. autofunction:: gunfolds.tools.conversions.g2ig
+
+
+graph2dot
+---------
+.. autofunction:: gunfolds.tools.conversions.graph2dot
+
+
+graph2nx
+--------
+.. autofunction:: gunfolds.tools.conversions.graph2nx
+
+
+nx2graph
+--------
+.. autofunction:: gunfolds.tools.conversions.nx2graph
+
+

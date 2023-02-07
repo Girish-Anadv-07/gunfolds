@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="ecj" href="ecj.html" /><link rel="prev" title="conversions" href="conversions.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="ecj" href="ecj.html" /><link rel="prev" title="Graph Conversions to igraph, NetworkX and graph-tool formats" href="other_conv.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
         <title>dbn2latex - gunfolds documentation</title>
@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     
     
 
@@ -19,6 +20,11 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --font-stack: FreightSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --font-family: FreightSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --color-api-overall: green;
+  --color-api-pre-name: #2f05ff;
+  --font-size: 0.5em;
   
   }
   @media not print {
@@ -167,14 +173,19 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">gunfolds</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current has-children"><a class="reference internal" href="tools.html">tools package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="tools.html">tools</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="bfutils.html">bfutils</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calc_procs.html">calc_procs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="clingo.html">clingo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="clingo_msl.html">clingo_msl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="clingo_rasl.html">clingo_rasl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="comparison.html">comparison</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html">conversions</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="conversions.html">conversions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html">Graph Conversions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html">Clingo Conversions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="other_conv.html">Graph Conversions to igraph, NetworkX and graph-tool formats</a></li>
+</ul>
+</li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">dbn2latex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ecj.html">ecj</a></li>
 <li class="toctree-l3"><a class="reference internal" href="grangercausality.html">grangercausality</a></li>
@@ -397,6 +408,14 @@ TikZ/Latex format</p>
 </dd>
 </dl>
 </dd></dl>
+
+</section>
+<section id="emacs-vars">
+<h2>emacs_vars<a class="headerlink" href="#emacs-vars" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="gunfolds.tools.dbn2latex.emacs_vars">
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.dbn2latex.</span></span><span class="sig-name descname"><span class="pre">emacs_vars</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/dbn2latex.html#emacs_vars"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.dbn2latex.emacs_vars" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
 
 </section>
 <section id="foldplot">
@@ -636,6 +655,14 @@ the graph in TikZ/Latex format</p>
 </dd></dl>
 
 </section>
+<section id="matrix-end">
+<h2>matrix_end<a class="headerlink" href="#matrix-end" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="gunfolds.tools.dbn2latex.matrix_end">
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.dbn2latex.</span></span><span class="sig-name descname"><span class="pre">matrix_end</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/dbn2latex.html#matrix_end"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.dbn2latex.matrix_end" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
 <section id="matrix-fold">
 <h2>matrix_fold<a class="headerlink" href="#matrix-fold" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
@@ -719,6 +746,14 @@ the graph in TikZ/Latex format</p>
 </dd>
 </dl>
 </dd></dl>
+
+</section>
+<section id="matrix-start">
+<h2>matrix_start<a class="headerlink" href="#matrix-start" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="gunfolds.tools.dbn2latex.matrix_start">
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.dbn2latex.</span></span><span class="sig-name descname"><span class="pre">matrix_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'generic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_gap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.45</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h_gap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/dbn2latex.html#matrix_start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.dbn2latex.matrix_start" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
 
 </section>
 <section id="output-graph-figure">
@@ -808,14 +843,14 @@ the graph in TikZ/Latex format</p>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="conversions.html">
+          <a class="prev-page" href="other_conv.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">conversions</div>
+                <div class="title">Graph Conversions to igraph, NetworkX and graph-tool formats</div>
                 
               </div>
             </a>
@@ -859,6 +894,7 @@ the graph in TikZ/Latex format</p>
 <li><a class="reference internal" href="#cdbnwrap">cdbnwrap</a></li>
 <li><a class="reference internal" href="#dbnprint">dbnprint</a></li>
 <li><a class="reference internal" href="#dict2graph">dict2graph</a></li>
+<li><a class="reference internal" href="#emacs-vars">emacs_vars</a></li>
 <li><a class="reference internal" href="#foldplot">foldplot</a></li>
 <li><a class="reference internal" href="#g-single">g_single</a></li>
 <li><a class="reference internal" href="#getangle">getangle</a></li>
@@ -868,9 +904,11 @@ the graph in TikZ/Latex format</p>
 <li><a class="reference internal" href="#graph2dict">graph2dict</a></li>
 <li><a class="reference internal" href="#gsingle">gsingle</a></li>
 <li><a class="reference internal" href="#matrix-edges">matrix_edges</a></li>
+<li><a class="reference internal" href="#matrix-end">matrix_end</a></li>
 <li><a class="reference internal" href="#matrix-fold">matrix_fold</a></li>
 <li><a class="reference internal" href="#matrix-grid">matrix_grid</a></li>
 <li><a class="reference internal" href="#matrix-list">matrix_list</a></li>
+<li><a class="reference internal" href="#matrix-start">matrix_start</a></li>
 <li><a class="reference internal" href="#output-graph-figure">output_graph_figure</a></li>
 <li><a class="reference internal" href="#paintscc">paintSCC</a></li>
 <li><a class="reference internal" href="#unfoldplot">unfoldplot</a></li>

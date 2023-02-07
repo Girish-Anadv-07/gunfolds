@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     
     
 
@@ -18,6 +19,11 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --font-stack: FreightSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --font-family: FreightSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --color-api-overall: green;
+  --color-api-pre-name: #2f05ff;
+  --font-size: 0.5em;
   
   }
   @media not print {
@@ -166,14 +172,19 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">gunfolds</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../bfutils.html">bfutils</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../calc_procs.html">calc_procs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../clingo.html">clingo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../clingo_msl.html">clingo_msl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../clingo_rasl.html">clingo_rasl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../comparison.html">comparison</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../conversions.html">conversions</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../conversions.html">conversions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../graph_conv.html">Graph Conversions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../clingo_conv.html">Clingo Conversions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../other_conv.html">Graph Conversions to igraph, NetworkX and graph-tool formats</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../../dbn2latex.html">dbn2latex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../ecj.html">ecj</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../grangercausality.html">grangercausality</a></li>
@@ -400,20 +411,22 @@
 <div class="viewcode-block" id="scale_free"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.scale_free">[docs]</a><span class="k">def</span> <span class="nf">scale_free</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span>
                <span class="n">delta_in</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">delta_out</span><span class="o">=</span><span class="mf">0.2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    :param n:</span>
-<span class="sd">    :type n: </span>
+<span class="sd">    (Copied from scale_free function in networkx should i need to add any citation)</span>
+
+<span class="sd">    :param n: number of nodes</span>
+<span class="sd">    :type n: integer</span>
 <span class="sd">    </span>
-<span class="sd">    :param alpha:</span>
-<span class="sd">    :type alpha:</span>
+<span class="sd">    :param alpha: probability for adding a new node connected to an existing node</span>
+<span class="sd">    :type alpha: float</span>
 <span class="sd">    </span>
-<span class="sd">    :param beta:</span>
-<span class="sd">    :type beta:</span>
+<span class="sd">    :param beta: probability for adding an edge between two existing nodes.</span>
+<span class="sd">    :type beta: float</span>
 <span class="sd">    </span>
-<span class="sd">    :param delta_in:</span>
-<span class="sd">    :type delta_in:</span>
+<span class="sd">    :param delta_in: bias for choosing nodes from in-degree</span>
+<span class="sd">    :type delta_in: float</span>
 <span class="sd">    </span>
-<span class="sd">    :param delta_out:</span>
-<span class="sd">    :type delta_out:</span>
+<span class="sd">    :param delta_out: bias for choosing nodes from out-degree distribution.</span>
+<span class="sd">    :type delta_out: float</span>
 <span class="sd">    </span>
 <span class="sd">    :returns: </span>
 <span class="sd">    :rtype: </span>
@@ -717,7 +730,7 @@
 
 <div class="viewcode-block" id="clean_leaf_nodes"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.clean_leaf_nodes">[docs]</a><span class="k">def</span> <span class="nf">clean_leaf_nodes</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    (Ask)</span>
+<span class="sd">    Removes leaf_nodes of the given graph ``g``</span>
 
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graph)</span>
@@ -772,12 +785,12 @@
 
 <div class="viewcode-block" id="no_parents"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.no_parents">[docs]</a><span class="k">def</span> <span class="nf">no_parents</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    (Ask)</span>
+<span class="sd">    Checks if there exists a node that has no parents in the given graph ``g``.</span>
 
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graph)</span>
 <span class="sd">    </span>
-<span class="sd">    :returns: </span>
+<span class="sd">    :returns: True, if there exists a node with no parents. False, otherwise.</span>
 <span class="sd">    :rtype: boolean</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">T</span> <span class="o">=</span> <span class="n">gtranspose</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
@@ -789,12 +802,12 @@
 
 <div class="viewcode-block" id="no_children"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.no_children">[docs]</a><span class="k">def</span> <span class="nf">no_children</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    (Ask)</span>
+<span class="sd">    Checks if there exists a node that has no children in the given graph ``g``.</span>
 
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graph)</span>
 <span class="sd">    </span>
-<span class="sd">    :returns: </span>
+<span class="sd">    :returns: True, if there exists a node with no children. False, otherwise.</span>
 <span class="sd">    :rtype: boolean</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">g</span><span class="p">:</span>
@@ -805,12 +818,12 @@
 
 <div class="viewcode-block" id="scc_unreachable"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.scc_unreachable">[docs]</a><span class="k">def</span> <span class="nf">scc_unreachable</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    (Ask)</span>
+<span class="sd">    Checks if there exists a strongly connected component in the given graph ``g`` that is unreachable.</span>
 
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graph)</span>
 <span class="sd">    </span>
-<span class="sd">    :returns: </span>
+<span class="sd">    :returns: True, if there exists SCC that is unreachable. False, otherwise.</span>
 <span class="sd">    :rtype: boolean</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">bidirected_no_fork</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
@@ -826,6 +839,8 @@
 
 <div class="viewcode-block" id="addanedge"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.addanedge">[docs]</a><span class="k">def</span> <span class="nf">addanedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Adds an edge ``e`` from the given graph ``g``</span>
+
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graph)</span>
 <span class="sd">    </span>
@@ -837,6 +852,8 @@
 
 <div class="viewcode-block" id="delanedge"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.delanedge">[docs]</a><span class="k">def</span> <span class="nf">delanedge</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Deletes an edge ``e`` from the given graph ``g``</span>
+
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graph)</span>
 <span class="sd">    </span>
@@ -848,6 +865,8 @@
 
 <div class="viewcode-block" id="addedges"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.addedges">[docs]</a><span class="k">def</span> <span class="nf">addedges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">es</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Adds the edges in the list ``es`` for given graph ``g``.</span>
+
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graph)</span>
 <span class="sd">    </span>
@@ -860,6 +879,8 @@
 
 <div class="viewcode-block" id="deledges"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.deledges">[docs]</a><span class="k">def</span> <span class="nf">deledges</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">es</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Deletes the edges in the list ``es`` for given graph ``g``.</span>
+
 <span class="sd">    :param g: ``gunfolds`` graph</span>
 <span class="sd">    :type g: dictionary (``gunfolds`` graph)</span>
 <span class="sd">    </span>
@@ -954,12 +975,12 @@
 
 <div class="viewcode-block" id="udensity"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.udensity">[docs]</a><span class="k">def</span> <span class="nf">udensity</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    (Ask)</span>
+<span class="sd">    Returns the density of the bidirected graph</span>
 
 <span class="sd">    :param g: `gunfolds` graph</span>
 <span class="sd">    :type g: dictionary (`gunfolds` graph)</span>
 <span class="sd">    </span>
-<span class="sd">    :returns: </span>
+<span class="sd">    :returns: the density of the bidirected graph</span>
 <span class="sd">    :rtype: float</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">gedgelist</span><span class="p">(</span><span class="n">g</span><span class="p">))</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">bedgelist</span><span class="p">(</span><span class="n">g</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">double</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span></div>
@@ -967,7 +988,7 @@
 
 <div class="viewcode-block" id="mean_degree_graph"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.mean_degree_graph">[docs]</a><span class="k">def</span> <span class="nf">mean_degree_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Returns mean outgoing degree of the graph</span>
+<span class="sd">    Generates a random graph with ``node_num``, nodes and mean outgoing degree of ``degree``.</span>
 
 <span class="sd">    :param node_num: number of nodes</span>
 <span class="sd">    :type node_num: integer</span>
@@ -975,7 +996,7 @@
 <span class="sd">    :param degree: degree</span>
 <span class="sd">    :type degree: integer</span>
 <span class="sd">    </span>
-<span class="sd">    :returns: mean outgoing degree of the graph</span>
+<span class="sd">    :returns: a random graph with mean outgoing degree of the given graph</span>
 <span class="sd">    :rtype: dictionary(``gunfolds`` graph)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">g</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">fast_gnp_random_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="o">/</span><span class="n">node_num</span><span class="p">,</span> <span class="n">directed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -985,7 +1006,7 @@
 
 <div class="viewcode-block" id="pow_degree_graph"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.pow_degree_graph">[docs]</a><span class="k">def</span> <span class="nf">pow_degree_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    (Ask)</span>
+<span class="sd">    Generates a graph by powerlaw sequence of ``degree`` constructed using the Havel-Hakimi algorithm.</span>
 
 <span class="sd">    :param node_num: number of nodes</span>
 <span class="sd">    :type node_num: integer</span>
@@ -996,7 +1017,7 @@
 <span class="sd">    :param seed: random seed</span>
 <span class="sd">    :type seed: integer</span>
 <span class="sd">    </span>
-<span class="sd">    :returns: </span>
+<span class="sd">    :returns: a graph constructed using the Havel-Hakimi algorithm.</span>
 <span class="sd">    :rtype: dictionary(``gunfolds`` graph)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -1012,7 +1033,7 @@
 
 <div class="viewcode-block" id="bp_mean_degree_graph"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.bp_mean_degree_graph">[docs]</a><span class="k">def</span> <span class="nf">bp_mean_degree_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Generates a random graph with ``node_num``, nodes and mean outgoing degree of ``degree``</span>
+<span class="sd">    Generates a random bipartite graph with ``node_num``, nodes and mean outgoing degree (``degree``)</span>
 
 <span class="sd">    :param node_num: number of nodes</span>
 <span class="sd">    :type node_num: integer</span>
@@ -1023,7 +1044,7 @@
 <span class="sd">    :param seed: random seed</span>
 <span class="sd">    :type seed: integer</span>
 <span class="sd">    </span>
-<span class="sd">    :returns: a random graph with ``node_num``, nodes and mean outgoing degree of ``degree``</span>
+<span class="sd">    :returns: a random bipartite graph with ``node_num``, nodes and mean outgoing degree of ``degree``</span>
 <span class="sd">    :rtype: dictionary(``gunfolds`` graph)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">bipartite</span><span class="o">.</span><span class="n">random_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="o">/</span><span class="n">node_num</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
@@ -1034,7 +1055,7 @@
 <span class="c1"># this function does not work yet - WIP</span>
 <div class="viewcode-block" id="bp_pow_degree_graph"><a class="viewcode-back" href="../../../graphkit.html#gunfolds.tools.graphkit.bp_pow_degree_graph">[docs]</a><span class="k">def</span> <span class="nf">bp_pow_degree_graph</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">degree</span><span class="p">,</span> <span class="n">prob</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    (Ask)</span>
+<span class="sd">    Generates a bipartite graph by powerlaw sequence of ``degree`` constructed using the Havel-Hakimi algorithm.</span>
 
 <span class="sd">    :param node_num: number of nodes</span>
 <span class="sd">    :type node_num: integer</span>
@@ -1048,7 +1069,7 @@
 <span class="sd">    :param seed: random seed</span>
 <span class="sd">    :type seed: integer</span>
 <span class="sd">    </span>
-<span class="sd">    :returns: </span>
+<span class="sd">    :returns: a bipartite graph constructed using the Havel-Hakimi algorithm.</span>
 <span class="sd">    :rtype: dictionary(``gunfolds`` graph)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>

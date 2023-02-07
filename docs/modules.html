@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="tools package" href="tools.html" /><link rel="prev" title="Contributors" href="contributers.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="tools" href="tools.html" /><link rel="prev" title="Contributors" href="contributers.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
         <title>gunfolds - gunfolds documentation</title>
@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     
     
 
@@ -19,6 +20,11 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --font-stack: FreightSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --font-family: FreightSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --color-api-overall: green;
+  --color-api-pre-name: #2f05ff;
+  --font-size: 0.5em;
   
   }
   @media not print {
@@ -167,14 +173,19 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">gunfolds</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="tools.html">tools package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="tools.html">tools</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="bfutils.html">bfutils</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calc_procs.html">calc_procs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="clingo.html">clingo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="clingo_msl.html">clingo_msl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="clingo_rasl.html">clingo_rasl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="comparison.html">comparison</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html">conversions</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="conversions.html">conversions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html">Graph Conversions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html">Clingo Conversions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="other_conv.html">Graph Conversions to igraph, NetworkX and graph-tool formats</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html">dbn2latex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ecj.html">ecj</a></li>
 <li class="toctree-l3"><a class="reference internal" href="grangercausality.html">grangercausality</a></li>
@@ -230,7 +241,7 @@
 <h1>gunfolds<a class="headerlink" href="#gunfolds" title="Permalink to this headline">#</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tools.html">tools package</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">tools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="bfutils.html">bfutils</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="bfutils.html#all-undersamples">all_undersamples</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bfutils.html#bidirected-inc">bidirected_inc</a></li>
@@ -309,44 +320,52 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="conversions.html">conversions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#a2edgetuple">a2edgetuple</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#adjs2graph">adjs2graph</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#bg2num">bg2num</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#c2edgepairs">c2edgepairs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#clingo2num">clingo2num</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#clingo-preamble">clingo_preamble</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#clingo-wedge">clingo_wedge</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#dict-format-converter">dict_format_converter</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#drasl-jclingo2g">drasl_jclingo2g</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#edgepairs2g">edgepairs2g</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#encode-list-sccs">encode_list_sccs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#encode-sccs">encode_sccs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#g2clingo">g2clingo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#g2ian">g2ian</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#g2ig">g2ig</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#g2num">g2num</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#g2vec">g2vec</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#g2wclingo">g2wclingo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#graph2adj">graph2adj</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#graph2badj">graph2badj</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#graph2dot">graph2dot</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#graph2nx">graph2nx</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#ian2g">ian2g</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#msl-jclingo2g">msl_jclingo2g</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#nodenum">nodenum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#num2cg">num2CG</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#numbered-g2clingo">numbered_g2clingo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#numbered-g2wclingo">numbered_g2wclingo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#nx2graph">nx2graph</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#nxbp2graph">nxbp2graph</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#old-g2clingo">old_g2clingo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#rasl-a2edgetuple">rasl_a2edgetuple</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#rasl-c2edgepairs">rasl_c2edgepairs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#rasl-jclingo2g">rasl_jclingo2g</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#rate">rate</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#ug2num">ug2num</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#vec2adj">vec2adj</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conversions.html#vec2g">vec2g</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph_conv.html">Graph Conversions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#adjs2graph">adjs2graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#bg2num">bg2num</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#dict-format-converter">dict_format_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#edgepairs2g">edgepairs2g</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#g2ian">g2ian</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#g2num">g2num</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#g2vec">g2vec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#graph2adj">graph2adj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#graph2badj">graph2badj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#ian2g">ian2g</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#nodenum">nodenum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#num2cg">num2CG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#ug2num">ug2num</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#vec2adj">vec2adj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graph_conv.html#vec2g">vec2g</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="clingo_conv.html">Clingo Conversions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#a2edgetuple">a2edgetuple</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#c2edgepairs">c2edgepairs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#clingo2num">clingo2num</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#clingo-preamble">clingo_preamble</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#clingo-wedge">clingo_wedge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#drasl-jclingo2g">drasl_jclingo2g</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#encode-list-sccs">encode_list_sccs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#encode-sccs">encode_sccs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#g2clingo">g2clingo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#g2wclingo">g2wclingo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#msl-jclingo2g">msl_jclingo2g</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#numbered-g2clingo">numbered_g2clingo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#numbered-g2wclingo">numbered_g2wclingo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#old-g2clingo">old_g2clingo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#rasl-a2edgetuple">rasl_a2edgetuple</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#rasl-c2edgepairs">rasl_c2edgepairs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#rasl-jclingo2g">rasl_jclingo2g</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clingo_conv.html#rate">rate</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="other_conv.html">Graph Conversions to igraph, NetworkX and graph-tool formats</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="other_conv.html#g2ig">g2ig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="other_conv.html#graph2dot">graph2dot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="other_conv.html#graph2nx">graph2nx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="other_conv.html#nx2graph">nx2graph</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="dbn2latex.html">dbn2latex</a><ul>
@@ -357,6 +376,7 @@
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#cdbnwrap">cdbnwrap</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#dbnprint">dbnprint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#dict2graph">dict2graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#emacs-vars">emacs_vars</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#foldplot">foldplot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#g-single">g_single</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#getangle">getangle</a></li>
@@ -366,9 +386,11 @@
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#graph2dict">graph2dict</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#gsingle">gsingle</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#matrix-edges">matrix_edges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#matrix-end">matrix_end</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#matrix-fold">matrix_fold</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#matrix-grid">matrix_grid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#matrix-list">matrix_list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#matrix-start">matrix_start</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#output-graph-figure">output_graph_figure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#paintscc">paintSCC</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html#unfoldplot">unfoldplot</a></li>
@@ -646,6 +668,7 @@
 <li class="toctree-l3"><a class="reference internal" href="unknownrate.html#le2num">le2num</a></li>
 <li class="toctree-l3"><a class="reference internal" href="unknownrate.html#liteqclass">liteqclass</a></li>
 <li class="toctree-l3"><a class="reference internal" href="unknownrate.html#loop2graph">loop2graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unknownrate.html#main">main</a></li>
 <li class="toctree-l3"><a class="reference internal" href="unknownrate.html#matchaloop">matchAloop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="unknownrate.html#perm-circular">perm_circular</a></li>
 <li class="toctree-l3"><a class="reference internal" href="unknownrate.html#prune-conflicts">prune_conflicts</a></li>
@@ -679,7 +702,7 @@
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">tools package</div>
+                <div class="title">tools</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>

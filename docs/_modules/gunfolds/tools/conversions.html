@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     
     
 
@@ -18,6 +19,11 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --font-stack: FreightSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --font-family: FreightSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --color-api-overall: green;
+  --color-api-pre-name: #2f05ff;
+  --font-size: 0.5em;
   
   }
   @media not print {
@@ -166,14 +172,19 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">gunfolds</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools.html">tools</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../bfutils.html">bfutils</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../calc_procs.html">calc_procs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../clingo.html">clingo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../clingo_msl.html">clingo_msl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../clingo_rasl.html">clingo_rasl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../comparison.html">comparison</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../conversions.html">conversions</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../conversions.html">conversions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../graph_conv.html">Graph Conversions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../clingo_conv.html">Clingo Conversions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../other_conv.html">Graph Conversions to igraph, NetworkX and graph-tool formats</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../../dbn2latex.html">dbn2latex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../ecj.html">ecj</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../grangercausality.html">grangercausality</a></li>
@@ -236,7 +247,7 @@
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<div class="viewcode-block" id="g2num"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.g2num">[docs]</a><span class="k">def</span> <span class="nf">g2num</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="g2num"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.g2num">[docs]</a><span class="k">def</span> <span class="nf">g2num</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Convert a graph into a long int </span>
 
@@ -256,7 +267,7 @@
 
     <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">num</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ug2num"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.ug2num">[docs]</a><span class="k">def</span> <span class="nf">ug2num</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="ug2num"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.ug2num">[docs]</a><span class="k">def</span> <span class="nf">ug2num</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert non-empty edges into a tuple of (directed, bidriected) in</span>
 <span class="sd">    binary format</span>
@@ -282,7 +293,7 @@
     <span class="k">return</span> <span class="n">num</span><span class="p">,</span> <span class="n">num2</span></div>
 
 
-<div class="viewcode-block" id="bg2num"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.bg2num">[docs]</a><span class="k">def</span> <span class="nf">bg2num</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="bg2num"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.bg2num">[docs]</a><span class="k">def</span> <span class="nf">bg2num</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert bidirected edges into a binary format</span>
 <span class="sd">    </span>
@@ -302,7 +313,7 @@
     <span class="k">return</span> <span class="n">num</span></div>
 
 
-<div class="viewcode-block" id="graph2nx"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.graph2nx">[docs]</a><span class="k">def</span> <span class="nf">graph2nx</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="graph2nx"><a class="viewcode-back" href="../../../other_conv.html#gunfolds.tools.conversions.graph2nx">[docs]</a><span class="k">def</span> <span class="nf">graph2nx</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert a ``gunfolds`` graph to NetworkX format ignoring bidirected edges</span>
 <span class="sd">    </span>
@@ -321,7 +332,7 @@
             <span class="n">g</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">g</span></div>
 
-<div class="viewcode-block" id="graph2dot"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.graph2dot">[docs]</a><span class="k">def</span> <span class="nf">graph2dot</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<div class="viewcode-block" id="graph2dot"><a class="viewcode-back" href="../../../other_conv.html#gunfolds.tools.conversions.graph2dot">[docs]</a><span class="k">def</span> <span class="nf">graph2dot</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Save the graph structure of `g` to a graphviz format dot file with the name `filename`</span>
 
@@ -334,7 +345,7 @@
     <span class="n">G</span> <span class="o">=</span> <span class="n">graph2nx</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
     <span class="n">nx</span><span class="o">.</span><span class="n">drawing</span><span class="o">.</span><span class="n">nx_pydot</span><span class="o">.</span><span class="n">write_dot</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="nx2graph"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.nx2graph">[docs]</a><span class="k">def</span> <span class="nf">nx2graph</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="nx2graph"><a class="viewcode-back" href="../../../other_conv.html#gunfolds.tools.conversions.nx2graph">[docs]</a><span class="k">def</span> <span class="nf">nx2graph</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert NetworkX format graph to ``gunfolds`` graph ignoring bidirected edges</span>
 <span class="sd">    :param G: ``gunfolds`` format graph</span>
@@ -349,7 +360,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="num2CG"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.num2CG">[docs]</a><span class="k">def</span> <span class="nf">num2CG</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="num2CG"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.num2CG">[docs]</a><span class="k">def</span> <span class="nf">num2CG</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts a number  whose binary representaion encodes edge</span>
 <span class="sd">    presence/absence into a compressed graph representaion</span>
@@ -372,7 +383,7 @@
     <span class="k">return</span> <span class="n">g</span></div>
 
 
-<div class="viewcode-block" id="dict_format_converter"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.dict_format_converter">[docs]</a><span class="k">def</span> <span class="nf">dict_format_converter</span><span class="p">(</span><span class="n">H</span><span class="p">):</span>
+<div class="viewcode-block" id="dict_format_converter"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.dict_format_converter">[docs]</a><span class="k">def</span> <span class="nf">dict_format_converter</span><span class="p">(</span><span class="n">H</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Convert a graph from the set style dictionary format to the integer style</span>
 <span class="sd">    </span>
 <span class="sd">        :param H: set style dictionary format</span>
@@ -411,7 +422,7 @@
                 <span class="n">H_new</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">vert_a</span><span class="p">)][</span><span class="nb">int</span><span class="p">(</span><span class="n">vert_b</span><span class="p">)]</span> <span class="o">=</span> <span class="n">edge_val</span>
     <span class="k">return</span> <span class="n">H_new</span></div>
 
-<div class="viewcode-block" id="g2ian"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.g2ian">[docs]</a><span class="k">def</span> <span class="nf">g2ian</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="g2ian"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.g2ian">[docs]</a><span class="k">def</span> <span class="nf">g2ian</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    (Ask)</span>
 
@@ -423,7 +434,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">dict_format_converter</span><span class="p">(</span><span class="n">g</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ian2g"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.ian2g">[docs]</a><span class="k">def</span> <span class="nf">ian2g</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="ian2g"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.ian2g">[docs]</a><span class="k">def</span> <span class="nf">ian2g</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    (Ask)</span>
 
@@ -444,7 +455,7 @@
 
 <span class="c1">#### Adjacency matrix functions</span>
 
-<div class="viewcode-block" id="graph2adj"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.graph2adj">[docs]</a><span class="k">def</span> <span class="nf">graph2adj</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="graph2adj"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.graph2adj">[docs]</a><span class="k">def</span> <span class="nf">graph2adj</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Convert the directed edges to an adjacency matrix </span>
 <span class="sd">    </span>
@@ -461,7 +472,7 @@
     <span class="k">return</span> <span class="n">A</span></div>
 
 
-<div class="viewcode-block" id="graph2badj"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.graph2badj">[docs]</a><span class="k">def</span> <span class="nf">graph2badj</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<div class="viewcode-block" id="graph2badj"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.graph2badj">[docs]</a><span class="k">def</span> <span class="nf">graph2badj</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Convert the bidirected edges to an adjacency matrix </span>
 <span class="sd">    </span>
@@ -478,7 +489,7 @@
     <span class="k">return</span> <span class="n">A</span></div>
 
 
-<div class="viewcode-block" id="adjs2graph"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.adjs2graph">[docs]</a><span class="k">def</span> <span class="nf">adjs2graph</span><span class="p">(</span><span class="n">directed</span><span class="p">,</span> <span class="n">bidirected</span><span class="p">):</span>
+<div class="viewcode-block" id="adjs2graph"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.adjs2graph">[docs]</a><span class="k">def</span> <span class="nf">adjs2graph</span><span class="p">(</span><span class="n">directed</span><span class="p">,</span> <span class="n">bidirected</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Convert an adjacency matrix of directed and bidirected edges to a graph</span>
 <span class="sd">    </span>
@@ -506,7 +517,7 @@
     <span class="k">return</span> <span class="n">G</span></div>
 
 
-<div class="viewcode-block" id="g2vec"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.g2vec">[docs]</a><span class="k">def</span> <span class="nf">g2vec</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="g2vec"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.g2vec">[docs]</a><span class="k">def</span> <span class="nf">g2vec</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts ``gunfolds`` graph to a vector</span>
 
@@ -521,7 +532,7 @@
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="n">A</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">B</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">triu_indices</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)]]</span></div>
 
 
-<div class="viewcode-block" id="vec2adj"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.vec2adj">[docs]</a><span class="k">def</span> <span class="nf">vec2adj</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="vec2adj"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.vec2adj">[docs]</a><span class="k">def</span> <span class="nf">vec2adj</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts a vector representation to adjacency matrix</span>
 
@@ -542,7 +553,7 @@
     <span class="k">return</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span></div>
 
 
-<div class="viewcode-block" id="vec2g"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.vec2g">[docs]</a><span class="k">def</span> <span class="nf">vec2g</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="vec2g"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.vec2g">[docs]</a><span class="k">def</span> <span class="nf">vec2g</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts a vector representation to ``gunfolds`` graph </span>
 
@@ -558,7 +569,7 @@
     <span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span> <span class="n">vec2adj</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">adjs2graph</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="rate"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.rate">[docs]</a><span class="k">def</span> <span class="nf">rate</span><span class="p">(</span><span class="n">u</span><span class="p">):</span>
+<div class="viewcode-block" id="rate"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.rate">[docs]</a><span class="k">def</span> <span class="nf">rate</span><span class="p">(</span><span class="n">u</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts under sampling rate to ``clingo`` predicate</span>
 
@@ -571,7 +582,7 @@
     <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;u(1..&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;).&quot;</span>
     <span class="k">return</span> <span class="n">s</span></div>
 
-<div class="viewcode-block" id="clingo_preamble"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.clingo_preamble">[docs]</a><span class="k">def</span> <span class="nf">clingo_preamble</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="clingo_preamble"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.clingo_preamble">[docs]</a><span class="k">def</span> <span class="nf">clingo_preamble</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts number of nodes into a ``clingo`` predicate</span>
 
@@ -587,7 +598,7 @@
     <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;node(1..n). &#39;</span>
     <span class="k">return</span> <span class="n">s</span></div>
 
-<div class="viewcode-block" id="g2clingo"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.g2clingo">[docs]</a><span class="k">def</span> <span class="nf">g2clingo</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">directed</span><span class="o">=</span><span class="s1">&#39;hdirected&#39;</span><span class="p">,</span> <span class="n">bidirected</span><span class="o">=</span><span class="s1">&#39;hbidirected&#39;</span><span class="p">,</span> <span class="n">both_bidirected</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">preamble</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="g2clingo"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.g2clingo">[docs]</a><span class="k">def</span> <span class="nf">g2clingo</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">directed</span><span class="o">=</span><span class="s1">&#39;hdirected&#39;</span><span class="p">,</span> <span class="n">bidirected</span><span class="o">=</span><span class="s1">&#39;hbidirected&#39;</span><span class="p">,</span> <span class="n">both_bidirected</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">preamble</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Convert a graph to a string of grounded terms for clingo</span>
 <span class="sd">    </span>
 <span class="sd">        :param g: ``gunfolds`` graph</span>
@@ -629,7 +640,7 @@
             <span class="k">if</span> <span class="n">g</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">direction</span><span class="p">:</span> <span class="n">s</span> <span class="o">+=</span> <span class="n">bidirected</span><span class="o">+</span><span class="s1">&#39;(&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;). &#39;</span>
     <span class="k">return</span> <span class="n">s</span></div>
 
-<div class="viewcode-block" id="numbered_g2clingo"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.numbered_g2clingo">[docs]</a><span class="k">def</span> <span class="nf">numbered_g2clingo</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">directed</span><span class="o">=</span><span class="s1">&#39;hdirected&#39;</span><span class="p">,</span> <span class="n">bidirected</span><span class="o">=</span><span class="s1">&#39;hbidirected&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="numbered_g2clingo"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.numbered_g2clingo">[docs]</a><span class="k">def</span> <span class="nf">numbered_g2clingo</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">directed</span><span class="o">=</span><span class="s1">&#39;hdirected&#39;</span><span class="p">,</span> <span class="n">bidirected</span><span class="o">=</span><span class="s1">&#39;hbidirected&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Convert a graph to a string of grounded terms for clingo</span>
 <span class="sd">    </span>
 <span class="sd">        :param g: ``gunfolds`` graph</span>
@@ -662,7 +673,7 @@
             <span class="k">if</span> <span class="n">g</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="n">w</span><span class="p">:</span> <span class="n">s</span> <span class="o">+=</span> <span class="n">bidirected</span><span class="o">+</span><span class="s1">&#39;(&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;). &#39;</span>
     <span class="k">return</span> <span class="n">s</span></div>
 
-<div class="viewcode-block" id="clingo_wedge"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.clingo_wedge">[docs]</a><span class="k">def</span> <span class="nf">clingo_wedge</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;edge&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="clingo_wedge"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.clingo_wedge">[docs]</a><span class="k">def</span> <span class="nf">clingo_wedge</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;edge&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns ``clingo`` predicate for weighted edge</span>
 
@@ -687,7 +698,7 @@
     <span class="n">edge</span> <span class="o">=</span> <span class="n">name</span><span class="o">+</span><span class="s1">&#39;(&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;, &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;, &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;, &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;). &#39;</span>
     <span class="k">return</span> <span class="n">edge</span></div>
 
-<div class="viewcode-block" id="numbered_g2wclingo"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.numbered_g2wclingo">[docs]</a><span class="k">def</span> <span class="nf">numbered_g2wclingo</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">directed_weights_matrix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bidirected_weights_matrix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="numbered_g2wclingo"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.numbered_g2wclingo">[docs]</a><span class="k">def</span> <span class="nf">numbered_g2wclingo</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">directed_weights_matrix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bidirected_weights_matrix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                        <span class="n">directed</span><span class="o">=</span><span class="s1">&#39;hdirected&#39;</span><span class="p">,</span> <span class="n">bidirected</span><span class="o">=</span><span class="s1">&#39;hbidirected&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert a graph to a string of grounded terms for ``clingo``</span>
@@ -743,7 +754,7 @@
             <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">missing</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">s</span></div>
 
-<div class="viewcode-block" id="g2wclingo"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.g2wclingo">[docs]</a><span class="k">def</span> <span class="nf">g2wclingo</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="g2wclingo"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.g2wclingo">[docs]</a><span class="k">def</span> <span class="nf">g2wclingo</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert a graph to a string of grounded terms for ``clingo``</span>
 <span class="sd">    </span>
@@ -770,7 +781,7 @@
             <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">missing</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">s</span></div>
 
-<div class="viewcode-block" id="clingo2num"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.clingo2num">[docs]</a><span class="k">def</span> <span class="nf">clingo2num</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="clingo2num"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.clingo2num">[docs]</a><span class="k">def</span> <span class="nf">clingo2num</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts the output of ``clingo`` into list of edges and under sampling rates for ``drasl``</span>
 
@@ -782,7 +793,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">a2edgetuple</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="rasl_a2edgetuple"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.rasl_a2edgetuple">[docs]</a><span class="k">def</span> <span class="nf">rasl_a2edgetuple</span><span class="p">(</span><span class="n">answer</span><span class="p">):</span>
+<div class="viewcode-block" id="rasl_a2edgetuple"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.rasl_a2edgetuple">[docs]</a><span class="k">def</span> <span class="nf">rasl_a2edgetuple</span><span class="p">(</span><span class="n">answer</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns list of edges and the under sampling rate for ``rasl``</span>
 
@@ -799,7 +810,7 @@
     <span class="n">u</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">edges</span><span class="p">,</span><span class="nb">int</span><span class="p">(</span><span class="n">u</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="a2edgetuple"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.a2edgetuple">[docs]</a><span class="k">def</span> <span class="nf">a2edgetuple</span><span class="p">(</span><span class="n">answer</span><span class="p">):</span>
+<div class="viewcode-block" id="a2edgetuple"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.a2edgetuple">[docs]</a><span class="k">def</span> <span class="nf">a2edgetuple</span><span class="p">(</span><span class="n">answer</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts the output of ``clingo`` into list of edges and under sampling rates for ``drasl``</span>
 <span class="sd"> </span>
@@ -813,7 +824,7 @@
     <span class="n">u</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">answer</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;u&#39;</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">edges</span><span class="p">,</span> <span class="n">u</span></div>
 
-<div class="viewcode-block" id="rasl_c2edgepairs"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.rasl_c2edgepairs">[docs]</a><span class="k">def</span> <span class="nf">rasl_c2edgepairs</span><span class="p">(</span><span class="n">clist</span><span class="p">):</span>
+<div class="viewcode-block" id="rasl_c2edgepairs"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.rasl_c2edgepairs">[docs]</a><span class="k">def</span> <span class="nf">rasl_c2edgepairs</span><span class="p">(</span><span class="n">clist</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts ``clingo`` predicates to edge pairs for ``rasl``</span>
 
@@ -825,7 +836,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">clist</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="c2edgepairs"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.c2edgepairs">[docs]</a><span class="k">def</span> <span class="nf">c2edgepairs</span><span class="p">(</span><span class="n">clist</span><span class="p">):</span>
+<div class="viewcode-block" id="c2edgepairs"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.c2edgepairs">[docs]</a><span class="k">def</span> <span class="nf">c2edgepairs</span><span class="p">(</span><span class="n">clist</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts ``clingo`` predicates to edge pairs for ``drasl``</span>
 
@@ -837,7 +848,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[</span><span class="mi">6</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">clist</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="nodenum"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.nodenum">[docs]</a><span class="k">def</span> <span class="nf">nodenum</span><span class="p">(</span><span class="n">edgepairs</span><span class="p">):</span>
+<div class="viewcode-block" id="nodenum"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.nodenum">[docs]</a><span class="k">def</span> <span class="nf">nodenum</span><span class="p">(</span><span class="n">edgepairs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the number of nodes in the graph</span>
 
@@ -852,7 +863,7 @@
         <span class="n">nodes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">([</span><span class="n">nodes</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">])])</span>
     <span class="k">return</span> <span class="n">nodes</span></div>
 
-<div class="viewcode-block" id="edgepairs2g"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.edgepairs2g">[docs]</a><span class="k">def</span> <span class="nf">edgepairs2g</span><span class="p">(</span><span class="n">edgepairs</span><span class="p">):</span>
+<div class="viewcode-block" id="edgepairs2g"><a class="viewcode-back" href="../../../graph_conv.html#gunfolds.tools.conversions.edgepairs2g">[docs]</a><span class="k">def</span> <span class="nf">edgepairs2g</span><span class="p">(</span><span class="n">edgepairs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts edge pairs to a ``gunfolds`` graph</span>
 
@@ -868,7 +879,7 @@
         <span class="n">g</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">])][</span><span class="nb">int</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">g</span></div>
 
-<div class="viewcode-block" id="msl_jclingo2g"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.msl_jclingo2g">[docs]</a><span class="k">def</span> <span class="nf">msl_jclingo2g</span><span class="p">(</span><span class="n">output_g</span><span class="p">):</span>
+<div class="viewcode-block" id="msl_jclingo2g"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.msl_jclingo2g">[docs]</a><span class="k">def</span> <span class="nf">msl_jclingo2g</span><span class="p">(</span><span class="n">output_g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts the output of ``clingo`` to ``gunfolds`` graph for ``rasl_msl``</span>
 
@@ -883,7 +894,7 @@
     <span class="n">l</span> <span class="o">=</span> <span class="p">(</span><span class="n">g2num</span><span class="p">(</span><span class="n">edgepairs2g</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">])),</span><span class="nb">int</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
     <span class="k">return</span> <span class="n">l</span></div>
 
-<div class="viewcode-block" id="rasl_jclingo2g"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.rasl_jclingo2g">[docs]</a><span class="k">def</span> <span class="nf">rasl_jclingo2g</span><span class="p">(</span><span class="n">output_g</span><span class="p">):</span>
+<div class="viewcode-block" id="rasl_jclingo2g"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.rasl_jclingo2g">[docs]</a><span class="k">def</span> <span class="nf">rasl_jclingo2g</span><span class="p">(</span><span class="n">output_g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts the output of ``clingo`` to ``gunfolds`` graph for ``rasl``</span>
 
@@ -898,7 +909,7 @@
     <span class="n">l</span> <span class="o">=</span> <span class="p">(</span><span class="n">g2num</span><span class="p">(</span><span class="n">edgepairs2g</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">])),</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">l</span></div>
 
-<div class="viewcode-block" id="drasl_jclingo2g"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.drasl_jclingo2g">[docs]</a><span class="k">def</span> <span class="nf">drasl_jclingo2g</span><span class="p">(</span><span class="n">output_g</span><span class="p">):</span>
+<div class="viewcode-block" id="drasl_jclingo2g"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.drasl_jclingo2g">[docs]</a><span class="k">def</span> <span class="nf">drasl_jclingo2g</span><span class="p">(</span><span class="n">output_g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts the output of ``clingo`` to ``gunfolds`` graph for ``drasl``</span>
 
@@ -913,7 +924,7 @@
     <span class="n">l</span> <span class="o">=</span> <span class="p">(</span><span class="n">g2num</span><span class="p">(</span><span class="n">edgepairs2g</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">])),</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">l</span></div>
 
-<div class="viewcode-block" id="old_g2clingo"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.old_g2clingo">[docs]</a><span class="k">def</span> <span class="nf">old_g2clingo</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">):</span>
+<div class="viewcode-block" id="old_g2clingo"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.old_g2clingo">[docs]</a><span class="k">def</span> <span class="nf">old_g2clingo</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    (Ask)</span>
 
@@ -934,7 +945,7 @@
                 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;confu(&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;).&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">file</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="g2ig"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.g2ig">[docs]</a><span class="k">def</span> <span class="nf">g2ig</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="viewcode-block" id="g2ig"><a class="viewcode-back" href="../../../other_conv.html#gunfolds.tools.conversions.g2ig">[docs]</a><span class="k">def</span> <span class="nf">g2ig</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts our graph representation to an igraph for plotting</span>
 <span class="sd">    </span>
@@ -951,7 +962,7 @@
     <span class="n">ig</span><span class="o">.</span><span class="n">vs</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ig</span><span class="o">.</span><span class="n">vs</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">ig</span></div>
 
-<div class="viewcode-block" id="nxbp2graph"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.nxbp2graph">[docs]</a><span class="k">def</span> <span class="nf">nxbp2graph</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">nxbp2graph</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Ask </span>
 
@@ -965,9 +976,9 @@
     <span class="n">g</span> <span class="o">=</span> <span class="p">{</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span> <span class="p">{}</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nodesnum</span><span class="p">)}</span>
     <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">g</span><span class="p">:</span>
         <span class="n">g</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="p">{(</span><span class="n">x</span><span class="o">%</span><span class="n">nodesnum</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">G</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]}</span>
-    <span class="k">return</span> <span class="n">g</span></div>
+    <span class="k">return</span> <span class="n">g</span>
 
-<div class="viewcode-block" id="encode_sccs"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.encode_sccs">[docs]</a><span class="k">def</span> <span class="nf">encode_sccs</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">components</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">SCCS</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="encode_sccs"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.encode_sccs">[docs]</a><span class="k">def</span> <span class="nf">encode_sccs</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">components</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">SCCS</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Encodes strongly connected components of ``gunfolds`` graph to ``clingo`` predicates </span>
 
@@ -1007,7 +1018,7 @@
             <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;scc(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;). &#39;</span>
     <span class="k">return</span> <span class="n">s</span></div>
 
-<div class="viewcode-block" id="encode_list_sccs"><a class="viewcode-back" href="../../../conversions.html#gunfolds.tools.conversions.encode_list_sccs">[docs]</a><span class="k">def</span> <span class="nf">encode_list_sccs</span><span class="p">(</span><span class="n">glist</span><span class="p">):</span>
+<div class="viewcode-block" id="encode_list_sccs"><a class="viewcode-back" href="../../../clingo_conv.html#gunfolds.tools.conversions.encode_list_sccs">[docs]</a><span class="k">def</span> <span class="nf">encode_list_sccs</span><span class="p">(</span><span class="n">glist</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Encodes strongly connected components of a list of ``gunfolds`` graph to ``clingo`` predicates </span>
 

@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="traversal" href="traversal.html" /><link rel="prev" title="pc" href="pc.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="dbn2latex" href="dbn2latex.html" /><link rel="prev" title="Clingo Conversions" href="clingo_conv.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
-        <title>simpleloops - gunfolds documentation</title>
+        <title>Graph Conversions to igraph, NetworkX and graph-tool formats - gunfolds documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
@@ -180,10 +180,10 @@
 <li class="toctree-l3"><a class="reference internal" href="clingo_msl.html">clingo_msl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="clingo_rasl.html">clingo_rasl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="comparison.html">comparison</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="conversions.html">conversions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 current has-children"><a class="reference internal" href="conversions.html">conversions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="graph_conv.html">Graph Conversions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="clingo_conv.html">Clingo Conversions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="other_conv.html">Graph Conversions to igraph, NetworkX and graph-tool formats</a></li>
+<li class="toctree-l4 current current-page"><a class="current reference internal" href="#">Graph Conversions to igraph, NetworkX and graph-tool formats</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="dbn2latex.html">dbn2latex</a></li>
@@ -195,7 +195,7 @@
 <li class="toctree-l3"><a class="reference internal" href="myTimeout.html">myTimeout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="neighborhoods.html">neighborhoods</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pc.html">pc</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">simpleloops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simpleloops.html">simpleloops</a></li>
 <li class="toctree-l3"><a class="reference internal" href="traversal.html">traversal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="unknownrate.html">unknownrate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="zickle.html">zickle</a></li>
@@ -237,37 +237,79 @@
           </label>
         </div>
         <article role="main">
-          <section id="simpleloops">
-<h1>simpleloops<a class="headerlink" href="#simpleloops" title="Permalink to this headline">#</a></h1>
-<section id="print-loops">
-<h2>print_loops<a class="headerlink" href="#print-loops" title="Permalink to this headline">#</a></h2>
+          <section id="graph-conversions-to-igraph-networkx-and-graph-tool-formats">
+<h1>Graph Conversions to igraph, NetworkX and graph-tool formats<a class="headerlink" href="#graph-conversions-to-igraph-networkx-and-graph-tool-formats" title="Permalink to this headline">#</a></h1>
+<section id="g2ig">
+<h2>g2ig<a class="headerlink" href="#g2ig" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="gunfolds.tools.simpleloops.print_loops">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.simpleloops.</span></span><span class="sig-name descname"><span class="pre">print_loops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/simpleloops.html#print_loops"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.simpleloops.print_loops" title="Permalink to this definition">#</a></dt>
-<dd><p>Prints the simple loops in graph <code class="docutils literal notranslate"><span class="pre">g</span></code></p>
+<dt class="sig sig-object py" id="gunfolds.tools.conversions.g2ig">
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">g2ig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#g2ig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.g2ig" title="Permalink to this definition">#</a></dt>
+<dd><p>Converts our graph representation to an igraph for plotting</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>g</strong> (dictionary (<code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graphs)) – <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>igraph representation of <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>igraph</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="graph2dot">
+<h2>graph2dot<a class="headerlink" href="#graph2dot" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="gunfolds.tools.conversions.graph2dot">
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">graph2dot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#graph2dot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.graph2dot" title="Permalink to this definition">#</a></dt>
+<dd><p>Save the graph structure of <cite>g</cite> to a graphviz format dot file with the name <cite>filename</cite></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>g</strong> (dictionary (<code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graphs)) – <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph</p></li>
-<li><p><strong>u</strong> (<em>integer</em>) – under sampling rate</p></li>
+<li><p><strong>filename</strong> (<em>string</em>) – name of the file</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 </section>
-<section id="simple-loops">
-<h2>simple_loops<a class="headerlink" href="#simple-loops" title="Permalink to this headline">#</a></h2>
+<section id="graph2nx">
+<h2>graph2nx<a class="headerlink" href="#graph2nx" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="gunfolds.tools.simpleloops.simple_loops">
-<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.simpleloops.</span></span><span class="sig-name descname"><span class="pre">simple_loops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/simpleloops.html#simple_loops"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.simpleloops.simple_loops" title="Permalink to this definition">#</a></dt>
-<dd><p>Iterator over the list of simple loops of graph g at the undersample rate u</p>
+<dt class="sig sig-object py" id="gunfolds.tools.conversions.graph2nx">
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">graph2nx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#graph2nx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.graph2nx" title="Permalink to this definition">#</a></dt>
+<dd><p>Convert a <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph to NetworkX format ignoring bidirected edges</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>g</strong> (dictionary (<code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graphs)) – <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph</p></li>
-<li><p><strong>u</strong> (<em>integer</em>) – under sampling rate</p></li>
-</ul>
+<dd class="field-odd"><p><strong>G</strong> (dictionary (<code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graphs)) – <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> format graph</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>NetworkX format graph</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>NetworkX graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="nx2graph">
+<h2>nx2graph<a class="headerlink" href="#nx2graph" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="gunfolds.tools.conversions.nx2graph">
+<span class="sig-prename descclassname"><span class="pre">gunfolds.tools.conversions.</span></span><span class="sig-name descname"><span class="pre">nx2graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gunfolds/tools/conversions.html#nx2graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gunfolds.tools.conversions.nx2graph" title="Permalink to this definition">#</a></dt>
+<dd><p>Convert NetworkX format graph to <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph ignoring bidirected edges
+:param G: <code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> format graph
+:type G: dictionary (<code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graphs)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graph</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dictionary (<code class="docutils literal notranslate"><span class="pre">gunfolds</span></code> graphs)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -280,23 +322,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="traversal.html">
+          <a class="next-page" href="dbn2latex.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">traversal</div>
+                <div class="title">dbn2latex</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="pc.html">
+          <a class="prev-page" href="clingo_conv.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">pc</div>
+                <div class="title">Clingo Conversions</div>
                 
               </div>
             </a>
@@ -332,9 +374,11 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">simpleloops</a><ul>
-<li><a class="reference internal" href="#print-loops">print_loops</a></li>
-<li><a class="reference internal" href="#simple-loops">simple_loops</a></li>
+<li><a class="reference internal" href="#">Graph Conversions to igraph, NetworkX and graph-tool formats</a><ul>
+<li><a class="reference internal" href="#g2ig">g2ig</a></li>
+<li><a class="reference internal" href="#graph2dot">graph2dot</a></li>
+<li><a class="reference internal" href="#graph2nx">graph2nx</a></li>
+<li><a class="reference internal" href="#nx2graph">nx2graph</a></li>
 </ul>
 </li>
 </ul>

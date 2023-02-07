@@ -1,0 +1,80 @@
+Graph Conversions
+=================
+.. currentmodule:: gunfolds.tools.conversions
+
+
+adjs2graph
+----------
+.. autofunction:: gunfolds.tools.conversions.adjs2graph
+
+
+bg2num
+------
+.. autofunction:: gunfolds.tools.conversions.bg2num
+
+
+dict\_format\_converter
+-----------------------
+.. autofunction:: gunfolds.tools.conversions.dict_format_converter
+
+
+edgepairs2g
+-----------
+.. autofunction:: gunfolds.tools.conversions.edgepairs2g
+
+
+g2ian
+-----
+.. autofunction:: gunfolds.tools.conversions.g2ian
+
+
+g2num
+-----
+.. autofunction:: gunfolds.tools.conversions.g2num
+
+
+g2vec
+-----
+.. autofunction:: gunfolds.tools.conversions.g2vec
+
+
+graph2adj
+---------
+.. autofunction:: gunfolds.tools.conversions.graph2adj
+
+
+graph2badj
+----------
+.. autofunction:: gunfolds.tools.conversions.graph2badj
+
+
+ian2g
+-----
+.. autofunction:: gunfolds.tools.conversions.ian2g
+
+
+nodenum
+-------
+.. autofunction:: gunfolds.tools.conversions.nodenum
+
+
+num2CG
+------
+.. autofunction:: gunfolds.tools.conversions.num2CG
+
+
+ug2num
+------
+.. autofunction:: gunfolds.tools.conversions.ug2num
+
+
+vec2adj
+-------
+.. autofunction:: gunfolds.tools.conversions.vec2adj
+
+
+vec2g
+-----
+.. autofunction:: gunfolds.tools.conversions.vec2g
+
+
