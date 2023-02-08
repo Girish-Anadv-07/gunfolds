@@ -2,6 +2,6 @@ conversions
 ===========
 .. toctree::
 
-   graph_conv
-   clingo_conv
-   other_conv
+   internal
+   external
+   to_clingo

@@ -1,5 +1,5 @@
-Graph Conversions to igraph, NetworkX and graph-tool formats
-============================================================
+external
+========
 .. currentmodule:: gunfolds.conversions
 
 
