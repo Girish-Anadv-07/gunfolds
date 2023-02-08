@@ -1,80 +1,80 @@
 Graph Conversions
 =================
-.. currentmodule:: gunfolds.tools.conversions
+.. currentmodule:: gunfolds.conversions
 
 
 adjs2graph
 ----------
-.. autofunction:: gunfolds.tools.conversions.adjs2graph
+.. autofunction:: gunfolds.conversions.adjs2graph
 
 
 bg2num
 ------
-.. autofunction:: gunfolds.tools.conversions.bg2num
+.. autofunction:: gunfolds.conversions.bg2num
 
 
 dict\_format\_converter
 -----------------------
-.. autofunction:: gunfolds.tools.conversions.dict_format_converter
+.. autofunction:: gunfolds.conversions.dict_format_converter
 
 
 edgepairs2g
 -----------
-.. autofunction:: gunfolds.tools.conversions.edgepairs2g
+.. autofunction:: gunfolds.conversions.edgepairs2g
 
 
 g2ian
 -----
-.. autofunction:: gunfolds.tools.conversions.g2ian
+.. autofunction:: gunfolds.conversions.g2ian
 
 
 g2num
 -----
-.. autofunction:: gunfolds.tools.conversions.g2num
+.. autofunction:: gunfolds.conversions.g2num
 
 
 g2vec
 -----
-.. autofunction:: gunfolds.tools.conversions.g2vec
+.. autofunction:: gunfolds.conversions.g2vec
 
 
 graph2adj
 ---------
-.. autofunction:: gunfolds.tools.conversions.graph2adj
+.. autofunction:: gunfolds.conversions.graph2adj
 
 
 graph2badj
 ----------
-.. autofunction:: gunfolds.tools.conversions.graph2badj
+.. autofunction:: gunfolds.conversions.graph2badj
 
 
 ian2g
 -----
-.. autofunction:: gunfolds.tools.conversions.ian2g
+.. autofunction:: gunfolds.conversions.ian2g
 
 
 nodenum
 -------
-.. autofunction:: gunfolds.tools.conversions.nodenum
+.. autofunction:: gunfolds.conversions.nodenum
 
 
 num2CG
 ------
-.. autofunction:: gunfolds.tools.conversions.num2CG
+.. autofunction:: gunfolds.conversions.num2CG
 
 
 ug2num
 ------
-.. autofunction:: gunfolds.tools.conversions.ug2num
+.. autofunction:: gunfolds.conversions.ug2num
 
 
 vec2adj
 -------
-.. autofunction:: gunfolds.tools.conversions.vec2adj
+.. autofunction:: gunfolds.conversions.vec2adj
 
 
 vec2g
 -----
-.. autofunction:: gunfolds.tools.conversions.vec2g
+.. autofunction:: gunfolds.conversions.vec2g
 
 

@@ -236,7 +236,7 @@
           <h1>Source code for gunfolds.tools.unknownrate</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot; BFS implementation of subgraph and supergraph Gu to G1 algorithm &quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">gunfolds.tools.bfutils</span> <span class="k">as</span> <span class="nn">bfu</span>
-<span class="kn">from</span> <span class="nn">gunfolds.tools.conversions</span> <span class="kn">import</span> <span class="n">g2num</span><span class="p">,</span> <span class="n">ug2num</span><span class="p">,</span> <span class="n">num2CG</span>
+<span class="kn">from</span> <span class="nn">gunfolds.conversions</span> <span class="kn">import</span> <span class="n">g2num</span><span class="p">,</span> <span class="n">ug2num</span><span class="p">,</span> <span class="n">num2CG</span>
 <span class="kn">import</span> <span class="nn">gunfolds.tools.graphkit</span> <span class="k">as</span> <span class="nn">gk</span>
 <span class="kn">import</span> <span class="nn">gunfolds.tools.simpleloops</span> <span class="k">as</span> <span class="nn">sls</span>
 <span class="kn">from</span> <span class="nn">gunfolds.tools</span> <span class="kn">import</span> <span class="n">load_data</span>
@@ -1200,11 +1200,11 @@
     <span class="k">return</span> <span class="n">dsr</span><span class="p">,</span> <span class="n">ss</span></div>
 
 
-<div class="viewcode-block" id="main"><a class="viewcode-back" href="../../../unknownrate.html#gunfolds.tools.unknownrate.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">g</span> <span class="o">=</span> <span class="n">gk</span><span class="o">.</span><span class="n">ringmore</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
     <span class="n">H</span> <span class="o">=</span> <span class="n">bfu</span><span class="o">.</span><span class="n">undersample</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
     <span class="n">ss</span> <span class="o">=</span> <span class="n">liteqclass</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span></div>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
