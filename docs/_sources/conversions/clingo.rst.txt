@@ -1,5 +1,5 @@
-to_clingo
-=========
+clingo
+======
 .. currentmodule:: gunfolds.conversions
 
 
