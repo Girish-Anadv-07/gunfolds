@@ -1,11 +1,11 @@
-from gunfolds.tools import zickle as zkl
+from gunfolds.utils import zickle as zkl
 from matplotlib import pyplot as plt
-plt.style.use('seaborn-whitegrid')
 import numpy as np
 from os import listdir
 import pandas as pd
 import seaborn as sns
 from matplotlib import ticker as mticker
+plt.style.use('seaborn-whitegrid')
 
 l = listdir('./res_CAP_100_/8 nodes')
 l.sort()

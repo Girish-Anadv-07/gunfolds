@@ -1,8 +1,8 @@
-from gunfolds.tools.calc_procs import get_process_count
+from gunfolds.utils.calc_procs import get_process_count
 import os
-from gunfolds.tools import traversal, bfutils
-from gunfolds.tools import zickle as zkl
-import gunfolds.tools.unknownrate as ur
+from gunfolds.solvers import traversal
+from gunfolds.utils import zickle as zkl
+import gunfolds.solvers.unknownrate as ur
 import time, socket, functools
 import scipy
 import argparse

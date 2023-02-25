@@ -6,9 +6,8 @@
 """
 import numpy as np
 import os, sys
-from random import random
-import gunfolds.tools.zickle as zkl
-import gunfolds.tools.dbn2latex as d2l
+import gunfolds.utils.zickle as zkl
+import gunfolds.viz.dbn2latex as d2l
 
 
 def listplot(fname, mname='JJ', stl='', width=5):

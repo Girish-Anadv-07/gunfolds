@@ -1,17 +1,16 @@
 import os
-from gunfolds.tools import bfutils
-from gunfolds.tools import zickle as zkl
+from gunfolds.utils import bfutils
+from gunfolds.utils import zickle as zkl
 import pickle
 import numpy as np
 import time, socket
 import scipy
-from gunfolds.tools.clingo_rasl import drasl
-import timeout_decorator
+from gunfolds.solvers.clingo_rasl import drasl
 from timeout_decorator import TimeoutError
 import argparse
-from gunfolds.tools import graphkit as gk
+from gunfolds.utils import graphkit as gk
 import distutils.util
-from gunfolds.tools.calc_procs import get_process_count
+from gunfolds.utils.calc_procs import get_process_count
 
 TIMEOUT=6 * 60 * 60 # seconds = 6 hours
 POSTFIX='D_RASL'

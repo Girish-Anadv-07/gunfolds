@@ -11,7 +11,7 @@ epoints = """
 [console_scripts]
 """
 
-install_requires = ['networkx', 'python-igraph==0.8.3', 'scipy', 'numpy',
+install_requires = ['networkx', 'igraph', 'scipy', 'numpy',
                     'statsmodels', 'sympy', 'seaborn', 'pandas', 'PyGObject',
                     'matplotlib', 'progressbar', 'ipdb', 'pydot']
 

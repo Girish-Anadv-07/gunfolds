@@ -1,23 +1,21 @@
 from __future__ import division
 import copy
 import functools
-from gunfolds.tools.calc_procs import get_process_count
-from gunfolds.tools import bfutils as bfu
-from gunfolds.tools.conversions import num2CG, g2vec, vec2g
-from gunfolds.tools import graphkit as gk
-from gunfolds.tools import linear_model as lm
-from gunfolds.tools import pc
-from gunfolds.tools import traversal as trv
-from gunfolds.tools import zickle as zkl
+from gunfolds.utils.calc_procs import get_process_count
+from gunfolds.utils import bfutils as bfu
+from gunfolds.conversions import num2CG, g2vec, vec2g
+from gunfolds.utils import graphkit as gk
+from gunfolds.estimation import linear_model as lm
+from gunfolds.estimation import pc
+from gunfolds.solvers import traversal as trv
+from gunfolds.utils import zickle as zkl
 import itertools
 from multiprocessing import Pool
 import numpy as np
 import pprint
 from progressbar import ProgressBar, Percentage
-import pylab as plt
 import scipy
 import socket
-import signal
 import sys
 import time
 

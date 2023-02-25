@@ -1,9 +1,9 @@
-from gunfolds.tools import zickle as zkl
-from gunfolds.tools import bfutils
+from gunfolds.utils import zickle as zkl
+from gunfolds.utils import bfutils
 from matplotlib import pyplot as plt
 plt.style.use('seaborn-whitegrid')
 import numpy as np
-from gunfolds.tools.graphkit import density
+from gunfolds.utils.graphkit import density
 from os import listdir
 CAPSIZE = 10000
 

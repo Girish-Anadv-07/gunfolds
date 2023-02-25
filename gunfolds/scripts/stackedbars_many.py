@@ -1,9 +1,8 @@
 from gunfolds.scripts.stackedbars import get_counts
-from gunfolds.tools import zickle as zkl
+from gunfolds.utils import zickle as zkl
 import matplotlib as mpl
 from matplotlib import pyplot as plt
 import numpy as np
-import pandas as pd
 import pylab as pl
 import seaborn as sns
 

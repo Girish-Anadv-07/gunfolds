@@ -1,16 +1,17 @@
 import os
-from gunfolds.tools import traversal, bfutils
-from gunfolds.tools import graphkit as gk
-from gunfolds.tools import zickle as zkl
+from gunfolds.solvers import traversal
+from gunfolds.utils import bfutils
+from gunfolds.utils import graphkit as gk
+from gunfolds.utils import zickle as zkl
 import time, socket
 import scipy
-from gunfolds.tools.clingo_rasl import rasl
+from gunfolds.solvers.clingo_rasl import rasl
 from timeout_decorator import TimeoutError
 import argparse
-TIMEOUT=3600 # seconds
+TIMEOUT = 3600 # seconds
 MSLTIMEOUT = TIMEOUT
 SATTIMEOUT = TIMEOUT
-POSTFIX='clingo_RASL'
+POSTFIX = 'clingo_RASL'
 UMAX = 1
 INPNUM = 1 # number of randomized starts per graph
 REPEATS = 100

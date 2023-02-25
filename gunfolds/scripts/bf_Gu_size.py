@@ -1,7 +1,6 @@
 from collections import Counter
 import functools
-from gunfolds.tools.bfutils import *
-import sys
+from gunfolds.utils.bfutils import *
 
 nodes = 4  # number of nodes in the graph
 PNUM = 75  # number of processes to use

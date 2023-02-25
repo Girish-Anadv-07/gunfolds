@@ -1,5 +1,5 @@
 from __future__ import division
-from gunfolds.tools import zickle as zkl
+from gunfolds.utils import zickle as zkl
 from matplotlib import pyplot as plt
 import numpy as np
 import seaborn as sb

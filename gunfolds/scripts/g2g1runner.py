@@ -1,10 +1,10 @@
 import functools
-from gunfolds.tools.calc_procs import get_process_count
-from gunfolds.tools import bfutils
-import gunfolds.tools.graphkit as gk
-from gunfolds.tools import traversal
-import gunfolds.tools.unknownrate as ur
-import gunfolds.tools.zickle as zkl
+from gunfolds.utils.calc_procs import get_process_count
+from gunfolds.utils import bfutils
+import gunfolds.utils.graphkit as gk
+from gunfolds.solvers import traversal
+import gunfolds.solvers.unknownrate as ur
+import gunfolds.utils.zickle as zkl
 from multiprocessing import Pool, Process, Queue, current_process
 import scipy
 import socket

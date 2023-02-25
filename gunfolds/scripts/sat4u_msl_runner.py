@@ -1,16 +1,17 @@
-import os, sys
-from gunfolds.tools import traversal, bfutils
-from gunfolds.tools import graphkit as gk
-from multiprocessing import Pool,Process, Queue, cpu_count, current_process
+import os
+from gunfolds.solvers import traversal
+from gunfolds.utils import graphkit as gk
+from gunfolds.utils import bfutils
+from multiprocessing import Pool
 from functools import partial
-from gunfolds.tools import zickle as zkl
+from gunfolds.utils import zickle as zkl
 import time, socket
 import scipy
 import numpy as np
-from gunfolds.tools.clingo_msl import msl
+from gunfolds.solvers.clingo_msl import msl
 import timeout_decorator
 from timeout_decorator import TimeoutError
-from gunfolds.tools.calc_procs import get_process_count
+from gunfolds.utils.calc_procs import get_process_count
 import argparse
 
 TIMEOUT=3600 # seconds

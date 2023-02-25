@@ -1,11 +1,9 @@
 from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
-from gunfolds.tools import zickle as zkl
-from gunfolds.tools import graphkit as gk
-from gunfolds.tools import bfutils as bfu
+from gunfolds.utils import graphkit as gk
+from gunfolds.utils import bfutils as bfu
 import seaborn as sb
-import sys
 
 #
 

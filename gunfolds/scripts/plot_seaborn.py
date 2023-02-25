@@ -1,9 +1,9 @@
 import pickle
-from gunfolds.tools import bfutils
+from gunfolds.utils import bfutils
 from matplotlib import pyplot as plt
 import pandas as pd
 import seaborn as sns
-from gunfolds.tools.graphkit import density
+from gunfolds.utils.graphkit import density
 from os import listdir
 from matplotlib.ticker import MultipleLocator
 

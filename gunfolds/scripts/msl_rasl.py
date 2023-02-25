@@ -1,17 +1,17 @@
 import os
 import pickle
 
-from gunfolds.tools import bfutils
-from gunfolds.tools import zickle as zkl
+from gunfolds.utils import bfutils
+from gunfolds.utils import zickle as zkl
 import numpy as np
 import time, socket
 import scipy
-from gunfolds.tools.clingo_msl import rasl_msl
+from gunfolds.solvers.clingo_msl import rasl_msl
 import timeout_decorator
 from timeout_decorator import TimeoutError
 import argparse
-from gunfolds.tools import graphkit as gk
-from gunfolds.tools.calc_procs import get_process_count
+from gunfolds.utils import graphkit as gk
+from gunfolds.utils.calc_procs import get_process_count
 
 CLINGO_LIMIT= 64
 PNUM = int(min(CLINGO_LIMIT, get_process_count(1)))

@@ -1,10 +1,10 @@
 from copy import deepcopy
-from gunfolds.tools import bfutils
-from gunfolds.tools import conversions
-from gunfolds.tools import graphkit
-from gunfolds.tools import traversal
-from gunfolds.tools import unknownrate as ur
-from gunfolds.tools import zickle as zkl
+from gunfolds.utils import bfutils
+from gunfolds import conversions
+from gunfolds.utils import graphkit
+from gunfolds.solvers import traversal
+from gunfolds.solvers import unknownrate as ur
+from gunfolds.utils import zickle as zkl
 import numpy as np
 import os
 import unittest

@@ -1,8 +1,7 @@
-import zickle as zkl
+import gunfolds.utils.zickle as zkl
 import matplotlib as mpl
 from matplotlib import pyplot as plt
 import numpy as np
-import pandas as pd
 import pylab as pl
 import seaborn as sb
 

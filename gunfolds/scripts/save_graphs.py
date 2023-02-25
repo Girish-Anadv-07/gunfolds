@@ -1,8 +1,6 @@
 import os
-
-from gunfolds.tools import bfutils
-from gunfolds.tools import graphkit as gk
-from gunfolds.tools import zickle as zkl
+from gunfolds.utils import graphkit as gk
+from gunfolds.utils import zickle as zkl
 import argparse
 import random
 import distutils.util
