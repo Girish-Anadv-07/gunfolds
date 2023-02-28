@@ -43,3 +43,17 @@ To install ``graph-tool`` package with **brew install** run the following comman
 .. code-block::
 
    brew install graph-tool
+
+PyGObject installation
+-------------------------
+**3. Install** ``PyGObject``
+
+To install ``PyGObject`` package with **brew install** run the following command
+
+.. code-block::
+
+   brew install pygobject3 gtk+3
+
+To install ``PyGObject`` package in Windows, Linux and any other platforms please refer to the link
+
+   https://pygobject.readthedocs.io/en/latest/getting_started.html
