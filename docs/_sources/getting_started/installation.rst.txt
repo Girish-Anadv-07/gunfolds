@@ -48,6 +48,8 @@ PyGObject installation
 -------------------------
 **3. Install** ``PyGObject``
 
+**This is only required if you need to use** ``gtool`` **module of the** ``gunfolds`` **package**
+
 To install ``PyGObject`` package with **brew install** run the following command
 
 .. code-block::
