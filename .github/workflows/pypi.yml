@@ -18,3 +18,4 @@ jobs:
           python3 version.py
           pip3 install twine
           twine upload dist/*
+          
