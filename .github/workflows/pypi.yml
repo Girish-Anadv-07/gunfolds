@@ -26,5 +26,5 @@ jobs:
           python3 version.py
           pip install twine
           twine upload dist/*
-          ${{PYPI_USER}}
+          echo ${{PYPI_USER}}
           
