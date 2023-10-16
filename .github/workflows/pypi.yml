@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: PyPi
 on:
   push:
     branches:
@@ -14,8 +14,9 @@ jobs:
 
       - name: Install dependencies   
         run: |
+          pip install setuptools
           python3 setup.py sdist bdist_wheel
           python3 version.py
-          pip3 install twine
+          pip install twine
           twine upload dist/*
           
