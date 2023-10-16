@@ -20,6 +20,7 @@ jobs:
 
       - name: Install dependencies   
         run: |
+          pip install bdist_wheel
           pip install setuptools
           python3 setup.py sdist bdist_wheel
           python3 version.py
