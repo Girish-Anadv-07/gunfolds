@@ -1,0 +1,18 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+permissions:
+  contents: write
+jobs:
+  build-and-deploy:
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install dependencies   
+        run: |
+          python3 setup.py sdist bdist_wheel
+          python3 version.py
