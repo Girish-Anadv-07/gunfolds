@@ -25,6 +25,5 @@ jobs:
           python3 setup.py sdist bdist_wheel
           python3 version.py
           pip install twine
-          twine upload dist/*
-          echo ${{PYPI_USER}}
+          twine upload dist/* -u ${{PYPI_USER}}
           
