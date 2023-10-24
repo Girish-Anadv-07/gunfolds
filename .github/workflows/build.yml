@@ -37,6 +37,7 @@ jobs:
           cd sphinx-build
           make clean html
 
+
       - name: Publish to Pypi
         run: |  
           git config --global user.name "${{secrets.GIT_USER}}"
