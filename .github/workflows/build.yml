@@ -44,6 +44,7 @@ jobs:
           git commit -m "version update"
           git push origin master
           python3 setup.py sdist bdist_wheel
+          ls
           twine upload dist/* -u ${{secrets.PYPI_USER}} 
 
       - name: Deploy 🚀
