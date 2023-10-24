@@ -23,9 +23,11 @@ jobs:
           pip install wheel
           pip install setuptools
           bash version_update.sh
+          rm *.py-e
           git status
           python3 setup.py sdist bdist_wheel
           python3 version.py
           pip install twine
           twine upload dist/* -u ${{secrets.PYPI_USER}}
+          
           
