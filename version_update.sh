@@ -9,3 +9,4 @@ git push origin master
 updated_version=$(python version_update.py)
 echo $updated_version
 sed -i -e "1s/__version_info__ = .*/__version_info__ = $updated_version/" version.py
+rm *.py-e
