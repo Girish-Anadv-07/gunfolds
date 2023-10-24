@@ -22,7 +22,8 @@ jobs:
         run: |
           pip install wheel
           pip install setuptools
-          bash ../../version_update.sh
+          bash version_update.sh
+          git status
           python3 setup.py sdist bdist_wheel
           python3 version.py
           pip install twine
