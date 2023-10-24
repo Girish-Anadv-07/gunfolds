@@ -23,7 +23,6 @@ jobs:
           pip install wheel
           pip install setuptools
           bash version_update.sh
-          rm *.py-e
           git add version.py
           git commit -m "version update"
           git push origin master
