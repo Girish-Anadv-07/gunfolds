@@ -39,6 +39,8 @@ jobs:
 
       - name: Publish to Pypi
         run: |  
+          git config --global user.name "${{secrets.GIT_USER}}"
+          git config --global user.email "${{secrets.GIT_GMAIL}}"
           bash version_update.sh
           git add version.py
           git commit -m "version update"
