@@ -24,6 +24,9 @@ jobs:
           pip install setuptools
           bash version_update.sh
           rm *.py-e
+          git add version.py
+          git commit -m "version update"
+          git push origin master
           git status
           python3 setup.py sdist bdist_wheel
           python3 version.py
